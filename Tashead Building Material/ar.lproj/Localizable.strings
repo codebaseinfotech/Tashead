@@ -1,0 +1,488 @@
+/* 
+  Localizable.strings
+  Tashead Building Material
+
+  Created by Ankit Gabani on 12/02/24.
+  
+*/
+"More" = " المزيد";
+
+"Email" = "البريد الالكتروني";
+
+"Password" = "كلمة السر";
+
+"Forgot Password !" = "نسيان كلمة السر !";
+
+"Login" = "تسجيل الدخول";
+
+"LOGIN" = "تسجيل الدخول";
+
+"Continue as a guest" = "الاستمرار كزائر";
+
+"Register" = "تسجيل";
+
+"Delivery Address*" = "عنوان التسليم*";
+
+"Register using following accont" = "التسجيل باستخدام الحسابات التالية";
+
+"Sign in with Google" = "التسجيل عبر جوجل";
+
+"Sign in with Facebook" = "التسجيل عبر فيس بوك";
+
+"Sign in with Apple" = "التسجيل عبر أبل";
+
+"Please enter email" = "الرجاء إدخال البريد الإلكتروني";
+
+"Please enter valid email" = "الرجاء إدخال بريد إلكتروني صحيح";
+
+"Please enter your Password" = "الرجاء إدخال كلمة المرور";
+
+"Mobile Number" = "الهاتف النقال";
+
+"Send" = "إرسال";
+
+"Register / log in" = "تسجيل الدخول / مستخدم جديد";
+
+"Skip" = "تخطى";
+
+"Welcome" = "مرحبابكم";
+
+"INFLUENCERS / Building Experts" = "الداعمون / خبراء البناء";
+
+"CONSTRUCTION MATERIALS STEP WISE" = "المواد الانشائية تبعا لمراحل البناء";
+
+"CATEGORIES" = "الفئات";
+
+"HOME" = "الصفحة الرئيسية";
+
+"MY ACCOUNT" = "حسابي";
+
+"MY ORDERS" = "طلباتى";
+
+"WISH LIST" = "قائمة الرغبات";
+
+"MY FAVORITE" = "المفضلة";
+
+"ABOUT US" = "نبذة عنا";
+
+"CONTACT US" = "اتصل بنا";
+
+"TERMS & CONDITIONS" = "الشروط والأحكام";
+
+"FEEDBACK" = "ملاحظات";
+
+"TELL A FRIEND" = "أخبر صديق";
+
+"LANGUAGE" = "اللغة";
+
+"AR" = "عربى";
+
+"EN" = "انجليزى";
+
+"NOTIFICATION" = "التنبيهات";
+
+"Supplier:" = "المورد";
+
+"Weight:" = "الوزن";
+
+"Unit Type:" = "نوع الوحدة";
+
+"Add to cart" = "أضف إلى السلة";
+
+"Related products" = "منتجات ذات صلة";
+
+"Full name*" = "الإسم الكامل*";
+
+"Password*" = "كلمة السر*";
+
+"Confirm password*" = "تأكيد كلمة السر*";
+
+"Add delivery address" = "إضافة عنوان التوصيل";
+
+"Comment (optional)" = "ملاحظات (إختيارى)";
+
+"Terms & conditions approval" = "الموافقة على الشروط والأحكام";
+
+"Create Account!" = "إنشاء حساب";
+
+"REGISTRATION" = "التسجيل";
+
+"Resend" = "أعد إرسال الرمز";
+
+"Please enter your name" = "أدخال الإسم الكامل";
+
+"Password length should be 6 digits" = "يجب أن تتكون كلمة المرور من 6 أرقام";
+
+"Please enter confirm password" = "الرجاء إدخال تأكيد كلمة المرور";
+
+"Your password and confirm password do not match" = "كلمة السر الجديدة وتاكيد كلمة السر يجب أن يكون متطابق";
+
+"Please enter your email" = "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك";
+
+"Please enter valid email address" = "الرجاء إدخال بريد إلكتروني صحيح";
+
+"Please enter address details" = "الرجاء إدخال تفاصيل العنوان";
+
+"You must agree with the terms and conditions." = "يجب الموافقة على الشروط و الاحكام.";
+
+"Please enter OTP" = "الرجاء ادخال رمز الأمان";
+
+"OTP" = "مكتب المدعي العام";
+
+"MY CART" = "سلتي";
+
+"Edit" = "التعديل";
+
+"Subtotal:" = "حاصل المجموع:";
+
+"Delivery Charge:" = "رسوم التوصيل:";
+
+"Total:" = "مجموع:";
+
+"General notes" = "ملاحظات عامة";
+
+"Notes" = "ملاحظات";
+
+"Continue Shopping" = "استمر بالتسوّق";
+
+"Next" = "التالي";
+
+"Your order will be delivered" = "سيتم توصيل طلبك";
+
+"Pay with" = "أدفع من خلال";
+
+"Knet" = "كي نت";
+
+"Visa / Mastercard" = "بطاقات الائتمان";
+
+"Apple pay" = "الدفع بواسطة أبل";
+
+"Cash on Deliverey" = "الدفع عند الاستلام";
+
+"Item successfully added in cart" = "تم إضافة المنتج الى سلتك";
+
+"Shopping Cart is Empty" = "سلة المشتريات فارغة";
+
+"Send a link" = "أرسل رابط";
+
+"Choose delivery address" = "إختيار عنوان التوصيل";
+
+"Add new address" = "أضف عنواناً جديدا";
+
+"Update Address" = "تعديل العنوان";
+
+"New address" = "عنوان جديد";
+
+"Address name" = "اسم العنوان";
+
+"Area*" = "المنطقة*";
+
+"Block*" = "قطعة*";
+
+"Street*" = "الشارع*";
+
+"Area" = "المنطقة";
+
+"Block" = "قطعة";
+
+"Street" = "الشارع";
+ 
+"Avenue ( Optional )" = "جادة (إختيارى)";
+
+"Building number*" = "رقم المبنى*";
+
+"Building" = "رقم";
+ 
+"Floor ( Optional )" = "الطابق (إختيارى)";
+
+"Apartment number ( Optional )" = "شقة (إختيارى)";
+
+"Select your location ( Optional )" = "حدد موقعك (إختيارى)";
+
+"Add" = "إضافة";
+
+"Governorates*" = "المحافظة*";
+
+"Please enter the block" = "إدخال القطعة";
+
+"Please enter the street" = "إدخال شارع";
+
+"Please enter the building number" = "أدخل رقم المبنى";
+
+"ORDER HISTORY" = "طلباتى السابقة";
+
+"Paid" = "مدفوع";
+
+"Details" = "التفاصيل";
+
+"Order ID:" = "رقم الطلب:";
+
+"Not paid" = "غير مدفوع";
+
+"Resend payment link" = "إعادة إرسال رابط الدفع";
+
+"Discount/Promo = " = "الخصم / كود العرض";
+
+"Payment Method" = "طريقة الدفع";
+
+"You Have No Orders." = "لا توجد طلبات";
+
+"Order Detail" = "تفاصيل الطلب";
+
+"ABOUT US" = "نبذة عنا";
+
+"CONTACT US" = "اتصل بنا";
+
+"OFFICE NUMBER" = "رقم المكتب";
+
+"SUPPORT NUMBER" = "رقم الدعم";
+
+"Name" = "الإسم";
+
+"Email or Phone number" = "البريد الإلكتروني أو رقم الهاتف";
+
+"Text" = "النص";
+
+"STORE ADDRESS" = "عنوان المخزن";
+
+"TERMS & CONDITIONS" = "الشروط والأحكام";
+
+"FEEDBACK" = "ملاحظات";
+
+"TELL US YOUR FEEDBACK" = "أخبرنا عن تجربتك";
+
+"Alert" = "تحذير";
+
+"OK" = "حسنا";
+
+"Are you sure!" = "هل أنت متأكد!";
+
+"YES" = "نعم";
+
+"Yes" = "نعم";
+
+"NO" = "لا";
+
+"No" = "لا";
+
+"Would you like to Logout?" = "هل أنت متأكد أنك تريد تسجيل الخروج؟";
+
+"Would you like to delete account?" = "هل انت متأكد انك ترغب بإلغاء حسابك ؟";
+
+"Welcome Guest" = "مرحبا بالزائر";
+
+"Welcome" = "مرحبا";
+
+"Are you sure you want to remove this item from your cart?" = "هل أنت متأكدانك تريد إزالة المنتج من سلتك؟";
+
+"MY PROFILE" = "ملفي";
+
+"My Addresses" = "عناويني";
+
+"Update" = "تحديث";
+
+"Change Password" = "تغيير كلمة المرور";
+
+"Reset Password" = "إعادة تعيين كلمة المرور";
+
+"Logout" = "تسجيل خروج";
+
+"LOGOUT" = "تسجيل خروج";
+
+"Delete Account" = "حذف الحساب";
+
+"Submit" = "يُقدِّم";
+
+"Old Password" = "كلمة المرور القديمة";
+
+"New Password" = "كلمة المرور الجديدة";
+
+"Confirm Password" = "تأكيد كلمة المرور";
+
+"Missing items" = "عناصر مفقودة";
+
+"New Address" = "العنوان الجديد";
+
+"Please enter password" = "الرجاء إدخال كلمة المرور";
+
+"Please enter full name" = "الرجاء إدخال الاسم الكامل";
+
+"Password dose not match" = "كلمة السر غير متطابقة";
+
+"Please enter address" = "الرجاء إدخال العنوان";
+
+"Please select area" = "الرجاء تحديد المنطقة";
+
+"Please enter block" = "الرجاء إدخال الكتلة";
+
+"Please enter street" = "الرجاء إدخال الشارع";
+
+"Please enter buliding number" = "الرجاء إدخال رقم المبنى";
+
+"You must agree with the terms and conditions." = "يجب عليك الموافقة على الشروط والأحكام.";
+
+"Please enter mobile number" = "الرجاء إدخال رقم الجوال";
+
+"Please enter valid mobile number" = "يرجى إدخال رقم الهاتف الصحيح";
+
+"Please select supplier" = "الرجاء اختيار المورد";
+
+"Enter old passwrod" = "أدخل كلمة المرور القديمة";
+
+"Enter new password" = "أدخل كلمة المرور الجديدة";
+
+"Enter cnofirm password" = "أدخل كلمة المرور";
+
+"Thank you" = "شكرا";
+
+"We have received your request. We will contact you soon from the relevant department." = "لقد استلمنا طلبك ، سيتم التواصل معك قريبا من القسم المختص.";
+
+"Out of stock" = "غير متوفر";
+
+"SEARCH" = "البحث";
+
+"Search" = "البحث";
+
+"PRODUCT" = "الأصناف";
+
+"Order Placed Successfully!" = "تم الطلب بنجاح";
+
+"Thank you for ordering!" = "شكرا لطلبكم من تشيد";
+
+"MY COMMISSIONS" = "حسابي";
+
+"Order Number" = "رقم الطلب";
+
+"Transaction ID" = "رقم المعاملة";
+
+"Transaction Date" = "تاريخ العملية";
+
+"Total" = "المجموع";
+
+"Payment Approved" = "تم قبول العملية بنجاح";
+
+"Payment Declined" = "العملية مرفوضة";
+
+"Go back to checkout" = "العودة إلى صفحة الدفع";
+
+"CHECKOUT" = "الدفع";
+
+"Transfer has been declined" = "العملية مرفوضة";
+
+"Change Number" = "تغير الرقم";
+
+"Change" = "تغيير";
+
+"Reset Link" = "إعادة إرسال";
+
+"Payment Pending" = "انتظار الدفع";
+
+"New" = "الجديدة";
+
+"Would you like to delete this address?" = "هل ترغب بإلغاء هذا العنوان ؟";
+
+"Please select payment method" = "الرجاء تحديد طريقة الدفع";
+
+"Catalogue:" = "كتلوج:";
+
+"Unfortunately, currently delivery services not available for" = "عذراً، خدمة التوصيل غير متوفره حالياً ل";
+
+"You will be forwarded to KNET to complete this transaction." = "سيتم تحويلك لصفحة كي نت لإكمال عملية الدفع" ;
+
+"Or" = "أو";
+
+"Redeem" = "أضف";
+
+"Remove" = "إزالة";
+
+"Please enter promo code" = "يرجى ادخال كود الخصم";
+
+"Express Delivery Charge:" = "تكلفة خدمة التوصيل السريع:";
+
+"Sign In With Google" = "إستمرار عبر  جوجل";
+
+"Sign In With Facebook" = "إستمرار عبر فيس بوك";
+
+"Sign In With Apple" = "التسجيل عبر أبل";
+
+"Promo code" = "كود الخصم";
+
+"Promo Code Discount:" = "كود الخصم:";
+
+"Minimum order is" = "الحد الأدنى لطلب";
+
+"Your current order is" = "طلبك الحالي";
+
+"Use Credit?" = "ادفع من رصيدك";
+
+"Balance:" = "رصيدك:";
+
+"Payment ID" = "رقم عملية الشراء";
+
+"Pay now" = "ادفع الآن";
+
+"Amount" = "لمبلغ";
+
+"STATEMENT" = "كشف الحساب";
+
+"MY CREDITS" = "رصيد اعتماد";
+
+"Total Assigned Credit:" = "Total Assigned Credit:";
+
+"Total Used Credit:" = "Total Used Credit:";
+
+"Total Due Amount:" = "Total Due Amount:";
+
+"Credit History" = "Credit History";
+
+"CREDIT HISTORY" = "CREDIT HISTORY";
+
+"Total Credit:" = "رصيد ‏الاعتماد:";
+ 
+"Current balance" = "الرصيد الحالي";
+
+"Due amount" = "الحد الأدنى المستحق";
+
+"Other amount" = "مبالغ اخرى";
+
+"Available limit:" = "الرصيد المتاح:";
+
+"Continue" = "مواصلة";
+
+"No Data Found" = "لا يوجد بيانات";
+
+"Choose File" = "أختيار ملف";
+
+"Attachment" = "التعلق";
+
+"Inbox" = "Inbox";
+
+"MY INBOX" = "MY INBOX";
+
+"Please enter your comment" = "يرجى إدخال تعليقك";
+
+"Available Balance:" = "الرصيد المتاح:";
+
+"Express Delivery" = "التسليم السريع";
+
+"Add Item" = "‏إضافة منتج";
+
+"View Cart" = "‏سلة المشتريات";
+
+"Saved Addresses" = "‏العنوانين المحفوظة";
+
+"Deliver to a different location" = "‏توصيل العنوان آخر";
+
+"Choose location on map" = "حدد موقعك من الخريطة";
+
+"SELECT DELIVERY TIME" = "اختر وقت التوصيل";
+
+"Available :" = "Available :";
+
+"Total Allowed Commission:" = "Total Allowed Commission:";
+
+"Total Paid:" = "Total Paid:";
+
+"Available Commission:" = "Available Commission:";
+
+"Use Commission?" = "Use Commission?";

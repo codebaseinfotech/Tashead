@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ToolsHeadrView" customModule="Tashead_Building_Material" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-WM-XtC">
+                    <rect key="frame" x="0.0" y="0.0" width="88" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tools" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myP-X3-TVe">
+                            <rect key="frame" x="20" y="-3.3333333333333339" width="48" height="22.666666666666671"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                            <color key="textColor" name="PRIMARY_COLOR"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.76862745098039209" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="myP-X3-TVe" secondAttribute="trailing" constant="20" id="Erb-CG-0NI"/>
+                        <constraint firstItem="myP-X3-TVe" firstAttribute="centerY" secondItem="AnB-WM-XtC" secondAttribute="centerY" id="cY2-ph-MEH"/>
+                        <constraint firstItem="myP-X3-TVe" firstAttribute="leading" secondItem="AnB-WM-XtC" secondAttribute="leading" constant="20" id="w1I-Ye-clE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AnB-WM-XtC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BTY-Rd-KjB"/>
+                <constraint firstItem="AnB-WM-XtC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GGa-rm-GEx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AnB-WM-XtC" secondAttribute="bottom" id="R2K-CI-ZLd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblname" destination="myP-X3-TVe" id="yHv-Ma-uo1"/>
+                <outlet property="viewMain" destination="AnB-WM-XtC" id="uWa-0Q-Hyb"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="-32"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PRIMARY_COLOR">
+            <color red="0.27799999713897705" green="0.2669999897480011" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

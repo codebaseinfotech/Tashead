@@ -1,0 +1,473 @@
+/*
+ Localizable.strings
+ Tashead Building Material
+ 
+ Created by Ankit Gabani on 12/02/24.
+ 
+ */
+"More" = "More";
+
+"Email" = "Email";
+
+"Password" = "Password";
+
+"Forgot Password !" = "Forgot Password !";
+
+"Login" = "Login";
+
+"LOGIN" = "LOGIN";
+
+"Continue as a guest" = "Continue as a guest";
+
+"Register" = "Register";
+
+"Delivery Address*" = "Delivery Address*";
+
+"Register using following accont" = "Register using following accont";
+
+"Sign in with Google" = "Sign in with Google";
+
+"Sign in with Facebook" = "Sign in with Facebook";
+
+"Sign in with Apple" = "Sign in with Apple";
+
+"Please enter email" = "Please enter email";
+
+"Please enter valid email" = "Please enter valid email";
+
+"Please enter your Password" = "Please enter your Password";
+
+"Mobile Number" = "Mobile Number";
+
+"Send" = "Send";
+
+"Register / log in" = "Register / log in";
+
+"Skip" = "Skip";
+
+"Welcome" = "Welcome";
+
+"INFLUENCERS / Building Experts" = "INFLUENCERS / Building Experts";
+
+"CONSTRUCTION MATERIALS STEP WISE" = "CONSTRUCTION MATERIALS STEP WISE";
+
+"CATEGORIES" = "CATEGORIES";
+
+"HOME" = "HOME";
+
+"MY ACCOUNT" = "MY ACCOUNT";
+
+"MY ORDERS" = "MY ORDERS";
+
+"WISH LIST" = "WISH LIST";
+
+"MY FAVORITE" = "MY FAVORITE";
+
+"ABOUT US" = "ABOUT US";
+
+"CONTACT US" = "CONTACT US";
+
+"TERMS & CONDITIONS" = "TERMS & CONDITIONS";
+
+"FEEDBACK" = "FEEDBACK";
+
+"TELL A FRIEND" = "TELL A FRIEND";
+
+"LANGUAGE" = "LANGUAGE";
+
+"AR" = "AR";
+
+"EN" = "EN";
+
+"NOTIFICATION" = "NOTIFICATION";
+
+"Supplier:" = "Supplier:";
+
+"Weight:" = "Weight:";
+
+"Unit Type:" = "Unit Type:";
+
+"Add to cart" = "Add to cart";
+
+"Related products" = "Related products";
+
+"Full name*" = "Full name*";
+
+"Password*" = "Password*";
+
+"Confirm password*" = "Confirm password*";
+
+"Add delivery address" = "Add delivery address";
+
+"Comment (optional)" = "Comment (optional)";
+
+"Terms & conditions approval" = "Terms & conditions approval";
+
+"Create Account!" = "Create Account!";
+
+"REGISTRATION" = "REGISTRATION";
+
+"Resend" = "Resend";
+
+"Please enter your name" = "Please enter your name";
+
+"Password length should be 6 digits" = "Password length should be 6 digits";
+
+"Please enter confirm password" = "Please enter confirm password";
+
+"Your password and confirm password do not match" = "Your password and confirm password do not match";
+
+"Please enter your email address" = "Please enter your email address";
+
+"Please enter valid email address" = "Please enter valid email address";
+
+"Please enter address details" = "Please enter address details";
+
+"You must agree with the terms and conditions." = "You must agree with the terms and conditions.";
+
+"Please enter OTP" = "Please enter OTP";
+
+"MY CART" = "MY CART";
+
+"Edit" = "Edit";
+
+"Subtotal:" = "Subtotal:";
+
+"Delivery Charge:" = "Delivery Charge:";
+
+"Total:" = "Total:";
+
+"General notes" = "General notes";
+
+"Notes" = "Notes";
+
+"Continue Shopping" = "Continue Shopping";
+
+"Next" = "Next";
+
+"Your order will be delivered" = "Your order will be delivered";
+
+"Pay with" = "Pay with";
+
+
+"Knet" = "Knet";
+
+"Visa / Mastercard" = "Visa / Mastercard";
+
+"Apple pay" = "Apple pay";
+
+"Cash on Deliverey" = "Cash on Deliverey";
+
+"Item successfully added in cart" = "Item successfully added in cart";
+
+"Shopping Cart is Empty" = "Shopping Cart is Empty";
+
+"Send a link" = "Send a link";
+
+"Choose delivery address" = "Choose delivery address";
+
+"Add new address" = "Add new address";
+
+"Update Address" = "Update Address";
+
+"New address" = "New address";
+
+"Address name" = "Address name";
+
+"Area*" = "Area*";
+
+"Block*" = "Block*";
+
+"Street*" = "Street*";
+
+"Avenue ( Optional )" = "Avenue ( Optional )";
+
+"Building number*" = "Building number*";
+
+"Floor ( Optional )" = "Floor ( Optional )";
+
+"Apartment number ( Optional )" = "Apartment number ( Optional )";
+
+"Select your location ( Optional )" = "Select your location ( Optional )";
+
+"Add" = "Add";
+
+"Governorates*" = "Governorates*";
+
+"Please enter the block" = "Please enter the block";
+
+"Please enter the street" = "Please enter the street";
+
+"Please enter the building number" = "Please enter the building number";
+
+"ORDER HISTORY" = "ORDER HISTORY";
+
+"Paid" = "Paid";
+
+"Details" = "Details";
+
+"Order ID:" = "Order ID:";
+
+"Not paid" = "Not paid";
+
+"Resend payment link" = "Resend payment link";
+
+"Discount/Promo:" = "Discount/Promo:";
+
+"Payment Method" = "Payment Method";
+
+"You Have No Orders." = "You Have No Orders.";
+
+"Order Detail" = "Order Detail";
+
+"ABOUT US" = "ABOUT US";
+
+"CONTACT US" = "CONTACT US";
+
+"OFFICE NUMBER" = "OFFICE NUMBER";
+
+"SUPPORT NUMBER" = "SUPPORT NUMBER";
+
+"Name" = "Name";
+
+"Email or Phone number" = "Email or Phone number";
+
+"Text" = "Text";
+
+"STORE ADDRESS" = "STORE ADDRESS";
+
+"TERMS & CONDITIONS" = "TERMS & CONDITIONS";
+
+"FEEDBACK" = "FEEDBACK";
+
+"TELL US YOUR FEEDBACK" = "TELL US YOUR FEEDBACK";
+
+"Alert" = "Alert";
+
+"OK" = "OK";
+
+"Are you sure!" = "Are you sure!";
+
+"YES" = "YES";
+
+"NO" = "NO";
+
+"Yes" = "Yes";
+
+"No"= "No";
+
+"Would you like to Logout?" = "Would you like to Logout?";
+
+"Would you like to delete account?" = "Would you like to delete account?";
+
+"Welcome Guest" = "Welcome Guest";
+
+"Welcome" = "Welcome";
+
+"Are you sure you want to remove this item from your cart?" = "Are you sure you want to remove this item from your cart?";
+
+"MY PROFILE" = "MY PROFILE";
+
+"My Addresses" = "My Addresses";
+
+"Update" = "Update";
+
+"Change Password" = "Change Password";
+
+"Reset Password" = "Reset Password";
+
+"Logout" = "Logout";
+
+"Delete Account" = "Delete Account";
+
+"Submit" = "Submit";
+
+"Old Password" = "Old Password";
+
+"New Password" = "New Password";
+
+"Confirm Password" = "Confirm Password";
+
+"Missing items" = "Missing items";
+
+"New Address" = "New Address";
+
+"Please enter password" = "Please enter password";
+
+"Please enter full name" = "Please enter full name";
+
+"Password dose not match" = "Password dose not match";
+
+"Please enter address" = "Please enter address";
+
+"Please select area" = "Please select area";
+
+"Please enter block" = "Please enter block";
+
+"Please enter street" = "Please enter street";
+
+"Please enter buliding number" = "Please enter buliding number";
+
+"You must agree with the terms and conditions." = "You must agree with the terms and conditions.";
+
+"Please enter mobile number" = "Please enter mobile number";
+
+"Please enter valid mobile number" = "Please enter valid mobile number";
+
+"Please select supplier" = "Please select supplier";
+
+"Enter old passwrod" = "Enter old passwrod";
+
+"Enter new password" = "Enter new password";
+
+"Enter cnofirm password" = "Enter cnofirm password";
+
+"Thank you" = "Thank you";
+
+"We have received your request. We will contact you soon from the relevant department." = "We have received your request. We will contact you soon from the relevant department.";
+
+"Out of stock" = "Out of stock";
+
+"SEARCH" = "SEARCH";
+
+"Search" = "Search";
+
+"PRODUCT" = "PRODUCT";
+
+"Order Placed Successfully!" = "Order Placed Successfully!";
+
+"Thank you for ordering!" = "Thank you for ordering!";
+
+"MY COMMISSIONS" = "MY COMMISSIONS";
+
+"Order Number" = "Order Number";
+
+"Transaction ID" = "Transaction ID";
+
+"Transaction Date" = "Transaction Date";
+
+"Total" = "Total";
+
+"Payment Approved" = "Payment Approved";
+
+"Payment Declined" = "Payment Declined";
+
+"Go back to checkout" = "Go back to checkout";
+
+"Transfer has been declined" = "Transfer has been declined";
+
+"Change Number" = "Change Number";
+
+"Change" = "Change";
+
+"Reset Link" = "Reset Link";
+
+"Payment Pending" = "Payment Pending";
+
+"New" = "New";
+
+"Would you like to delete this address?" = "Would you like to delete this address?";
+
+"Catalogue:" = "Catalogue:";
+
+"Unfortunately, currently delivery services not available for" = "Unfortunately, currently delivery services not available for";
+
+"You will be forwarded to KNET to complete this transaction." = "You will be forwarded to KNET to complete this transaction." ;
+
+"Or" = "Or";
+
+"Redeem" = "Redeem";
+
+"Remove" = "Remove";
+
+"Please enter promo code" = "Please enter promo code";
+
+"Express Delivery Charge" = "Express Delivery Charge";
+
+"Sign In With Google" = "Sign In With Google";
+
+"Sign In With Facebook" = "Sign In With Facebook";
+
+"Sign In With Apple" = "Sign In With Apple";
+
+"Promo code" = "Promo code";
+
+"Promo Code Discount:" = "Promo Code Discount:";
+
+"Minimum order is" = "Minimum order is";
+
+"Your current order is" = "Your current order is";
+
+"Use Credit?" = "Use Credit?";
+
+"Balance:" = "Balance:";
+
+"Payment ID" = "Payment ID";
+
+"Pay now" = "Pay now";
+
+"Amount" = "Amount";
+
+"STATEMENT" = "STATEMENT";
+
+"Total Assigned Credit:" = "Total Assigned Credit:";
+
+"Total Used Credit:" = "Total Used Credit:";
+
+"Total Due Amount:" = "Total Due Amount:";
+
+"Credit History" = "Credit History";
+
+"CREDIT HISTORY" = "CREDIT HISTORY";
+
+"Payment ID:" = "Payment ID:";
+
+"Total Credit:" = "Total Credit:";
+
+"MY CREDITS" = "MY CREDITS";
+
+"Current balance" = "Current balance";
+
+"Due amount" = "Due amount";
+
+"Other amount" = "Other amount";
+
+"Available limit:" = "Available limit:";
+
+"Continue" = "Continue";
+
+"No Data Found" = "No Data Found";
+
+"Choose File" = "Choose File";
+
+"Inbox" = "Inbox";
+
+"MY INBOX" = "MY INBOX";
+
+"Please enter your comment" = "Please enter your comment";
+
+"Available Balance:" = "Available Balance:";
+
+"Express Delivery" = "Express Delivery";
+
+"Add Item" = "Add Item";
+
+"View Cart" = "View Cart";
+
+"Saved Addresses" = "Saved Addresses";
+
+"Deliver to a different location" = "Deliver to a different location";
+
+"Choose location on map" = "Choose location on map";
+
+"SELECT DELIVERY TIME" = "SELECT DELIVERY TIME";
+
+"Available :" = "Available :";
+
+"Total Allowed Commission:" = "Total Allowed Commission:";
+
+"Total Paid:" = "Total Paid:";
+
+"Available Commission:" = "Available Commission:";
+
+"Use Commission?" = "Use Commission?";
