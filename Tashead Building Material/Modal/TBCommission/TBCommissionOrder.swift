@@ -1,18 +1,14 @@
 //
-//	TBCommissionGetUserOrder.swift
-//
-//	Create by Ankit Gabani on 6/5/2024
-//	Copyright © 2024. All rights reserved.
+//	TBCommissionOrder.swift
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
 
 
-class TBCommissionGetUserOrder : NSObject, NSCoding{
+class TBCommissionOrder : NSObject, NSCoding{
 
 	var createdAt : String!
 	var id : Int!
-	var isPaid : Int!
 	var status : Int!
 	var subTotal : String!
 	var total : String!
@@ -40,7 +36,6 @@ class TBCommissionGetUserOrder : NSObject, NSCoding{
 	{
 		createdAt = dictionary["created_at"] as? String == nil ? "" : dictionary["created_at"] as? String
 		id = dictionary["id"] as? Int == nil ? 0 : dictionary["id"] as? Int
-		isPaid = dictionary["is_paid"] as? Int == nil ? 0 : dictionary["is_paid"] as? Int
 		status = dictionary["status"] as? Int == nil ? 0 : dictionary["status"] as? Int
 		subTotal = dictionary["sub_total"] as? String == nil ? "" : dictionary["sub_total"] as? String
 		total = dictionary["total"] as? String == nil ? "" : dictionary["total"] as? String
@@ -57,9 +52,6 @@ class TBCommissionGetUserOrder : NSObject, NSCoding{
 		}
 		if id != nil{
 			dictionary["id"] = id
-		}
-		if isPaid != nil{
-			dictionary["is_paid"] = isPaid
 		}
 		if status != nil{
 			dictionary["status"] = status
@@ -81,7 +73,6 @@ class TBCommissionGetUserOrder : NSObject, NSCoding{
 	{
          createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
          id = aDecoder.decodeObject(forKey: "id") as? Int
-         isPaid = aDecoder.decodeObject(forKey: "is_paid") as? Int
          status = aDecoder.decodeObject(forKey: "status") as? Int
          subTotal = aDecoder.decodeObject(forKey: "sub_total") as? String
          total = aDecoder.decodeObject(forKey: "total") as? String
@@ -99,9 +90,6 @@ class TBCommissionGetUserOrder : NSObject, NSCoding{
 		}
 		if id != nil{
 			aCoder.encode(id, forKey: "id")
-		}
-		if isPaid != nil{
-			aCoder.encode(isPaid, forKey: "is_paid")
 		}
 		if status != nil{
 			aCoder.encode(status, forKey: "status")

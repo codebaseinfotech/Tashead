@@ -111,13 +111,13 @@ class CommissionHistoryVC: UIViewController {
                     {
                         if let dic_result = response?.value(forKey: "result") as? NSDictionary
                         {
-                            let total_commission_amount = dic_result.value(forKey: "total_commission_amount") as? Float
-                            let total_paid_commission_amount = dic_result.value(forKey: "total_paid_commission_amount") as? Float
-                            let total_unpaid_commission_amount = dic_result.value(forKey: "total_unpaid_commission_amount") as? Float
+                            let total_commission_amount = dic_result.value(forKey: "total_commission_amount") as? String ?? ""
+                            let total_paid_commission_amount = dic_result.value(forKey: "total_paid_commission_amount") as? String ?? ""
+                            let total_unpaid_commission_amount = dic_result.value(forKey: "total_unpaid_commission_amount") as? String ?? ""
                             
-                            self.lblTotalCommission.text = "Total Allowed Commission: \(total_commission_amount ?? 0.0) KD"
-                            self.lblTotalPaid.text = "Total Paid:" + " " + "\(total_paid_commission_amount ?? 0.0)" + " KD"
-                            self.lblAvailableCommission.text = "Available Commission:" + " " + "\(total_unpaid_commission_amount ?? 0.0)" + " KD"
+                            self.lblTotalCommission.text = "Total Allowed Commission: \(total_commission_amount) KD"
+                            self.lblTotalPaid.text = "Total Paid:" + " " + "\(total_paid_commission_amount)" + " KD"
+                            self.lblAvailableCommission.text = "Available Commission:" + " " + "\(total_unpaid_commission_amount)" + " KD"
                             
                             if let arr_user_ordered_discounts = dic_result.value(forKey: "user_ordered_discounts") as? NSArray
                             {
@@ -277,7 +277,7 @@ extension CommissionHistoryVC: UITableViewDelegate, UITableViewDataSource
         
         cell.lblOrderId.text = "Order ID: \(dicData.orderId ?? 0)"
         
-        cell.lblPrice.text = "\(dicData.commissionAmount ?? 0.0) KD"
+        cell.lblPrice.text = "\(dicData.commissionAmount ?? "") KD"
         
         let bidAccepted = dicData.createdAt ?? ""
         let formatter = DateFormatter()

@@ -6491,6 +6491,7 @@ hours.</string>
                         <outlet property="btnTEditAddress" destination="Mxk-R4-5Ie" id="ELX-hD-hL5"/>
                         <outlet property="btnTNxt" destination="u1z-IJ-d5q" id="YGi-1V-x75"/>
                         <outlet property="btnTopRemoveCont" destination="ZmS-ze-FGk" id="hI9-yP-M9t"/>
+                        <outlet property="heightCommission" destination="m7E-T4-zrH" id="YQc-ek-Sj0"/>
                         <outlet property="heightTblViewTop" destination="FKw-Gy-6UU" id="QfS-YD-tZd"/>
                         <outlet property="heightViewCrdit" destination="6Du-Yb-BV5" id="MfW-mP-fWz"/>
                         <outlet property="imgApplePay" destination="qW3-bO-TJk" id="MaF-u5-glc"/>
@@ -6539,6 +6540,7 @@ hours.</string>
                         <outlet property="mapView" destination="4U5-FP-WwR" id="Bvc-Qe-Pj5"/>
                         <outlet property="promobottomCont" destination="May-0T-gBc" id="ROA-xu-WM4"/>
                         <outlet property="stackHifd" destination="vDs-bf-u2W" id="AfJ-rG-0nI"/>
+                        <outlet property="stackViewCommision" destination="iVk-pu-U5G" id="xQ3-zr-IBb"/>
                         <outlet property="switchExpressDelivery" destination="8qN-9d-h77" id="Uzq-fj-t21"/>
                         <outlet property="tblVie" destination="1BK-Cq-Qf7" id="CeD-0I-Usy"/>
                         <outlet property="txtMobileNo" destination="OkB-Zq-Jeg" id="BwT-Rf-iH9"/>
@@ -8996,10 +8998,10 @@ hours.</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="952"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oJ-is-Ffo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1010"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="934"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1X-tr-5dx">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1010"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="934"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 49xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="vGZ-tM-5h2">
                                                         <rect key="frame" x="20" y="20" width="20" height="20"/>
@@ -9086,10 +9088,10 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXC-zP-we0">
-                                                        <rect key="frame" x="15" y="162.5" width="384" height="225"/>
+                                                        <rect key="frame" x="15" y="162.5" width="384" height="149"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Nt-3b-M1f">
-                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="225"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="149"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-WH-Djj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
@@ -9200,62 +9202,8 @@ hours.</string>
                                                                             <constraint firstItem="0sz-kw-koa" firstAttribute="top" secondItem="jxE-ss-fnP" secondAttribute="top" id="uQH-7C-iSS"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-Iq-GZ3">
-                                                                        <rect key="frame" x="0.0" y="114" width="384" height="35"/>
-                                                                        <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOYALTY POINTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT0-oF-iT0">
-                                                                                <rect key="frame" x="40" y="8.5" width="124" height="18"/>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2op-He-yyK">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
-                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                <connections>
-                                                                                    <action selector="clickedLoyaltyPoints:" destination="tQB-nZ-4Bz" eventType="touchUpInside" id="RmD-Jp-UVg"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="trailing" secondItem="2op-He-yyK" secondAttribute="trailing" id="Jq1-P1-J8O"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="2op-He-yyK" secondAttribute="bottom" id="NZR-52-cPY"/>
-                                                                            <constraint firstItem="rT0-oF-iT0" firstAttribute="leading" secondItem="v1e-Iq-GZ3" secondAttribute="leading" constant="40" id="XLu-Wv-r52"/>
-                                                                            <constraint firstItem="2op-He-yyK" firstAttribute="leading" secondItem="v1e-Iq-GZ3" secondAttribute="leading" id="hjU-L8-Uyy"/>
-                                                                            <constraint firstItem="rT0-oF-iT0" firstAttribute="centerY" secondItem="v1e-Iq-GZ3" secondAttribute="centerY" id="q8r-sF-iNJ"/>
-                                                                            <constraint firstItem="2op-He-yyK" firstAttribute="top" secondItem="v1e-Iq-GZ3" secondAttribute="top" id="u0j-OU-ngr"/>
-                                                                            <constraint firstAttribute="height" constant="35" id="wJm-Wm-tQx"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2J7-FU-Jba">
-                                                                        <rect key="frame" x="0.0" y="152" width="384" height="35"/>
-                                                                        <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOYALTY COUPONS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDA-n0-hIl">
-                                                                                <rect key="frame" x="40" y="8.5" width="144" height="18"/>
-                                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNT-1o-guU">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
-                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                <connections>
-                                                                                    <action selector="clickedLoyaltyCoupons:" destination="tQB-nZ-4Bz" eventType="touchUpInside" id="L0v-Tp-Z4f"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="trailing" secondItem="vNT-1o-guU" secondAttribute="trailing" id="Gkj-Ar-ASO"/>
-                                                                            <constraint firstAttribute="height" constant="35" id="NUZ-4D-MQL"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="vNT-1o-guU" secondAttribute="bottom" id="OQg-Ly-jOU"/>
-                                                                            <constraint firstItem="vNT-1o-guU" firstAttribute="leading" secondItem="2J7-FU-Jba" secondAttribute="leading" id="f2x-O2-Sem"/>
-                                                                            <constraint firstItem="XDA-n0-hIl" firstAttribute="leading" secondItem="2J7-FU-Jba" secondAttribute="leading" constant="40" id="gR4-fU-wnM"/>
-                                                                            <constraint firstItem="XDA-n0-hIl" firstAttribute="centerY" secondItem="2J7-FU-Jba" secondAttribute="centerY" id="jLN-JY-JYL"/>
-                                                                            <constraint firstItem="vNT-1o-guU" firstAttribute="top" secondItem="2J7-FU-Jba" secondAttribute="top" id="jN5-up-qfk"/>
-                                                                        </constraints>
-                                                                    </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJj-QQ-bvn">
-                                                                        <rect key="frame" x="0.0" y="190" width="384" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="114" width="384" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATEMENT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX9-X9-hmi">
                                                                                 <rect key="frame" x="40" y="8.5" width="87" height="18"/>
@@ -9293,14 +9241,14 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8U-Vr-3Q2">
-                                                        <rect key="frame" x="15" y="387.5" width="384" height="1"/>
+                                                        <rect key="frame" x="15" y="311.5" width="384" height="1"/>
                                                         <color key="backgroundColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="bPC-to-CBT"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V4y-fO-Mqw">
-                                                        <rect key="frame" x="15" y="388.5" width="384" height="355"/>
+                                                        <rect key="frame" x="15" y="312.5" width="384" height="355"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btS-qL-teH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
@@ -9607,7 +9555,7 @@ hours.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-A9-4yt">
-                                                        <rect key="frame" x="0.0" y="753.5" width="414" height="60"/>
+                                                        <rect key="frame" x="0.0" y="677.5" width="414" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 382" translatesAutoresizingMaskIntoConstraints="NO" id="nNn-cz-CAP">
                                                                 <rect key="frame" x="20" y="0.0" width="374" height="60"/>
@@ -9626,7 +9574,7 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="KfY-1c-8om">
-                                                        <rect key="frame" x="87" y="863" width="240" height="50"/>
+                                                        <rect key="frame" x="87" y="787" width="240" height="50"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhV-OY-MN9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -9690,7 +9638,7 @@ hours.</string>
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17d-Cm-nP0">
-                                                        <rect key="frame" x="73" y="918" width="268.5" height="87"/>
+                                                        <rect key="frame" x="73" y="842" width="268.5" height="87"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 62xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-jF-5Ud">
                                                                 <rect key="frame" x="143.5" y="-3" width="120" height="70"/>
@@ -9729,7 +9677,7 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8V-Z6-seH">
-                                                        <rect key="frame" x="166" y="833.5" width="82" height="21.5"/>
+                                                        <rect key="frame" x="166" y="757.5" width="82" height="21.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
@@ -15319,13 +15267,16 @@ hours.</string>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 30xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="gH4-Dx-jJP">
+                                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gH4-Dx-jJP">
                                                             <rect key="frame" x="0.0" y="0.0" width="128" height="80"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 30xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="ETq-hy-KxM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="80"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVELING MATERIAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGI-mc-n96">
                                                             <rect key="frame" x="10" y="24.5" width="108" height="31"/>
@@ -15342,7 +15293,11 @@ hours.</string>
                                                         <constraint firstItem="6E6-jv-C5x" firstAttribute="top" secondItem="rIS-mO-xj9" secondAttribute="top" id="Jwz-6u-KpK"/>
                                                         <constraint firstAttribute="trailing" secondItem="6E6-jv-C5x" secondAttribute="trailing" id="LXM-Oq-pah"/>
                                                         <constraint firstAttribute="bottom" secondItem="gH4-Dx-jJP" secondAttribute="bottom" id="M6g-q7-joO"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ETq-hy-KxM" secondAttribute="trailing" id="QhD-o2-WO3"/>
                                                         <constraint firstItem="sGI-mc-n96" firstAttribute="leading" secondItem="rIS-mO-xj9" secondAttribute="leading" constant="10" id="R5H-5w-Bvg"/>
+                                                        <constraint firstItem="ETq-hy-KxM" firstAttribute="top" secondItem="rIS-mO-xj9" secondAttribute="top" id="RJa-b8-NVj"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ETq-hy-KxM" secondAttribute="bottom" id="bWn-2P-x7e"/>
+                                                        <constraint firstItem="ETq-hy-KxM" firstAttribute="leading" secondItem="rIS-mO-xj9" secondAttribute="leading" id="fRJ-aX-Tpi"/>
                                                         <constraint firstAttribute="bottom" secondItem="6E6-jv-C5x" secondAttribute="bottom" id="g3c-xL-mVP"/>
                                                         <constraint firstItem="gH4-Dx-jJP" firstAttribute="leading" secondItem="rIS-mO-xj9" secondAttribute="leading" id="pfH-Qt-7y0"/>
                                                         <constraint firstItem="sGI-mc-n96" firstAttribute="centerY" secondItem="rIS-mO-xj9" secondAttribute="centerY" id="uGj-ax-WIG"/>

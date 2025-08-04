@@ -46,7 +46,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
 
         print("Usertoken:- \(token)")
         
-        callComminsonAPI(isShowIndicator: false)
+        callBannersAPI()
         callBannersAPI()
         callGetCartAPI()
         callMasterCategoriesAPI()
@@ -379,66 +379,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func callComminsonAPI(isShowIndicator: Bool)
-    {
-        if isShowIndicator == true{
-            APIClient.sharedInstance.showIndicator()
-        }
-        
-        let param = ["":""]
-        
-        print(param)
-        
-        APIClient.sharedInstance.MakeAPICallWithAuthHeaderGet(COMMISSION_LIST, parameters: param) { response, error, statusCode in
-            
-            print("STATUS CODE \(String(describing: statusCode))")
-            print("RESPONSE \(String(describing: response))")
-            
-            if error == nil
-            {
-                APIClient.sharedInstance.hideIndicator()
-                
-                let status = response?.value(forKey: "status") as? Int
-                let message = response?.value(forKey: "message") as? String
-                
-                if statusCode == 200
-                {
-                    if status == 1
-                    {
-                        if let dic_result = response?.value(forKey: "result") as? NSDictionary
-                        {
-                            let total_commission_amount = dic_result.value(forKey: "total_commission_amount") as? Float ?? 0.0
-                            
-                            appDelegate?.user_commission = Double(total_commission_amount)
-                        }
-                    }
-                    else
-                    {
-                        APIClient.sharedInstance.hideIndicator()
-                    }
-                    
-                }
-                else
-                {
-                    APIClient.sharedInstance.hideIndicator()
-                    
-                    if message?.contains("Unauthenticated.") == true
-                    {
-                        appDelegate?.strTotalCount = "0"
-                        
-                        appDelegate?.saveCuurentUserData(dic: TBLoginUserResult())
-                        appDelegate?.dicCurrentLoginUser = TBLoginUserResult()
-                        
-                        appDelegate?.saveIsUserLogin(dic: false)
-                    }
-                }
-            }
-            else
-            {
-                APIClient.sharedInstance.hideIndicator()
-            }
-        }
-    }
+    
     
     func callRemoveApplyCodeAPI(cart_id: String)
     {
