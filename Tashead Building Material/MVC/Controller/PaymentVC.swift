@@ -223,14 +223,22 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     }
     
     @IBOutlet weak var stackViewLaoyatyList: UIStackView!
-    @IBOutlet weak var collectionViewLoayltyPoint: UICollectionView! {
+//    @IBOutlet weak var collectionViewLoayltyPoint: UICollectionView! {
+//        didSet {
+//            collectionViewLoayltyPoint.delegate = self
+//            collectionViewLoayltyPoint.dataSource = self
+//        }
+//    }
+    @IBOutlet weak var lblSelectLoayltyPoin: UILabel!
+//    @IBOutlet weak var heightCollectionLayalty: NSLayoutConstraint!
+    
+    @IBOutlet weak var tblViewLoyaltyCoupons: UITableView! {
         didSet {
-            collectionViewLoayltyPoint.delegate = self
-            collectionViewLoayltyPoint.dataSource = self
+            tblViewLoyaltyCoupons.delegate = self
+            tblViewLoyaltyCoupons.dataSource = self
         }
     }
-    @IBOutlet weak var lblSelectLoayltyPoin: UILabel!
-    @IBOutlet weak var heightCollectionLayalty: NSLayoutConstraint!
+    
     
     
     var arrFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
@@ -2149,6 +2157,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             }
         }
     }
+    
+    
 }
 
 extension PaymentVC: ADCountryPickerDelegate {
@@ -2182,23 +2192,28 @@ class checkOutListCell: UITableViewCell
 
 
 // MARK: - collectionView Delegate & DataSource
-extension PaymentVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = self.collectionViewLoayltyPoint.dequeueReusableCell(withReuseIdentifier: "LoayltyCouponCell", for: indexPath) as! LoayltyCouponCell
-        
-        return cell
-    }
-    
-    
-}
+//extension PaymentVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 5
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = self.collectionViewLoayltyPoint.dequeueReusableCell(withReuseIdentifier: "LoayltyCouponCell", for: indexPath) as! LoayltyCouponCell
+//        
+//        return cell
+//    }
+//    
+//    
+//}
+//
+//class LoayltyCouponCell: UICollectionViewCell {
+//    
+//    @IBOutlet weak var lblPrice: UILabel!
+//    @IBOutlet weak var lblPoint: UILabel!
+//    @IBOutlet weak var imgSelect: UIImageView!
+//}
 
-class LoayltyCouponCell: UICollectionViewCell {
+class LoayltyCouponCell: UITableViewCell {
     
-    @IBOutlet weak var lblPrice: UILabel!
-    @IBOutlet weak var lblPoint: UILabel!
-    @IBOutlet weak var imgSelect: UIImageView!
+    
 }
