@@ -13,7 +13,6 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var viewLogout: UIView!
     @IBOutlet weak var lblLogout: UILabel!
     
-    
     @IBOutlet weak var viewOrder_: UIView!
     @IBOutlet weak var viewFav_: UIView!
     @IBOutlet weak var viewAllHide: UIView!

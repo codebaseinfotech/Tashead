@@ -207,6 +207,30 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     @IBOutlet weak var stackViewCommision: UIStackView!
     @IBOutlet weak var heightCommission: NSLayoutConstraint!
     
+    @IBOutlet weak var viewMainLoyaltyPoints: UIView!
+    @IBOutlet weak var viewYesLoyalty: UIView!
+    @IBOutlet weak var viewNoLoyalty: UIView!
+    
+    @IBOutlet weak var lblYesLoyalty: UILabel! {
+        didSet {
+            lblYesLoyalty.text = "Yes".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
+    @IBOutlet weak var lblNoLoyalty: UILabel! {
+        didSet {
+            lblNoLoyalty.text = "No".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
+    
+    @IBOutlet weak var stackViewLaoyatyList: UIStackView!
+    @IBOutlet weak var collectionViewLoayltyPoint: UICollectionView! {
+        didSet {
+            collectionViewLoayltyPoint.delegate = self
+            collectionViewLoayltyPoint.dataSource = self
+        }
+    }
+    @IBOutlet weak var lblSelectLoayltyPoin: UILabel!
+    @IBOutlet weak var heightCollectionLayalty: NSLayoutConstraint!
     
     
     var arrFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
@@ -314,6 +338,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             heightViewCrdit.constant = 0
             
             viewMainCommission.isHidden = true
+            viewMainLoyaltyPoints.isHidden = false
+            callGetCouponAPI()
         }
         // Do any additional setup after loading the view.
     }
@@ -734,7 +760,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             imgApplePay.image = UIImage(named: "ic_UnCheckbox")
             imgSendLink.image = UIImage(named: "ic_UnCheckbox")
             imgCOd.image = UIImage(named: "ic_UnCheckbox")
-        } else {
+        } else if sender.tag == 2 {
             is_commission_used = true
             
             viewYesCommission.backgroundColor = UIColor(hexString: "#F7C491")
@@ -751,6 +777,12 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             imgApplePay.image = UIImage(named: "ic_UnCheckbox")
             imgSendLink.image = UIImage(named: "ic_UnCheckbox")
             imgCOd.image = UIImage(named: "ic_UnCheckbox")
+        } else {
+            viewYesLoyalty.backgroundColor = UIColor(hexString: "#F7C491")
+            viewNoLoyalty.backgroundColor = .clear
+            
+            viewYesLoyalty.borderColor = .clear
+            viewNoLoyalty.borderColor = UIColor(hexString: "#AEAEB2")
         }
         
     }
@@ -766,7 +798,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             viewMainYes.borderColor = UIColor(hexString: "#AEAEB2")
             
             setPaymentOption()
-        } else {
+        } else if sender.tag == 2 {
             is_commission_used = false
             
             viewNoCommission.backgroundColor = UIColor(hexString: "#F7C491")
@@ -776,6 +808,12 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             viewYesCommission.borderColor = UIColor(hexString: "#AEAEB2")
             
 //            setPaymentOption()
+        } else {
+            viewNoLoyalty.backgroundColor = UIColor(hexString: "#F7C491")
+            viewYesLoyalty.backgroundColor = .clear
+            
+            viewNoLoyalty.borderColor = .clear
+            viewYesLoyalty.borderColor = UIColor(hexString: "#AEAEB2")
         }
         
     }
@@ -1840,6 +1878,41 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         }
     }
     
+    func callGetCouponAPI()
+    {
+        let param = ["":""]
+        
+        print(param)
+        
+        APIClient.sharedInstance.MakeAPICallWithAuthHeaderPost(GET_COUPON_LOYALTY, parameters: param) { response, error, statusCode in
+            
+            print("STATUS CODE \(String(describing: statusCode))")
+            print("RESPONSE \(String(describing: response))")
+            
+            if error == nil
+            {
+                APIClient.sharedInstance.hideIndicator()
+                
+                let status = response?.value(forKey: "status") as? Int
+                let message = response?.value(forKey: "message") as? String
+                
+                if statusCode == 200
+                {
+                    
+                }
+                else
+                {
+                    
+                    APIClient.sharedInstance.hideIndicator()
+                }
+            }
+            else
+            {
+                APIClient.sharedInstance.hideIndicator()
+            }
+        }
+    }
+    
     func callModifytoCartAPI(is_express_delivery: String,cart_id: String)
     {
         APIClient.sharedInstance.showIndicator()
@@ -2105,4 +2178,27 @@ extension PaymentVC: ADCountryPickerDelegate {
 class checkOutListCell: UITableViewCell
 {
     @IBOutlet weak var lblName: UILabel!
+}
+
+
+// MARK: - collectionView Delegate & DataSource
+extension PaymentVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.collectionViewLoayltyPoint.dequeueReusableCell(withReuseIdentifier: "LoayltyCouponCell", for: indexPath) as! LoayltyCouponCell
+        
+        return cell
+    }
+    
+    
+}
+
+class LoayltyCouponCell: UICollectionViewCell {
+    
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var lblPoint: UILabel!
+    @IBOutlet weak var imgSelect: UIImageView!
 }

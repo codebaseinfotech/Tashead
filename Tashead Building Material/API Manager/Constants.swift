@@ -161,5 +161,8 @@ let CREDIT_HISTROY = "v1/account/credit/history"
 let CMC_ADVERD = "v1/cms/adverd"
 
 let GET_DELIVERY_SLOT = "v1/common/delivery-slots"
+
+let GET_COUPON_LOYALTY = "v1/loyalty-coupons"
+
 // **************************************************
 let appDelegate = UIApplication.shared.delegate as? AppDelegate
