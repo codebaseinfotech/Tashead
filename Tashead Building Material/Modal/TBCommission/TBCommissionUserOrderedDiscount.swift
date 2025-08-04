@@ -1,5 +1,8 @@
 //
 //	TBCommissionUserOrderedDiscount.swift
+//
+//	Create by Ankit Gabani on 6/5/2024
+//	Copyright © 2024. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
@@ -7,13 +10,15 @@ import Foundation
 
 class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
 
-	var commissionAmount : String!
-	var commissionDetails : [TBCommissionCommissionDetail]!
+	var commissionAmount : Float!
+	var commissionPercentage : Int!
 	var createdAt : String!
+	var getUserOrder : TBCommissionGetUserOrder!
+	var getUserOrderCommissionDetail : [TBCommissionGetUserOrderCommissionDetail]!
 	var id : Int!
-	var order : TBCommissionOrder!
 	var orderId : Int!
 	var status : Int!
+	var updatedAt : String!
 	var userId : Int!
 
 
@@ -37,25 +42,27 @@ class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
 	 */
 	@objc func parseJSONData(fromDictionary dictionary: NSDictionary)
 	{
-		commissionAmount = dictionary["commission_amount"] as? String == nil ? "" : dictionary["commission_amount"] as? String
-		commissionDetails = [TBCommissionCommissionDetail]()
-		if let commissionDetailsArray = dictionary["commission_details"] as? [NSDictionary]{
-			for dic in commissionDetailsArray{
-				let value = TBCommissionCommissionDetail(fromDictionary: dic)
-				commissionDetails.append(value)
-			}
-		}
+		commissionAmount = dictionary["commission_amount"] as? Float == nil ? 0 : dictionary["commission_amount"] as? Float
+		commissionPercentage = dictionary["commission_percentage"] as? Int == nil ? 0 : dictionary["commission_percentage"] as? Int
 		createdAt = dictionary["created_at"] as? String == nil ? "" : dictionary["created_at"] as? String
-		id = dictionary["id"] as? Int == nil ? 0 : dictionary["id"] as? Int
-		if let orderData = dictionary["order"] as? NSDictionary{
-			order = TBCommissionOrder(fromDictionary: orderData)
+		if let getUserOrderData = dictionary["get_user_order"] as? NSDictionary{
+			getUserOrder = TBCommissionGetUserOrder(fromDictionary: getUserOrderData)
 		}
 		else
 		{
-			order = TBCommissionOrder(fromDictionary: NSDictionary.init())
+			getUserOrder = TBCommissionGetUserOrder(fromDictionary: NSDictionary.init())
 		}
+		getUserOrderCommissionDetail = [TBCommissionGetUserOrderCommissionDetail]()
+		if let getUserOrderCommissionDetailArray = dictionary["get_user_order_commission_detail"] as? [NSDictionary]{
+			for dic in getUserOrderCommissionDetailArray{
+				let value = TBCommissionGetUserOrderCommissionDetail(fromDictionary: dic)
+				getUserOrderCommissionDetail.append(value)
+			}
+		}
+		id = dictionary["id"] as? Int == nil ? 0 : dictionary["id"] as? Int
 		orderId = dictionary["order_id"] as? Int == nil ? 0 : dictionary["order_id"] as? Int
 		status = dictionary["status"] as? Int == nil ? 0 : dictionary["status"] as? Int
+		updatedAt = dictionary["updated_at"] as? String == nil ? "" : dictionary["updated_at"] as? String
 		userId = dictionary["user_id"] as? Int == nil ? 0 : dictionary["user_id"] as? Int
 	}
 
@@ -68,27 +75,33 @@ class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
 		if commissionAmount != nil{
 			dictionary["commission_amount"] = commissionAmount
 		}
-		if commissionDetails != nil{
-			var dictionaryElements = [NSDictionary]()
-			for commissionDetailsElement in commissionDetails {
-				dictionaryElements.append(commissionDetailsElement.toDictionary())
-			}
-			dictionary["commission_details"] = dictionaryElements
+		if commissionPercentage != nil{
+			dictionary["commission_percentage"] = commissionPercentage
 		}
 		if createdAt != nil{
 			dictionary["created_at"] = createdAt
 		}
+		if getUserOrder != nil{
+			dictionary["get_user_order"] = getUserOrder.toDictionary()
+		}
+		if getUserOrderCommissionDetail != nil{
+			var dictionaryElements = [NSDictionary]()
+			for getUserOrderCommissionDetailElement in getUserOrderCommissionDetail {
+				dictionaryElements.append(getUserOrderCommissionDetailElement.toDictionary())
+			}
+			dictionary["get_user_order_commission_detail"] = dictionaryElements
+		}
 		if id != nil{
 			dictionary["id"] = id
-		}
-		if order != nil{
-			dictionary["order"] = order.toDictionary()
 		}
 		if orderId != nil{
 			dictionary["order_id"] = orderId
 		}
 		if status != nil{
 			dictionary["status"] = status
+		}
+		if updatedAt != nil{
+			dictionary["updated_at"] = updatedAt
 		}
 		if userId != nil{
 			dictionary["user_id"] = userId
@@ -102,13 +115,15 @@ class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         commissionAmount = aDecoder.decodeObject(forKey: "commission_amount") as? String
-         commissionDetails = aDecoder.decodeObject(forKey: "commission_details") as? [TBCommissionCommissionDetail]
+         commissionAmount = aDecoder.decodeObject(forKey: "commission_amount") as? Float
+         commissionPercentage = aDecoder.decodeObject(forKey: "commission_percentage") as? Int
          createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
+         getUserOrder = aDecoder.decodeObject(forKey: "get_user_order") as? TBCommissionGetUserOrder
+         getUserOrderCommissionDetail = aDecoder.decodeObject(forKey: "get_user_order_commission_detail") as? [TBCommissionGetUserOrderCommissionDetail]
          id = aDecoder.decodeObject(forKey: "id") as? Int
-         order = aDecoder.decodeObject(forKey: "order") as? TBCommissionOrder
          orderId = aDecoder.decodeObject(forKey: "order_id") as? Int
          status = aDecoder.decodeObject(forKey: "status") as? Int
+         updatedAt = aDecoder.decodeObject(forKey: "updated_at") as? String
          userId = aDecoder.decodeObject(forKey: "user_id") as? Int
 
 	}
@@ -122,23 +137,29 @@ class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
 		if commissionAmount != nil{
 			aCoder.encode(commissionAmount, forKey: "commission_amount")
 		}
-		if commissionDetails != nil{
-			aCoder.encode(commissionDetails, forKey: "commission_details")
+		if commissionPercentage != nil{
+			aCoder.encode(commissionPercentage, forKey: "commission_percentage")
 		}
 		if createdAt != nil{
 			aCoder.encode(createdAt, forKey: "created_at")
 		}
+		if getUserOrder != nil{
+			aCoder.encode(getUserOrder, forKey: "get_user_order")
+		}
+		if getUserOrderCommissionDetail != nil{
+			aCoder.encode(getUserOrderCommissionDetail, forKey: "get_user_order_commission_detail")
+		}
 		if id != nil{
 			aCoder.encode(id, forKey: "id")
-		}
-		if order != nil{
-			aCoder.encode(order, forKey: "order")
 		}
 		if orderId != nil{
 			aCoder.encode(orderId, forKey: "order_id")
 		}
 		if status != nil{
 			aCoder.encode(status, forKey: "status")
+		}
+		if updatedAt != nil{
+			aCoder.encode(updatedAt, forKey: "updated_at")
 		}
 		if userId != nil{
 			aCoder.encode(userId, forKey: "user_id")

@@ -8998,10 +8998,10 @@ hours.</string>
                                 <rect key="frame" x="0.0" y="48" width="414" height="952"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oJ-is-Ffo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="934"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1010"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1X-tr-5dx">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="934"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1010"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 49xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="vGZ-tM-5h2">
                                                         <rect key="frame" x="20" y="20" width="20" height="20"/>
@@ -9088,10 +9088,10 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXC-zP-we0">
-                                                        <rect key="frame" x="15" y="162.5" width="384" height="149"/>
+                                                        <rect key="frame" x="15" y="162.5" width="384" height="225"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Nt-3b-M1f">
-                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="149"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="225"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-WH-Djj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
@@ -9229,6 +9229,60 @@ hours.</string>
                                                                             <constraint firstItem="9Sm-2Z-OaE" firstAttribute="top" secondItem="uJj-QQ-bvn" secondAttribute="top" id="oza-sf-SED"/>
                                                                         </constraints>
                                                                     </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-z5-iMI">
+                                                                        <rect key="frame" x="0.0" y="152" width="384" height="35"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOYALTY POINTS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCa-OR-EnC">
+                                                                                <rect key="frame" x="40" y="8.5" width="124" height="18"/>
+                                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j18-xF-Ctb">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <connections>
+                                                                                    <action selector="clickedLoyaltyPoints:" destination="tQB-nZ-4Bz" eventType="touchUpInside" id="TpK-XX-DAB"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="UCa-OR-EnC" firstAttribute="centerY" secondItem="JmW-z5-iMI" secondAttribute="centerY" id="4XE-Gh-yKY"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="j18-xF-Ctb" secondAttribute="trailing" id="7iu-Jr-vCa"/>
+                                                                            <constraint firstItem="j18-xF-Ctb" firstAttribute="leading" secondItem="JmW-z5-iMI" secondAttribute="leading" id="GV0-TL-Cq5"/>
+                                                                            <constraint firstItem="UCa-OR-EnC" firstAttribute="leading" secondItem="JmW-z5-iMI" secondAttribute="leading" constant="40" id="ky1-lB-2B4"/>
+                                                                            <constraint firstItem="j18-xF-Ctb" firstAttribute="top" secondItem="JmW-z5-iMI" secondAttribute="top" id="nBj-27-wJm"/>
+                                                                            <constraint firstAttribute="height" constant="35" id="ozz-tl-jRx"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="j18-xF-Ctb" secondAttribute="bottom" id="wsj-Qf-Oye"/>
+                                                                        </constraints>
+                                                                    </view>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56h-IU-QHZ">
+                                                                        <rect key="frame" x="0.0" y="190" width="384" height="35"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOYALTY COUPONS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmo-fk-AzA">
+                                                                                <rect key="frame" x="40" y="8.5" width="144" height="18"/>
+                                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnT-OK-q1H">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
+                                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                <connections>
+                                                                                    <action selector="clickedLoyaltyCoupons:" destination="tQB-nZ-4Bz" eventType="touchUpInside" id="Xlg-Ja-qts"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="35" id="Jt7-0M-cGm"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="cnT-OK-q1H" secondAttribute="bottom" id="dbE-SW-wMW"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="cnT-OK-q1H" secondAttribute="trailing" id="ffm-cR-fQf"/>
+                                                                            <constraint firstItem="cnT-OK-q1H" firstAttribute="leading" secondItem="56h-IU-QHZ" secondAttribute="leading" id="n1s-3S-076"/>
+                                                                            <constraint firstItem="cnT-OK-q1H" firstAttribute="top" secondItem="56h-IU-QHZ" secondAttribute="top" id="pU5-9b-CiX"/>
+                                                                            <constraint firstItem="cmo-fk-AzA" firstAttribute="centerY" secondItem="56h-IU-QHZ" secondAttribute="centerY" id="tWP-aY-pzC"/>
+                                                                            <constraint firstItem="cmo-fk-AzA" firstAttribute="leading" secondItem="56h-IU-QHZ" secondAttribute="leading" constant="40" id="xqf-qJ-zxE"/>
+                                                                        </constraints>
+                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
@@ -9241,14 +9295,14 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8U-Vr-3Q2">
-                                                        <rect key="frame" x="15" y="311.5" width="384" height="1"/>
+                                                        <rect key="frame" x="15" y="387.5" width="384" height="1"/>
                                                         <color key="backgroundColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="bPC-to-CBT"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V4y-fO-Mqw">
-                                                        <rect key="frame" x="15" y="312.5" width="384" height="355"/>
+                                                        <rect key="frame" x="15" y="388.5" width="384" height="355"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btS-qL-teH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
@@ -9555,7 +9609,7 @@ hours.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OfN-A9-4yt">
-                                                        <rect key="frame" x="0.0" y="677.5" width="414" height="60"/>
+                                                        <rect key="frame" x="0.0" y="753.5" width="414" height="60"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 382" translatesAutoresizingMaskIntoConstraints="NO" id="nNn-cz-CAP">
                                                                 <rect key="frame" x="20" y="0.0" width="374" height="60"/>
@@ -9574,7 +9628,7 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="KfY-1c-8om">
-                                                        <rect key="frame" x="87" y="787" width="240" height="50"/>
+                                                        <rect key="frame" x="87" y="863" width="240" height="50"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhV-OY-MN9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -9638,7 +9692,7 @@ hours.</string>
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17d-Cm-nP0">
-                                                        <rect key="frame" x="73" y="842" width="268.5" height="87"/>
+                                                        <rect key="frame" x="73" y="918" width="268.5" height="87"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Asset 62xxhdpi" translatesAutoresizingMaskIntoConstraints="NO" id="4xs-jF-5Ud">
                                                                 <rect key="frame" x="143.5" y="-3" width="120" height="70"/>
@@ -9677,7 +9731,7 @@ hours.</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Follow us" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8V-Z6-seH">
-                                                        <rect key="frame" x="166" y="757.5" width="82" height="21.5"/>
+                                                        <rect key="frame" x="166" y="833.5" width="82" height="21.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>

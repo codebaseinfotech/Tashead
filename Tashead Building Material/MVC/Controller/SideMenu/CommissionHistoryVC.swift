@@ -277,7 +277,7 @@ extension CommissionHistoryVC: UITableViewDelegate, UITableViewDataSource
         
         cell.lblOrderId.text = "Order ID: \(dicData.orderId ?? 0)"
         
-        cell.lblPrice.text = "\(dicData.commissionAmount ?? "") KD"
+        cell.lblPrice.text = "\(dicData.commissionAmount ?? 0.0) KD"
         
         let bidAccepted = dicData.createdAt ?? ""
         let formatter = DateFormatter()

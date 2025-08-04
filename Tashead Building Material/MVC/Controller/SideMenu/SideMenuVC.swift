@@ -448,6 +448,34 @@ class SideMenuVC: UIViewController {
         }
     }
     
+    @IBAction func clickedLoyaltyPoints(_ sender: Any) {
+        let controller = appDelegate?.window?.rootViewController as! LGSideMenuController
+        let navigation = controller.rootViewController as! UINavigationController
+        let SelectLangViewController = LoyaltyPointsVC()
+        navigation.viewControllers = [SelectLangViewController]
+        if Language.shared.isArabic {
+            self.sideMenuController?.hideRightViewAnimated(sender: self)
+        }
+        else
+        {
+            self.sideMenuController?.hideLeftViewAnimated(sender: self)
+        }
+    }
+    
+    @IBAction func clickedLoyaltyCoupons(_ sender: Any) {
+        let controller = appDelegate?.window?.rootViewController as! LGSideMenuController
+        let navigation = controller.rootViewController as! UINavigationController
+        let SelectLangViewController = LoyaltyCouponsVC()
+        navigation.viewControllers = [SelectLangViewController]
+        if Language.shared.isArabic {
+            self.sideMenuController?.hideRightViewAnimated(sender: self)
+        }
+        else
+        {
+            self.sideMenuController?.hideLeftViewAnimated(sender: self)
+        }
+    }
+    
     
     @IBAction func clickedLanguage(_ sender: Any) {
         let mainStoryboard : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)

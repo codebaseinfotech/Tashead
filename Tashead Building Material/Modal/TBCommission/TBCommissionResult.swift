@@ -1,5 +1,8 @@
 //
 //	TBCommissionResult.swift
+//
+//	Create by Ankit Gabani on 6/5/2024
+//	Copyright © 2024. All rights reserved.
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
@@ -7,9 +10,7 @@ import Foundation
 
 class TBCommissionResult : NSObject, NSCoding{
 
-	var totalCommissionAmount : String!
-	var totalPaidCommissionAmount : String!
-	var totalUnpaidCommissionAmount : String!
+	var totalCommissionAmount : Float!
 	var userOrderedDiscounts : [TBCommissionUserOrderedDiscount]!
 
 
@@ -33,9 +34,7 @@ class TBCommissionResult : NSObject, NSCoding{
 	 */
 	@objc func parseJSONData(fromDictionary dictionary: NSDictionary)
 	{
-		totalCommissionAmount = dictionary["total_commission_amount"] as? String == nil ? "" : dictionary["total_commission_amount"] as? String
-		totalPaidCommissionAmount = dictionary["total_paid_commission_amount"] as? String == nil ? "" : dictionary["total_paid_commission_amount"] as? String
-		totalUnpaidCommissionAmount = dictionary["total_unpaid_commission_amount"] as? String == nil ? "" : dictionary["total_unpaid_commission_amount"] as? String
+		totalCommissionAmount = dictionary["total_commission_amount"] as? Float == nil ? 0 : dictionary["total_commission_amount"] as? Float
 		userOrderedDiscounts = [TBCommissionUserOrderedDiscount]()
 		if let userOrderedDiscountsArray = dictionary["user_ordered_discounts"] as? [NSDictionary]{
 			for dic in userOrderedDiscountsArray{
@@ -54,12 +53,6 @@ class TBCommissionResult : NSObject, NSCoding{
 		if totalCommissionAmount != nil{
 			dictionary["total_commission_amount"] = totalCommissionAmount
 		}
-		if totalPaidCommissionAmount != nil{
-			dictionary["total_paid_commission_amount"] = totalPaidCommissionAmount
-		}
-		if totalUnpaidCommissionAmount != nil{
-			dictionary["total_unpaid_commission_amount"] = totalUnpaidCommissionAmount
-		}
 		if userOrderedDiscounts != nil{
 			var dictionaryElements = [NSDictionary]()
 			for userOrderedDiscountsElement in userOrderedDiscounts {
@@ -76,9 +69,7 @@ class TBCommissionResult : NSObject, NSCoding{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         totalCommissionAmount = aDecoder.decodeObject(forKey: "total_commission_amount") as? String
-         totalPaidCommissionAmount = aDecoder.decodeObject(forKey: "total_paid_commission_amount") as? String
-         totalUnpaidCommissionAmount = aDecoder.decodeObject(forKey: "total_unpaid_commission_amount") as? String
+         totalCommissionAmount = aDecoder.decodeObject(forKey: "total_commission_amount") as? Float
          userOrderedDiscounts = aDecoder.decodeObject(forKey: "user_ordered_discounts") as? [TBCommissionUserOrderedDiscount]
 
 	}
@@ -91,12 +82,6 @@ class TBCommissionResult : NSObject, NSCoding{
 	{
 		if totalCommissionAmount != nil{
 			aCoder.encode(totalCommissionAmount, forKey: "total_commission_amount")
-		}
-		if totalPaidCommissionAmount != nil{
-			aCoder.encode(totalPaidCommissionAmount, forKey: "total_paid_commission_amount")
-		}
-		if totalUnpaidCommissionAmount != nil{
-			aCoder.encode(totalUnpaidCommissionAmount, forKey: "total_unpaid_commission_amount")
 		}
 		if userOrderedDiscounts != nil{
 			aCoder.encode(userOrderedDiscounts, forKey: "user_ordered_discounts")
