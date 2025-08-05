@@ -232,14 +232,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     @IBOutlet weak var lblSelectLoayltyPoin: UILabel!
 //    @IBOutlet weak var heightCollectionLayalty: NSLayoutConstraint!
     
-    @IBOutlet weak var tblViewLoyaltyCoupons: UITableView! {
-        didSet {
-            tblViewLoyaltyCoupons.delegate = self
-            tblViewLoyaltyCoupons.dataSource = self
-        }
-    }
-    
-    
+    @IBOutlet weak var tblViewLoyaltyCoupons: UITableView!
     
     var arrFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
     var arrNonFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
@@ -272,6 +265,10 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         tblVie.delegate = self
         tblVie.dataSource = self
         tblVie.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        
+        tblViewLoyaltyCoupons.delegate = self
+        tblViewLoyaltyCoupons.dataSource = self
+        tblViewLoyaltyCoupons.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         
         lblTUseCredit.text = "Use Credit?".localizeString(string: Language.shared.currentAppLang)
         lblTBalanceUC.text = "Available limit:".localizeString(string: Language.shared.currentAppLang)
@@ -541,6 +538,9 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         {
             return 1
         }
+        else if tableView == tblViewLoyaltyCoupons {
+            return 1
+        }
         else
         {
             return 0
@@ -572,6 +572,9 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                 return arrFactoryProduct.count
             }
         }
+        else if tableView == tblViewLoyaltyCoupons {
+            return 2
+        }
         else
         {
             return 0
@@ -582,53 +585,62 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if arrNonFactoryProduct.count > 0 && arrFactoryProduct.count > 0
-        {
-            if indexPath.section == 0
+        if tableView == tblVie {
+            if arrNonFactoryProduct.count > 0 && arrFactoryProduct.count > 0
             {
-                let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
-                
-                let dicProduct = arrNonFactoryProduct[indexPath.row]
-                
-                cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
-                
-                return cell
+                if indexPath.section == 0
+                {
+                    let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
+                    
+                    let dicProduct = arrNonFactoryProduct[indexPath.row]
+                    
+                    cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
+                    
+                    return cell
+                }
+                else
+                {
+                    let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
+                    
+                    let dicProduct = arrFactoryProduct[indexPath.row]
+                    
+                    cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
+                    
+                    return cell
+                    
+                }
             }
             else
             {
-                let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
-                
-                let dicProduct = arrFactoryProduct[indexPath.row]
-                
-                cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
-                
-                return cell
-                
+                if arrNonFactoryProduct.count > 0
+                {
+                    let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
+                    
+                    let dicProduct = arrNonFactoryProduct[indexPath.row]
+                    
+                    cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
+                    
+                    return cell
+                }
+                else
+                {
+                    let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
+                    
+                    let dicProduct = arrFactoryProduct[indexPath.row]
+                    
+                    cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
+                    
+                    return cell
+                }
             }
+            
+        } else if tableView == tblViewLoyaltyCoupons {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LoayltyCouponCell", for: indexPath) as! LoayltyCouponCell
+            
+            return cell
         }
-        else
-        {
-            if arrNonFactoryProduct.count > 0
-            {
-                let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
-                
-                let dicProduct = arrNonFactoryProduct[indexPath.row]
-                
-                cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
-                
-                return cell
-            }
-            else
-            {
-                let cell = tblVie.dequeueReusableCell(withIdentifier: "checkOutListCell") as! checkOutListCell
-                
-                let dicProduct = arrFactoryProduct[indexPath.row]
-                
-                cell.lblName.text = "\(indexPath.row+1). \(dicProduct.name ?? "")"
-                
-                return cell
-            }
-        }
+        
+        return UITableViewCell()
         
     }
     

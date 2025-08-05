@@ -5776,7 +5776,7 @@ hours.</string>
                                                                                         <rect key="frame" x="0.0" y="32" width="378" height="100"/>
                                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                         <constraints>
-                                                                                            <constraint firstAttribute="height" constant="100" id="gKn-r9-swG"/>
+                                                                                            <constraint firstAttribute="height" constant="100" id="6wa-Le-0XL"/>
                                                                                         </constraints>
                                                                                         <prototypes>
                                                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoayltyCouponCell" rowHeight="80" id="q8a-8Q-eG4" customClass="LoayltyCouponCell" customModule="Tashead_Building_Material" customModuleProvider="target">
@@ -5787,13 +5787,13 @@ hours.</string>
                                                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                                                     <subviews>
                                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynd-iJ-ix1">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="378" height="80"/>
+                                                                                                            <rect key="frame" x="0.0" y="3" width="378" height="74"/>
                                                                                                             <subviews>
                                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="JlY-2Q-iOE">
-                                                                                                                    <rect key="frame" x="10" y="15" width="50" height="50"/>
+                                                                                                                    <rect key="frame" x="10" y="10" width="40" height="54"/>
                                                                                                                     <constraints>
-                                                                                                                        <constraint firstAttribute="height" constant="50" id="TcX-st-hyj"/>
-                                                                                                                        <constraint firstAttribute="width" constant="50" id="ojT-nT-njw"/>
+                                                                                                                        <constraint firstAttribute="height" constant="40" id="TcX-st-hyj"/>
+                                                                                                                        <constraint firstAttribute="width" constant="40" id="ojT-nT-njw"/>
                                                                                                                     </constraints>
                                                                                                                     <userDefinedRuntimeAttributes>
                                                                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -5802,19 +5802,19 @@ hours.</string>
                                                                                                                     </userDefinedRuntimeAttributes>
                                                                                                                 </imageView>
                                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.000 KD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwZ-ph-Tx0">
-                                                                                                                    <rect key="frame" x="70" y="15" width="64.5" height="18"/>
+                                                                                                                    <rect key="frame" x="60" y="10" width="64.5" height="18"/>
                                                                                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                                                     <nil key="textColor"/>
                                                                                                                     <nil key="highlightedColor"/>
                                                                                                                 </label>
                                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-xB-VrY">
-                                                                                                                    <rect key="frame" x="70" y="38" width="65.5" height="18"/>
+                                                                                                                    <rect key="frame" x="60" y="32" width="65.5" height="18"/>
                                                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                                                                     <color key="textColor" red="0.062745098040000002" green="0.63529411759999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                                     <nil key="highlightedColor"/>
                                                                                                                 </label>
                                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_UnCheckbox" translatesAutoresizingMaskIntoConstraints="NO" id="SCN-lS-25m">
-                                                                                                                    <rect key="frame" x="348" y="30" width="20" height="20"/>
+                                                                                                                    <rect key="frame" x="343" y="27" width="20" height="20"/>
                                                                                                                     <constraints>
                                                                                                                         <constraint firstAttribute="width" constant="20" id="41g-ok-89e"/>
                                                                                                                         <constraint firstAttribute="height" constant="20" id="rOc-F1-3ai"/>
@@ -5825,16 +5825,18 @@ hours.</string>
                                                                                                             <constraints>
                                                                                                                 <constraint firstItem="YwZ-ph-Tx0" firstAttribute="leading" secondItem="JlY-2Q-iOE" secondAttribute="trailing" constant="10" id="CoJ-Py-unn"/>
                                                                                                                 <constraint firstItem="JlY-2Q-iOE" firstAttribute="leading" secondItem="ynd-iJ-ix1" secondAttribute="leading" constant="10" id="Gnh-8s-cLN"/>
-                                                                                                                <constraint firstAttribute="trailing" secondItem="SCN-lS-25m" secondAttribute="trailing" constant="10" id="Jmg-ld-8fq"/>
-                                                                                                                <constraint firstItem="0DH-xB-VrY" firstAttribute="top" secondItem="YwZ-ph-Tx0" secondAttribute="bottom" constant="5" id="L8j-z0-tpf"/>
+                                                                                                                <constraint firstAttribute="trailing" secondItem="SCN-lS-25m" secondAttribute="trailing" constant="15" id="Jmg-ld-8fq"/>
+                                                                                                                <constraint firstItem="0DH-xB-VrY" firstAttribute="top" secondItem="YwZ-ph-Tx0" secondAttribute="bottom" constant="4" id="L8j-z0-tpf"/>
                                                                                                                 <constraint firstItem="0DH-xB-VrY" firstAttribute="leading" secondItem="YwZ-ph-Tx0" secondAttribute="leading" id="Oe8-DK-xdX"/>
+                                                                                                                <constraint firstAttribute="bottom" secondItem="JlY-2Q-iOE" secondAttribute="bottom" constant="10" id="Slo-7b-FLf"/>
                                                                                                                 <constraint firstItem="SCN-lS-25m" firstAttribute="centerY" secondItem="JlY-2Q-iOE" secondAttribute="centerY" id="VdF-PB-SwC"/>
+                                                                                                                <constraint firstItem="JlY-2Q-iOE" firstAttribute="top" secondItem="ynd-iJ-ix1" secondAttribute="top" constant="10" id="b5A-hG-9XO"/>
                                                                                                                 <constraint firstItem="JlY-2Q-iOE" firstAttribute="centerY" secondItem="ynd-iJ-ix1" secondAttribute="centerY" id="kVK-9o-BTT"/>
                                                                                                                 <constraint firstItem="YwZ-ph-Tx0" firstAttribute="top" secondItem="JlY-2Q-iOE" secondAttribute="top" id="yFR-IE-gxV"/>
                                                                                                             </constraints>
                                                                                                             <userDefinedRuntimeAttributes>
                                                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                                                    <real key="value" value="5"/>
+                                                                                                                    <real key="value" value="8"/>
                                                                                                                 </userDefinedRuntimeAttribute>
                                                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                                                                     <real key="value" value="1"/>
@@ -5848,8 +5850,8 @@ hours.</string>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="trailing" secondItem="ynd-iJ-ix1" secondAttribute="trailing" id="HBT-18-6k0"/>
                                                                                                         <constraint firstItem="ynd-iJ-ix1" firstAttribute="leading" secondItem="Esi-Jo-NTj" secondAttribute="leading" id="Iej-Hm-Qro"/>
-                                                                                                        <constraint firstAttribute="bottom" secondItem="ynd-iJ-ix1" secondAttribute="bottom" id="bgG-Qs-2r0"/>
-                                                                                                        <constraint firstItem="ynd-iJ-ix1" firstAttribute="top" secondItem="Esi-Jo-NTj" secondAttribute="top" id="rZ7-EC-XwE"/>
+                                                                                                        <constraint firstAttribute="bottom" secondItem="ynd-iJ-ix1" secondAttribute="bottom" constant="3" id="bgG-Qs-2r0"/>
+                                                                                                        <constraint firstItem="ynd-iJ-ix1" firstAttribute="top" secondItem="Esi-Jo-NTj" secondAttribute="top" constant="3" id="rZ7-EC-XwE"/>
                                                                                                     </constraints>
                                                                                                 </tableViewCellContentView>
                                                                                             </tableViewCell>
