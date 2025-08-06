@@ -11,7 +11,7 @@ import CoreLocation
 import MarqueeLabel
 
 class NewHomeVC: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var tblView: UITableView! {
         didSet {
             tblView.delegate = self
@@ -43,7 +43,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         let token = UserDefaults.standard.value(forKey: "token") as? String ?? ""
-
+        
         print("Usertoken:- \(token)")
         
         callBannersAPI()
@@ -62,7 +62,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
                 self.locationManager.requestAlwaysAuthorization()
                 self.locationManager.startUpdatingLocation()
             }
-         }
+        }
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             if appDelegate?.isFirstTime == true {
@@ -83,7 +83,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
                 self.openChooseDelivery()
             }
         }
-       
+        
         // Do any additional setup after loading the view.
     }
     
@@ -95,7 +95,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
             self.setUpMakeToast(msg: appDelegate?.strOrder ?? "")
         }
         
-      
+        
         if appDelegate?.dicCurrentLoginUser.id != nil
         {
             imgCartRight.constant = 20
@@ -106,22 +106,22 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
             
             //lblUserNaem.text = "\("Welcome".localizeString(string: Language.shared.currentAppLang)) \(appDelegate?.dicCurrentLoginUser.name ?? "")"
             
-//            lblUserNaem.isHidden = true
-//            imgProfile.isHidden = true
-
+            //            lblUserNaem.isHidden = true
+            //            imgProfile.isHidden = true
+            
             callGetCartAPI()
         }
         else
         {
-          //  lblUserNaem.text = "Welcome Guest".localizeString(string: Language.shared.currentAppLang)
+            //  lblUserNaem.text = "Welcome Guest".localizeString(string: Language.shared.currentAppLang)
             
-//            lblUserNaem.isHidden = true
-//            imgProfile.isHidden = true
+            //            lblUserNaem.isHidden = true
+            //            imgProfile.isHidden = true
             
             imgCartRight.constant = 0
             imgCartWidth.constant = 0
             imgCart.isHidden = true
-
+            
         }
     }
     
@@ -172,21 +172,21 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
-//            else
-//            {
-//                let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let vc: LoginViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//                vc.isFromHome = true
-//                self.navigationController?.pushViewController(vc, animated: false)
-//            }
+            //            else
+            //            {
+            //                let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            //                let vc: LoginViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            //                vc.isFromHome = true
+            //                self.navigationController?.pushViewController(vc, animated: false)
+            //            }
         }
-//        else
-//        {
-//            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc: LoginViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//            vc.isFromHome = true
-//            self.navigationController?.pushViewController(vc, animated: false)
-//        }
+        //        else
+        //        {
+        //            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //            let vc: LoginViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        //            vc.isFromHome = true
+        //            self.navigationController?.pushViewController(vc, animated: false)
+        //        }
         
     }
     @IBAction func clickedSearch(_ sender: Any) {
@@ -294,7 +294,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
                     if status == 1
                     {
                         var objCart = TBCartListResult()
-
+                        
                         if let dicResult = response?.value(forKey: "result") as? NSDictionary
                         {
                             
@@ -402,23 +402,23 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
                 {
                     if status == 1
                     {
-//                        self.txtPromoCode.text = ""
-//                        self.txtPromoCode.isUserInteractionEnabled = true
-//                        self.txtPromoCode.alpha = 1
-//                        self.btnApplyRemove.setTitle("Redeem".localizeString(string: Language.shared.currentAppLang), for: .normal)
-//
-//                        self.callGetCartAPI()
+                        //                        self.txtPromoCode.text = ""
+                        //                        self.txtPromoCode.isUserInteractionEnabled = true
+                        //                        self.txtPromoCode.alpha = 1
+                        //                        self.btnApplyRemove.setTitle("Redeem".localizeString(string: Language.shared.currentAppLang), for: .normal)
+                        //
+                        //                        self.callGetCartAPI()
                         
-                  //      self.setUpMakeToast(msg: message ?? "")
+                        //      self.setUpMakeToast(msg: message ?? "")
                     }
                     else
                     {
-                    //    self.setUpMakeToast(msg: message ?? "")
-                     }
+                        //    self.setUpMakeToast(msg: message ?? "")
+                    }
                 }
                 else
                 {
-                  //  self.setUpMakeToast(msg: message ?? "")
+                    //  self.setUpMakeToast(msg: message ?? "")
                 }
             }
             else
@@ -561,7 +561,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
     
     func callInfluencersAPI()
     {
-//        APIClient.sharedInstance.showIndicator()
+        //        APIClient.sharedInstance.showIndicator()
         
         let param = ["":""]
         
@@ -658,10 +658,10 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
                         if let dic = response?.value(forKey: "result") as? NSDictionary
                         {
                             let dicData = TBLoginUserResult(fromDictionary: dic)
-                           
+                            
                             appDelegate?.saveCuurentUserData(dic: dicData)
                             appDelegate?.dicCurrentLoginUser = dicData
-                         }
+                        }
                     }
                     else
                     {
@@ -689,7 +689,7 @@ class NewHomeVC: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-
+    
 }
 
 // MARK: - didOnChooseDelivery
@@ -728,8 +728,8 @@ extension NewHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewInfluncerCell", for: indexPath) as! NewInfluncerCell
         
         let dicData = arrInfluencersList[indexPath.row]
- 
-//        cell.hideSkeltonview()
+        
+        //        cell.hideSkeltonview()
         
         var media_link_url = "\(dicData.image ?? "")"
         media_link_url = (media_link_url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))!
@@ -806,7 +806,7 @@ extension NewHomeVC: UITableViewDelegate, UITableViewDataSource {
                 
                 let dicData = arrMasterCategories[indexPath.row]
                 
- 
+                
                 cell.configure(with: dicData.name ?? "")
                 
                 var media_link_url = "\(dicData.image ?? "")"
@@ -1130,7 +1130,7 @@ class TopHomeBannerCell: UITableViewCell, UICollectionViewDelegate, UICollection
         super.awakeFromNib()
         
     }
- 
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         if let collectionView = scrollView as? UICollectionView {

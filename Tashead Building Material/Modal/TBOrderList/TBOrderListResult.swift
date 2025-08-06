@@ -23,6 +23,7 @@ class TBOrderListResult : NSObject, NSCoding{
     var invoice_url : String!
     var total : String!
     var order_status_text : String!
+    var status : Int!
     var order_total : String!
 
 	/**
@@ -57,6 +58,7 @@ class TBOrderListResult : NSObject, NSCoding{
 
         invoice_url = dictionary["invoice_url"] as? String == nil ? "" : dictionary["invoice_url"] as? String
         order_status_text = dictionary["order_status_text"] as? String == nil ? "" : dictionary["order_status_text"] as? String
+        status = dictionary["status"] as? Int == nil ? 0 : dictionary["status"] as? Int
         total = dictionary["total"] as? String == nil ? "" : dictionary["total"] as? String
         order_total = dictionary["order_total"] as? String == nil ? "" : dictionary["order_total"] as? String
 
@@ -100,6 +102,9 @@ class TBOrderListResult : NSObject, NSCoding{
         if order_status_text != nil{
             dictionary["order_status_text"] = order_status_text
         }
+        if status != nil{
+            dictionary["status"] = status
+        }
         if total != nil{
             dictionary["total"] = total
         }
@@ -127,6 +132,7 @@ class TBOrderListResult : NSObject, NSCoding{
 
         invoice_url = aDecoder.decodeObject(forKey: "invoice_url") as? String
         order_status_text = aDecoder.decodeObject(forKey: "order_status_text") as? String
+        status = aDecoder.decodeObject(forKey: "status") as? Int
         total = aDecoder.decodeObject(forKey: "total") as? String
         order_total = aDecoder.decodeObject(forKey: "order_total") as? String
 
@@ -170,6 +176,10 @@ class TBOrderListResult : NSObject, NSCoding{
         }
         if order_status_text != nil{
             aCoder.encode(order_status_text, forKey: "order_status_text")
+        }
+        
+        if status != nil{
+            aCoder.encode(status, forKey: "status")
         }
         
         if total != nil{

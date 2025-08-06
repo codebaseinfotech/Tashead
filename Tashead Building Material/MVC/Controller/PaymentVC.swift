@@ -1366,9 +1366,12 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                     if payment_method == "" {
                         self.setUpMakeToast(msg: "Please select payment method".localizeString(string: Language.shared.currentAppLang))
                     } else {
-                        if payment_method == "knet" {
+                        if payment_method == "knet" || payment_method == "loyalty_knet"
+                        {
                             payment_method = "loyalty_knet"
-                        } else {
+                        }
+                        else
+                        {
                             payment_method = "loyalty_cod"
                         }
                         callCheckOutAPI()
@@ -1833,12 +1836,6 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             }*/
                             
                             self.setPaymentOption()
-                            
-                            self.payment_method = ""
-                            self.imgKnet.image = UIImage(named: "ic_UnCheckbox")
-                            self.imgApplePay.image = UIImage(named: "ic_UnCheckbox")
-                            self.imgSendLink.image = UIImage(named: "ic_UnCheckbox")
-                            self.imgCOd.image = UIImage(named: "ic_UnCheckbox")
                             
                             if self.is_loaylty == true {
                                 self.viewApplePay.isHidden = true
