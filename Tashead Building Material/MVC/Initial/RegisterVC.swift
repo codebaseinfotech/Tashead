@@ -865,7 +865,7 @@ class RegisterVC: UIViewController, CLLocationManagerDelegate, UITextViewDelegat
                             UserDefaults.standard.synchronize()
                             
                             appDelegate?.saveIsUserLogin(dic: true)
-                            
+                            appDelegate?.isFirstTime = true
                             appDelegate?.setUpHome()
                         }
                     }

@@ -17,7 +17,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoyaltyCouponsVC" customModule="Tashead_Building_Material" customModuleProvider="target">
             <connections>
+                <outlet property="imgBAck" destination="26w-yV-VVf" id="hKZ-ej-BSn"/>
                 <outlet property="lblAmount" destination="wEp-LX-SG5" id="dJR-2e-FBB"/>
+                <outlet property="lblLoyaltyPoint" destination="kxR-yr-Y4J" id="aK8-C8-kdy"/>
+                <outlet property="lblTotalPoint" destination="Tqg-rd-is7" id="OxL-4S-gev"/>
                 <outlet property="lblTotalPoints" destination="pfI-Qd-h9w" id="dyV-Ea-tdn"/>
                 <outlet property="tblView" destination="hyl-fh-Wx6" id="5kr-b9-79t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

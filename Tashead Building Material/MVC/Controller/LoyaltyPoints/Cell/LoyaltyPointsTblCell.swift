@@ -18,6 +18,11 @@ class LoyaltyPointsTblCell: UITableViewCell {
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblPoints: UILabel!
     
+    @IBOutlet weak var lblTitleOrderID: UILabel! {
+        didSet {
+            lblTitleOrderID.text = "Order ID:".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

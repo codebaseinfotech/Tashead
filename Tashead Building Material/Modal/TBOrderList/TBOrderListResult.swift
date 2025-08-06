@@ -23,6 +23,7 @@ class TBOrderListResult : NSObject, NSCoding{
     var invoice_url : String!
     var total : String!
     var order_status_text : String!
+    var order_total : String!
 
 	/**
 	 * Overiding init method
@@ -57,6 +58,7 @@ class TBOrderListResult : NSObject, NSCoding{
         invoice_url = dictionary["invoice_url"] as? String == nil ? "" : dictionary["invoice_url"] as? String
         order_status_text = dictionary["order_status_text"] as? String == nil ? "" : dictionary["order_status_text"] as? String
         total = dictionary["total"] as? String == nil ? "" : dictionary["total"] as? String
+        order_total = dictionary["order_total"] as? String == nil ? "" : dictionary["order_total"] as? String
 
 	}
 
@@ -101,6 +103,9 @@ class TBOrderListResult : NSObject, NSCoding{
         if total != nil{
             dictionary["total"] = total
         }
+        if order_total != nil{
+            dictionary["order_total"] = order_total
+        }
 		return dictionary
 	}
 
@@ -123,6 +128,7 @@ class TBOrderListResult : NSObject, NSCoding{
         invoice_url = aDecoder.decodeObject(forKey: "invoice_url") as? String
         order_status_text = aDecoder.decodeObject(forKey: "order_status_text") as? String
         total = aDecoder.decodeObject(forKey: "total") as? String
+        order_total = aDecoder.decodeObject(forKey: "order_total") as? String
 
 	}
 
@@ -170,6 +176,9 @@ class TBOrderListResult : NSObject, NSCoding{
             aCoder.encode(total, forKey: "total")
         }
 
+        if order_total != nil{
+            aCoder.encode(order_total, forKey: "order_total")
+        }
 
 	}
 

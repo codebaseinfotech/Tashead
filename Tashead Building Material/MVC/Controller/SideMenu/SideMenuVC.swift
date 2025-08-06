@@ -45,6 +45,11 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var viewMainInbox: UIView!
     @IBOutlet weak var lblInbox: UILabel!
     @IBOutlet weak var viewMainLoyaltiPoint: UIView!
+    @IBOutlet weak var lblTotalProgram: UILabel! {
+        didSet {
+            lblTotalProgram.text = "Loyalty Program".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
     
     override func viewDidLoad()
     {

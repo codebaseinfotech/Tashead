@@ -106,6 +106,7 @@
                 <outlet property="lblPoints" destination="wZf-Y7-s5h" id="e3i-yb-BfH"/>
                 <outlet property="lblTime" destination="LVe-6E-r0I" id="4tV-sR-IC2"/>
                 <outlet property="lblTitle" destination="4m3-T4-FAZ" id="vIE-Jr-ANb"/>
+                <outlet property="lblTitleOrderID" destination="02q-rc-f3J" id="5hZ-z6-0nc"/>
                 <outlet property="topViewOrderConstant" destination="Ic0-LT-eVC" id="4X2-NP-mh7"/>
             </connections>
             <point key="canvasLocation" x="10.687022900763358" y="-10.211267605633804"/>

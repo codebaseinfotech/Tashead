@@ -17,6 +17,26 @@ class LoyaltyPointsVC: UIViewController {
             lblNoDataFounf.text = "No Data Found".localizeString(string: Language.shared.currentAppLang)
         }
     }
+    @IBOutlet weak var imgBack: UIImageView! {
+        didSet {
+            imgBack.image = Language.shared.isArabic ? UIImage(named: "Back_Ar") : UIImage(named: "Back")
+        }
+    }
+    @IBOutlet weak var lblLoyatyPoint: UILabel! {
+        didSet {
+            lblLoyatyPoint.text = "Loyalty Points".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
+    @IBOutlet weak var lblTotalPoint: UILabel! {
+        didSet {
+            lblTotalPoint.text = "Total Points".localizeString(string: Language.shared.currentAppLang) + " :"
+        }
+    }
+    @IBOutlet weak var btnRedeem: UIButton! {
+        didSet {
+            btnRedeem.setTitle("Redeem".localizeString(string: Language.shared.currentAppLang), for: .normal)
+        }
+    }
     
     var arrLoyaltyCouponsHistory: [TBLoyaltyCouponsHistoryHistory] = [TBLoyaltyCouponsHistoryHistory]()
     
@@ -76,8 +96,10 @@ class LoyaltyPointsVC: UIViewController {
                             
                             let point = result.value(forKey: "point") as? String
                             
-                            self.lblTotalPoints.text = point == "" || point == nil ? "0" + " Points" : "\(point ?? "")" + " Points"
-                            
+                            let Points = "Points".localizeString(string: Language.shared.currentAppLang)
+
+                            self.lblTotalPoints.text = point == "" ? "0" + " " + Points : "\(point ?? "")" + " " + Points
+
                             if self.arrLoyaltyCouponsHistory.count > 0 {
                                 self.lblNoDataFounf.isHidden = true
                             } else {
@@ -122,10 +144,12 @@ extension LoyaltyPointsVC: UITableViewDelegate, UITableViewDataSource {
         
         let dicData = arrLoyaltyCouponsHistory[indexPath.row]
         
-        cell.lblTitle.text = (dicData.couponTitle?.isEmpty == false) ? dicData.couponTitle : "Loyalty Points Credited"
+        cell.lblTitle.text = dicData.type == "redeem" ? "Loyalty Points Redeemed".localizeString(string: Language.shared.currentAppLang) : "Loyalty Points Credited".localizeString(string: Language.shared.currentAppLang)
         cell.lblOrderId.text = "\(dicData.orderId ?? 0)"
         cell.lblTime.text = dicData.createdAt ?? ""
         cell.lblPoints.text = "\(dicData.points ?? "") Points"
+        
+        cell.lblPoints.textColor = dicData.type == "redeem" ? .red : UIColor(hexString: "5ABD3B")
         
         cell.selectionStyle = .none
         return cell

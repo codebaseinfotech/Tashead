@@ -477,12 +477,28 @@
 
 "SELECT DELIVERY TIME" = "اختر وقت التوصيل";
 
-"Available :" = "Available :";
+"Available :" = " المتاح :";
 
 "Total Allowed Commission:" = "Total Allowed Commission:";
 
-"Total Paid:" = "Total Paid:";
+"Total Paid:" = "مجموع المدفوع";
 
-"Available Commission:" = "Available Commission:";
+"Available Commission:" = "مبلغ العمولة المتوفر ";
 
-"Use Commission?" = "Use Commission?";
+"Use Commission?" = "استخدم مبلغ العمولة";
+
+"Total Points" = "مجموع النقاط ";
+
+"Points" = "نقاط";
+
+"Loyalty Points" = " نقاط العضوية";
+
+"Loyalty Program" = "برنامج الولاء";
+
+"Loyalty Coupons" = "قسيمة شراء";
+
+"Select Loyalty Coupon" = "اختر قسيمة الشراء ";
+
+"Loyalty Points Credited" = "نقاط العضوية المكتسبة";
+
+"Loyalty Points Redeemed" = "نقاط العضوية المستخدمة";

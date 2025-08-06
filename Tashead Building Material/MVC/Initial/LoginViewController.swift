@@ -354,6 +354,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
     
     func callLoginAPI()
     {
+       
         APIClient.sharedInstance.showIndicator()
         
         let device_token = appDelegate?.devicePushToken ?? ""
@@ -404,7 +405,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
                             UserDefaults.standard.synchronize()
                             
                             appDelegate?.saveIsUserLogin(dic: true)
-                            
+                            appDelegate?.isFirstTime = true
                             if self.isFromHome == true
                             {
                                 self.navigationController?.popViewController(animated: true)
@@ -478,7 +479,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, GIDSignInDeleg
                             UserDefaults.standard.synchronize()
                             
                             appDelegate?.saveIsUserLogin(dic: true)
-                            
+                            appDelegate?.isFirstTime = true
                             if self.isFromHome == true
                             {
                                 self.navigationController?.popViewController(animated: true)

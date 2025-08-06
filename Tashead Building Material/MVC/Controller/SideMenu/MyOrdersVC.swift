@@ -377,9 +377,29 @@ extension MyOrdersVC: UITableViewDelegate, UITableViewDataSource
             cell.viewChangeNumber.isHidden = true
             
             cell.viewNew.isHidden = false
+            
+            cell.lblNew.text = dicData.order_status_text.localizeString(string: Language.shared.currentAppLang)
+            
+            if dicData.order_status_text == "New" {
+                cell.viewNew.backgroundColor = UIColor(hexString: "#e2e8f0")
+                cell.lblNew.textColor = UIColor(hexString: "#9da8b8")
+            } else if dicData.order_status_text == "Delivered" {
+                cell.viewNew.backgroundColor = UIColor(hexString: "#e7f8e7")
+                cell.lblNew.textColor = UIColor(hexString: "#8fd28f")
+
+            } else if dicData.order_status_text == "Out for Delivery" {
+                cell.viewNew.backgroundColor = UIColor(hexString: "#e6e9ff")
+                cell.lblNew.textColor = UIColor(hexString: "#7f8afc")
+
+            } else if dicData.order_status_text == "Cancelled" {
+                cell.viewNew.backgroundColor = UIColor(hexString: "#fde4ea")
+                cell.lblNew.textColor = UIColor(hexString: "#f46d8e")
+
+            } else if dicData.order_status_text == "Confirm" {
+                cell.viewNew.backgroundColor = UIColor(hexString: "#FFEED7")
+                cell.lblNew.textColor = .orange
+            }
         }
-        
-        
         
         cell.lblOrderId.text = "\("Order ID:".localizeString(string: Language.shared.currentAppLang) ) \(dicData.orderId ?? 0)"
         
@@ -387,14 +407,14 @@ extension MyOrdersVC: UITableViewDelegate, UITableViewDataSource
         
         cell.lblDate.text = utcToLocal(dateStr: dicData.createdDate ?? "")
         
-        cell.lblPrice.text = "\(dicData.total ?? "") KD"
+        cell.lblPrice.text = "\(dicData.order_total ?? "") KD"
         
         
         cell.lblResendlink.text = "Reset Link".localizeString(string: Language.shared.currentAppLang)
         cell.lblShareLink.text = "Share Link".localizeString(string: Language.shared.currentAppLang)
         cell.lblChangeNumber.text = "Change Number".localizeString(string: Language.shared.currentAppLang)
         cell.lblPaymentPending.text = "Payment Pending".localizeString(string: Language.shared.currentAppLang)
-        cell.lblNew.text = "New".localizeString(string: Language.shared.currentAppLang)
+//        cell.lblNew.text = "New".localizeString(string: Language.shared.currentAppLang)
         
 
         cell.btnDetails.tag = indexPath.row

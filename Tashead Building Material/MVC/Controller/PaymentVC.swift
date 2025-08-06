@@ -1834,6 +1834,12 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             
                             self.setPaymentOption()
                             
+                            self.payment_method = ""
+                            self.imgKnet.image = UIImage(named: "ic_UnCheckbox")
+                            self.imgApplePay.image = UIImage(named: "ic_UnCheckbox")
+                            self.imgSendLink.image = UIImage(named: "ic_UnCheckbox")
+                            self.imgCOd.image = UIImage(named: "ic_UnCheckbox")
+                            
                             if self.is_loaylty == true {
                                 self.viewApplePay.isHidden = true
                                 self.viewMainSendLink.isHidden = true

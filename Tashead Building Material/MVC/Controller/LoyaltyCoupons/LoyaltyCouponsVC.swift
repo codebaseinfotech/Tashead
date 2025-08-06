@@ -14,6 +14,22 @@ class LoyaltyCouponsVC: UIViewController {
     @IBOutlet weak var lblAmount: UILabel!
     @IBOutlet weak var lblTotalPoints: UILabel!
     
+    @IBOutlet weak var imgBAck: UIImageView! {
+        didSet {
+            imgBAck.image = Language.shared.isArabic ? UIImage(named: "Back_Ar") : UIImage(named: "Back")
+        }
+    }
+    @IBOutlet weak var lblLoyaltyPoint: UILabel! {
+        didSet {
+            lblLoyaltyPoint.text = "Loyalty Coupons".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
+    @IBOutlet weak var lblTotalPoint: UILabel! {
+        didSet {
+            lblTotalPoint.text = "Loyalty Points".localizeString(string: Language.shared.currentAppLang) + " :"
+        }
+    }
+    
     var dicLoyaltyCoupons = TBLoyaltyCouponsResult()
     var isApiCall = false
     
@@ -57,7 +73,8 @@ class LoyaltyCouponsVC: UIViewController {
                             let dic = TBLoyaltyCouponsResult(fromDictionary: result)
                             self.dicLoyaltyCoupons = dic
                             
-                            self.lblTotalPoints.text = dic.point == "" ? "0" + " Points" : "\(dic.point ?? "")" + " Points"
+                            let Points = "Points".localizeString(string: Language.shared.currentAppLang)
+                            self.lblTotalPoints.text = dic.point == "" ? "0" + " " + Points : "\(dic.point ?? "")" + " " + Points
                             
                             DispatchQueue.main.async {
                                 self.isApiCall = true

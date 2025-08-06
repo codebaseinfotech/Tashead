@@ -10080,6 +10080,7 @@ hours.</string>
                         <outlet property="lblTOrder" destination="x0H-dy-ncZ" id="tTD-EX-Wzg"/>
                         <outlet property="lblTWishList" destination="qwB-P8-Xib" id="ro9-xV-9WT"/>
                         <outlet property="lblTell" destination="qOw-uv-dSm" id="3Nq-Jb-asN"/>
+                        <outlet property="lblTotalProgram" destination="UCa-OR-EnC" id="WhH-cz-Lol"/>
                         <outlet property="viewAccountHiesgh_" destination="66L-Ne-j67" id="cVj-Zj-gBY"/>
                         <outlet property="viewAccount_" destination="3Ug-w5-ZfD" id="764-qe-IWr"/>
                         <outlet property="viewAllHide" destination="HXC-zP-we0" id="VwW-44-pxJ"/>
@@ -11648,11 +11649,11 @@ hours.</string>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgj-PD-N69">
-                                                            <rect key="frame" x="280" y="10" width="119" height="28"/>
+                                                            <rect key="frame" x="274" y="10" width="125" height="28"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Pending" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzH-Hz-rEk">
-                                                                    <rect key="frame" x="8" y="6.5" width="103" height="15.5"/>
-                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                                    <rect key="frame" x="8" y="6.5" width="109" height="15.5"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                                                     <color key="textColor" red="0.78823529410000004" green="0.4549019608" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
