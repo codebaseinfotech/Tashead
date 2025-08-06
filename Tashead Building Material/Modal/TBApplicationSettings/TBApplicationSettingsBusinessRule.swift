@@ -17,7 +17,7 @@ class TBApplicationSettingsBusinessRule : NSObject, NSCoding{
 	var knetSwitch : Int!
     var sendPaymentLink : Int!
     var deliverySlotAllowed : Int!
-	var is_loyalty_used : Int!
+	var is_loyalty_allowed : Int!
 
 
 	/**
@@ -50,7 +50,7 @@ class TBApplicationSettingsBusinessRule : NSObject, NSCoding{
 		knetSwitch = dictionary["knet_switch"] as? Int == nil ? 0 : dictionary["knet_switch"] as? Int
         sendPaymentLink = dictionary["send_payment_link"] as? Int == nil ? 0 : dictionary["send_payment_link"] as? Int
         deliverySlotAllowed = dictionary["delivery_slot_allowed"] as? Int == nil ? 0 : dictionary["delivery_slot_allowed"] as? Int
-        is_loyalty_used = dictionary["is_loyalty_used"] as? Int == nil ? 0 : dictionary["is_loyalty_used"] as? Int
+        is_loyalty_allowed = dictionary["is_loyalty_allowed"] as? Int == nil ? 0 : dictionary["is_loyalty_allowed"] as? Int
 	}
 
 	/**
@@ -89,8 +89,8 @@ class TBApplicationSettingsBusinessRule : NSObject, NSCoding{
         if deliverySlotAllowed != nil{
             dictionary["delivery_slot_allowed"] = deliverySlotAllowed
         }
-        if is_loyalty_used != nil{
-            dictionary["is_loyalty_used"] = is_loyalty_used
+        if is_loyalty_allowed != nil{
+            dictionary["is_loyalty_allowed"] = is_loyalty_allowed
         }
 		return dictionary
 	}
@@ -111,7 +111,7 @@ class TBApplicationSettingsBusinessRule : NSObject, NSCoding{
          knetSwitch = aDecoder.decodeObject(forKey: "knet_switch") as? Int
          sendPaymentLink = aDecoder.decodeObject(forKey: "send_payment_link") as? Int
         deliverySlotAllowed = aDecoder.decodeObject(forKey: "delivery_slot_allowed") as? Int
-        is_loyalty_used = aDecoder.decodeObject(forKey: "is_loyalty_used") as? Int
+        is_loyalty_allowed = aDecoder.decodeObject(forKey: "is_loyalty_allowed") as? Int
 
 	}
 
@@ -151,8 +151,8 @@ class TBApplicationSettingsBusinessRule : NSObject, NSCoding{
         if deliverySlotAllowed != nil{
             aCoder.encode(deliverySlotAllowed, forKey: "delivery_slot_allowed")
         }
-        if is_loyalty_used != nil{
-            aCoder.encode(is_loyalty_used, forKey: "is_loyalty_used")
+        if is_loyalty_allowed != nil{
+            aCoder.encode(is_loyalty_allowed, forKey: "is_loyalty_allowed")
         }
 
 	}

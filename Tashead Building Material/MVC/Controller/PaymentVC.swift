@@ -268,6 +268,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     var is_commission_used: Bool = false
     
     var isApiCall = false
+    var selectedIndex = -1
     
     var walletBalance = ""
     
@@ -359,9 +360,14 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             viewLineCredit.isHidden = true
             heightViewCrdit.constant = 0
             
-            viewMainCommission.isHidden = true
-            viewMainLoyaltyPoints.isHidden = false
-            callLoyaltyCouponsAPI()
+            if appDelegate?.getApplicationSettingData().businessrules.is_loyalty_allowed == 1 {
+                viewMainCommission.isHidden = true
+                viewMainLoyaltyPoints.isHidden = false
+                callLoyaltyCouponsAPI()
+            } else {
+                viewMainCommission.isHidden = true
+                viewMainLoyaltyPoints.isHidden = true
+            }
         }
         
         // Do any additional setup after loading the view.
@@ -564,48 +570,40 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         else if tableView == tblViewLoyaltyCoupons {
             return 1
         }
-        else
-        {
-            return 0
-        }
-        
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if arrNonFactoryProduct.count > 0 && arrFactoryProduct.count > 0
-        {
-            if section == 0
-            {
-                return arrNonFactoryProduct.count
-            }
-            else
-            {
-                return arrFactoryProduct.count
-            }
-        }
-        else if arrNonFactoryProduct.count > 0 || arrFactoryProduct.count > 0
-        {
-            if arrNonFactoryProduct.count > 0
-            {
-                return arrNonFactoryProduct.count
-            }
-            else
-            {
-                return arrFactoryProduct.count
-            }
-        }
-        else if tableView == tblViewLoyaltyCoupons {
+        if tableView == tblViewLoyaltyCoupons {
             if isApiCall == true {
                 return dicLoyaltyCoupons.coupons.count
             }
             return 0
+        } else {
+            if arrNonFactoryProduct.count > 0 && arrFactoryProduct.count > 0
+            {
+                if section == 0
+                {
+                    return arrNonFactoryProduct.count
+                }
+                else
+                {
+                    return arrFactoryProduct.count
+                }
+            }
+            else if arrNonFactoryProduct.count > 0 || arrFactoryProduct.count > 0
+            {
+                if arrNonFactoryProduct.count > 0
+                {
+                    return arrNonFactoryProduct.count
+                }
+                else
+                {
+                    return arrFactoryProduct.count
+                }
+            }
         }
-        else
-        {
-            return 0
-        }
-        
+        return 0
         
     }
     
@@ -663,6 +661,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         } else if tableView == tblViewLoyaltyCoupons {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LoayltyCouponCell", for: indexPath) as! LoayltyCouponCell
             
+            cell.imgSelect.image = selectedIndex == indexPath.row ? UIImage(named: "ic_Checkbox") : UIImage(named: "ic_UnCheckbox")
+            
             if isApiCall == true {
                 let dicData = dicLoyaltyCoupons.coupons[indexPath.row]
                 cell.lblKD.text = "\(dicData.amount ?? "") KD"
@@ -678,6 +678,26 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         
         return UITableViewCell()
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == tblViewLoyaltyCoupons {
+            let dicData = dicLoyaltyCoupons.coupons[indexPath.row]
+            
+            let amount = Double(dicData.amount) ?? 0.0
+            let cartTotal = Double(objCart.total.cartTotal) ?? 0.0
+            let pointCoupon = Double(dicLoyaltyCoupons.point) ?? 0.0
+            let point = Double(dicData.point)
+            
+            if amount <= cartTotal && pointCoupon >= point {
+                selectedIndex = indexPath.row
+            }
+            
+            DispatchQueue.main.async {
+                self.tblViewLoyaltyCoupons.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+                self.tblViewLoyaltyCoupons.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -2124,6 +2144,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             
                             DispatchQueue.main.async {
                                 self.isApiCall = true
+                                self.tblViewLoyaltyCoupons.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
                                 self.tblViewLoyaltyCoupons.reloadData()
                             }
                         }
@@ -2295,5 +2316,6 @@ class LoayltyCouponCell: UITableViewCell {
     @IBOutlet weak var imgCoupon: UIImageView!
     @IBOutlet weak var lblKD: UILabel!
     @IBOutlet weak var lblPoint: UILabel!
+    @IBOutlet weak var imgSelect: UIImageView!
     
 }

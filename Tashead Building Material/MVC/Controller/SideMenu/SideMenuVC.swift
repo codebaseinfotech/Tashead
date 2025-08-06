@@ -44,6 +44,7 @@ class SideMenuVC: UIViewController {
     @IBOutlet weak var lblMyCredits: UILabel!
     @IBOutlet weak var viewMainInbox: UIView!
     @IBOutlet weak var lblInbox: UILabel!
+    @IBOutlet weak var viewMainLoyaltiPoint: UIView!
     
     override func viewDidLoad()
     {
@@ -116,6 +117,12 @@ class SideMenuVC: UIViewController {
             lblLng.text = ""
         }
         
+        if appDelegate?.dicCurrentLoginUser.user_type_text == "customer" && appDelegate?.getApplicationSettingData().businessrules.is_loyalty_allowed == 1 {
+            // wallet API calling
+            viewMainLoyaltiPoint.isHidden = false
+        } else {
+            viewMainLoyaltiPoint.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
     

@@ -31,6 +31,7 @@ class SelectDeliveryTimeVC: UIViewController {
     }
     @IBOutlet weak var btnConfirm: UIButton! {
         didSet {
+            btnConfirm.isHidden = true
             btnConfirm.setTitle("Next".localizeString(string: Language.shared.currentAppLang), for: .normal)
         }
     }
@@ -58,6 +59,7 @@ class SelectDeliveryTimeVC: UIViewController {
             imgBack.image = Language.shared.isArabic ? UIImage(named: "Back_Ar") : UIImage(named: "Back")
         }
     }
+    @IBOutlet weak var viewBtnNext: UIView!
     
     var delegateAction: didTapOnDeliveryTime?
     var selectedIndexPath: IndexPath?
@@ -290,6 +292,7 @@ extension SelectDeliveryTimeVC: UICollectionViewDelegate, UICollectionViewDataSo
         let dicData = arrAllDeliverySolt[indexPath.section].slots[indexPath.item]
         
         if selectedIndexPath == indexPath {
+            btnConfirm.isHidden = false
             AppManager.shared.delivery_day_slot_id = dicData.id ?? 0
             AppManager.shared.booked_slot_time = dicData.startTime + " To " + dicData.endTime
             AppManager.shared.delivery_date = arrAllDeliverySolt[indexPath.section].date

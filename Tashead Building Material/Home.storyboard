@@ -5042,10 +5042,10 @@ Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
                                 <rect key="frame" x="0.0" y="152" width="414" height="1048"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Jc-Y5-daQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1471"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1003"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="srh-LZ-BCp">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1471"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1003"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nZX-wB-iWw">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="275.5"/>
@@ -5268,7 +5268,7 @@ Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-ou-wow">
-                                                        <rect key="frame" x="0.0" y="275.5" width="414" height="667"/>
+                                                        <rect key="frame" x="0.0" y="275.5" width="414" height="199"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cf-MH-di9">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
@@ -5651,8 +5651,8 @@ hours.</string>
                                                                     <constraint firstItem="99L-TP-fUJ" firstAttribute="leading" secondItem="9QQ-Rd-ct1" secondAttribute="leading" id="wv8-rf-o1c"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-6x-Qqb">
-                                                                <rect key="frame" x="0.0" y="207" width="414" height="460"/>
+                                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvK-6x-Qqb">
+                                                                <rect key="frame" x="0.0" y="199" width="414" height="137"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWi-Ga-BLC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="5"/>
@@ -5662,7 +5662,7 @@ hours.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="COr-YR-zWH">
-                                                                        <rect key="frame" x="18" y="17" width="378" height="431"/>
+                                                                        <rect key="frame" x="18" y="17" width="378" height="108"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Loyalty Point?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqv-2L-85J">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="378" height="21"/>
@@ -5674,16 +5674,16 @@ hours.</string>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5O-hL-gk1">
-                                                                                <rect key="frame" x="0.0" y="36" width="378" height="344"/>
+                                                                                <rect key="frame" x="0.0" y="36" width="378" height="21"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vp2-Xa-wRV">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="344"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="21"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4b-YJ-Xyf">
-                                                                                        <rect key="frame" x="83.5" y="162" width="11" height="20.5"/>
+                                                                                        <rect key="frame" x="83.5" y="0.5" width="11" height="20.5"/>
                                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                                                         <nil key="highlightedColor"/>
@@ -5695,11 +5695,12 @@ hours.</string>
                                                                                     <constraint firstItem="N4b-YJ-Xyf" firstAttribute="centerY" secondItem="Vp2-Xa-wRV" secondAttribute="centerY" id="IZJ-i7-YKV"/>
                                                                                     <constraint firstItem="Vp2-Xa-wRV" firstAttribute="top" secondItem="R5O-hL-gk1" secondAttribute="top" id="KTc-cx-ctp"/>
                                                                                     <constraint firstItem="N4b-YJ-Xyf" firstAttribute="leading" secondItem="Vp2-Xa-wRV" secondAttribute="trailing" constant="3" id="V57-fE-hpc"/>
+                                                                                    <constraint firstAttribute="height" constant="21" id="fDe-wm-WbE"/>
                                                                                     <constraint firstItem="Vp2-Xa-wRV" firstAttribute="leading" secondItem="R5O-hL-gk1" secondAttribute="leading" id="rEG-at-2fU"/>
                                                                                 </constraints>
                                                                             </view>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="44U-8g-peJ">
-                                                                                <rect key="frame" x="0.0" y="395" width="378" height="36"/>
+                                                                                <rect key="frame" x="0.0" y="72" width="378" height="36"/>
                                                                                 <subviews>
                                                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xW-ar-uv3">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="182" height="36"/>
@@ -5786,7 +5787,7 @@ hours.</string>
                                                                                 </constraints>
                                                                             </stackView>
                                                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P4z-K4-C6d">
-                                                                                <rect key="frame" x="0.0" y="431" width="378" height="127"/>
+                                                                                <rect key="frame" x="0.0" y="108" width="378" height="177"/>
                                                                                 <subviews>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Loyalty Coupon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoc-Ll-bzo">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="378" height="22"/>
@@ -5797,11 +5798,11 @@ hours.</string>
                                                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                                                         <nil key="highlightedColor"/>
                                                                                     </label>
-                                                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FUF-46-kJA">
-                                                                                        <rect key="frame" x="0.0" y="27" width="378" height="100"/>
+                                                                                    <tableView contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FUF-46-kJA">
+                                                                                        <rect key="frame" x="0.0" y="27" width="378" height="150"/>
                                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <constraints>
-                                                                                            <constraint firstAttribute="height" constant="100" id="6wa-Le-0XL"/>
+                                                                                            <constraint firstAttribute="height" constant="150" id="6wa-Le-0XL"/>
                                                                                         </constraints>
                                                                                         <prototypes>
                                                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoayltyCouponCell" rowHeight="80" id="q8a-8Q-eG4" customClass="LoayltyCouponCell" customModule="Tashead_Building_Material" customModuleProvider="target">
@@ -5881,6 +5882,7 @@ hours.</string>
                                                                                                 </tableViewCellContentView>
                                                                                                 <connections>
                                                                                                     <outlet property="imgCoupon" destination="JlY-2Q-iOE" id="NdO-W8-sNn"/>
+                                                                                                    <outlet property="imgSelect" destination="SCN-lS-25m" id="ebr-Xr-paS"/>
                                                                                                     <outlet property="lblKD" destination="YwZ-ph-Tx0" id="dfF-dM-MpX"/>
                                                                                                     <outlet property="lblPoint" destination="0DH-xB-VrY" id="qog-3b-JwW"/>
                                                                                                 </connections>
@@ -5906,14 +5908,14 @@ hours.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjM-d4-oxb">
-                                                        <rect key="frame" x="0.0" y="947.5" width="414" height="5"/>
+                                                        <rect key="frame" x="0.0" y="479.5" width="414" height="5"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="5" id="63N-UP-9uf"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7pV-84-qN3">
-                                                        <rect key="frame" x="0.0" y="952.5" width="414" height="326"/>
+                                                        <rect key="frame" x="0.0" y="484.5" width="414" height="326"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7k7-r4-9xw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="326"/>
@@ -6299,20 +6301,20 @@ hours.</string>
                                                         </subviews>
                                                     </stackView>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3P-WX-vqT">
-                                                        <rect key="frame" x="0.0" y="1278.5" width="414" height="5"/>
+                                                        <rect key="frame" x="0.0" y="810.5" width="414" height="5"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="5" id="ffD-C2-LNb"/>
                                                         </constraints>
                                                     </view>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="if2-FV-921">
-                                                        <rect key="frame" x="18" y="1283.5" width="0.0" height="0.0"/>
+                                                        <rect key="frame" x="18" y="815.5" width="0.0" height="0.0"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siT-pT-gtH">
-                                                        <rect key="frame" x="18" y="1283.5" width="378" height="0.0"/>
+                                                        <rect key="frame" x="18" y="815.5" width="378" height="0.0"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Promo code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MOu-Jl-7H1">
                                                                 <rect key="frame" x="12" y="0.0" width="271" height="0.0"/>
@@ -6363,7 +6365,7 @@ hours.</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1z-IJ-d5q">
-                                                        <rect key="frame" x="18" y="1416" width="378" height="45"/>
+                                                        <rect key="frame" x="18" y="948" width="378" height="45"/>
                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.76862745099999996" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="JQG-2d-rpf"/>
@@ -6384,7 +6386,7 @@ hours.</string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTR-my-2rV">
-                                                        <rect key="frame" x="18" y="1416" width="0.0" height="45"/>
+                                                        <rect key="frame" x="18" y="948" width="0.0" height="45"/>
                                                         <color key="backgroundColor" red="0.96862745100000003" green="0.76862745099999996" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="eI1-mn-35j"/>
@@ -6406,63 +6408,63 @@ hours.</string>
                                                         </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gq-W9-DhD">
-                                                        <rect key="frame" x="0.0" y="1283.5" width="414" height="5"/>
+                                                        <rect key="frame" x="0.0" y="815.5" width="414" height="5"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="5" id="61P-AI-s3d"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwG-uA-b1a">
-                                                        <rect key="frame" x="18" y="1298.5" width="60" height="17"/>
+                                                        <rect key="frame" x="18" y="830.5" width="60" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.000 KD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k3-GO-73d">
-                                                        <rect key="frame" x="328.5" y="1298.5" width="67.5" height="17"/>
+                                                        <rect key="frame" x="328.5" y="830.5" width="67.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery Charge:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILs-RX-Evh">
-                                                        <rect key="frame" x="18" y="1325.5" width="110" height="17"/>
+                                                        <rect key="frame" x="18" y="857.5" width="110" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.000 KD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3F-7l-JQ3">
-                                                        <rect key="frame" x="326.5" y="1325.5" width="67.5" height="17"/>
+                                                        <rect key="frame" x="326.5" y="857.5" width="67.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Code Discount:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yK2-yv-TiW">
-                                                        <rect key="frame" x="18" y="1352.5" width="151.5" height="17"/>
+                                                        <rect key="frame" x="18" y="884.5" width="151.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.000 KD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFj-3A-ahB">
-                                                        <rect key="frame" x="328.5" y="1352.5" width="67.5" height="17"/>
+                                                        <rect key="frame" x="328.5" y="884.5" width="67.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzk-p8-rw1">
-                                                        <rect key="frame" x="20" y="1369.5" width="374" height="1"/>
+                                                        <rect key="frame" x="20" y="901.5" width="374" height="1"/>
                                                         <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="k1D-pB-gsx"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58A-WF-fxR">
-                                                        <rect key="frame" x="18" y="1380.5" width="44" height="20.5"/>
+                                                        <rect key="frame" x="18" y="912.5" width="44" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.000 KD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90p-br-uME">
-                                                        <rect key="frame" x="314" y="1380.5" width="82" height="20.5"/>
+                                                        <rect key="frame" x="314" y="912.5" width="82" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" name="PRIMARY_COLOR"/>
                                                         <nil key="highlightedColor"/>
@@ -9410,8 +9412,8 @@ hours.</string>
                                                                             <constraint firstAttribute="height" constant="35" id="eN6-I0-Uqu"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3s-9J-4lW">
-                                                                        <rect key="frame" x="0.0" y="74.5" width="384" height="35"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W3s-9J-4lW">
+                                                                        <rect key="frame" x="0.0" y="76" width="384" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY INBOX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-Nd-Z2x">
                                                                                 <rect key="frame" x="40" y="8.5" width="74" height="18"/>
@@ -9438,7 +9440,7 @@ hours.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxE-ss-fnP">
-                                                                        <rect key="frame" x="0.0" y="76" width="384" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="114" width="384" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY COMMISSIONS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaB-Yk-LUg">
                                                                                 <rect key="frame" x="40" y="8.5" width="136" height="18"/>
@@ -9465,7 +9467,7 @@ hours.</string>
                                                                         </constraints>
                                                                     </view>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJj-QQ-bvn">
-                                                                        <rect key="frame" x="0.0" y="114" width="384" height="35"/>
+                                                                        <rect key="frame" x="0.0" y="152" width="384" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATEMENT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DX9-X9-hmi">
                                                                                 <rect key="frame" x="40" y="8.5" width="87" height="18"/>
@@ -9491,8 +9493,8 @@ hours.</string>
                                                                             <constraint firstItem="9Sm-2Z-OaE" firstAttribute="top" secondItem="uJj-QQ-bvn" secondAttribute="top" id="oza-sf-SED"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-z5-iMI">
-                                                                        <rect key="frame" x="0.0" y="152" width="384" height="35"/>
+                                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-z5-iMI">
+                                                                        <rect key="frame" x="0.0" y="187" width="384" height="35"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOYALTY PROGRAM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCa-OR-EnC">
                                                                                 <rect key="frame" x="40" y="8.5" width="146" height="18"/>
@@ -10087,6 +10089,7 @@ hours.</string>
                         <outlet property="viewLineHide" destination="z8U-Vr-3Q2" id="5SU-k2-Q3m"/>
                         <outlet property="viewLogout" destination="a7X-C7-pei" id="5id-Cn-T7d"/>
                         <outlet property="viewMainInbox" destination="W3s-9J-4lW" id="pND-qc-eec"/>
+                        <outlet property="viewMainLoyaltiPoint" destination="JmW-z5-iMI" id="E7h-O7-wzG"/>
                         <outlet property="viewOrder_" destination="tTb-WH-Djj" id="Xsp-jx-rUL"/>
                     </connections>
                 </viewController>

@@ -28,6 +28,7 @@
                 <outlet property="lblTitleCheckout" destination="lc8-zy-TDk" id="zlV-R7-1NQ"/>
                 <outlet property="lblTitleSelectDeliveryTime" destination="iYc-te-nij" id="vtc-fX-s9n"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewBtnNext" destination="rDz-z2-vdk" id="dYR-2i-Kz7"/>
                 <outlet property="viewCartCount" destination="4Rg-tO-LaI" id="xbc-Qs-BIJ"/>
                 <outlet property="viewMain" destination="fmH-2Q-k9G" id="wSQ-74-oae"/>
             </connections>
@@ -310,26 +311,38 @@
                                                         <action selector="clickedSkip:" destination="-1" eventType="touchUpInside" id="0Ag-RK-KUB"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8n-B6-7zr">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDz-z2-vdk">
                                                     <rect key="frame" x="184" y="0.0" width="169" height="45"/>
-                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.76862745099999996" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8n-B6-7zr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="169" height="45"/>
+                                                            <color key="backgroundColor" red="0.96862745100000003" green="0.76862745099999996" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="OA8-cj-epj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="Next">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="22.5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="clickedConfirm:" destination="-1" eventType="touchUpInside" id="iae-VY-D3D"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="45" id="OA8-cj-epj"/>
+                                                        <constraint firstItem="f8n-B6-7zr" firstAttribute="top" secondItem="rDz-z2-vdk" secondAttribute="top" id="0nf-Lo-wuk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="f8n-B6-7zr" secondAttribute="trailing" id="E2Z-MX-Cw1"/>
+                                                        <constraint firstItem="f8n-B6-7zr" firstAttribute="leading" secondItem="rDz-z2-vdk" secondAttribute="leading" id="Jq4-lC-LzN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="f8n-B6-7zr" secondAttribute="bottom" id="nAw-Jw-pYW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="Next">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="22.5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="clickedConfirm:" destination="-1" eventType="touchUpInside" id="iae-VY-D3D"/>
-                                                    </connections>
-                                                </button>
+                                                </view>
                                             </subviews>
                                         </stackView>
                                     </subviews>
