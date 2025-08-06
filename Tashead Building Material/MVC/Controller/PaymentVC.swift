@@ -834,6 +834,18 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         if sender.tag == 1 {
             is_used_credit = true
             
+            if is_commission_used == true {
+                is_commission_used = false
+                
+                viewNoCommission.backgroundColor = UIColor(hexString: "#F7C491")
+                viewYesCommission.backgroundColor = .clear
+                
+                viewNoCommission.borderColor = .clear
+                viewYesCommission.borderColor = UIColor(hexString: "#AEAEB2")
+                
+                setPaymentOption()
+            }
+            
             viewMainYes.backgroundColor = UIColor(hexString: "#F7C491")
             viewMainNo.backgroundColor = .clear
             
@@ -851,15 +863,27 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         } else if sender.tag == 2 {
             is_commission_used = true
             
+            if is_used_credit == true {
+                is_used_credit = false
+                
+                viewMainNo.backgroundColor = UIColor(hexString: "#F7C491")
+                viewMainYes.backgroundColor = .clear
+                
+                viewMainNo.borderColor = .clear
+                viewMainYes.borderColor = UIColor(hexString: "#AEAEB2")
+                
+                setPaymentOption()
+            }
+            
             viewYesCommission.backgroundColor = UIColor(hexString: "#F7C491")
             viewNoCommission.backgroundColor = .clear
             
             viewYesCommission.borderColor = .clear
             viewNoCommission.borderColor = UIColor(hexString: "#AEAEB2")
             
-            /*viewCOD.isHidden = true
+            viewCOD.isHidden = false
             viewMainSendLink.isHidden = true
-            viewApplePay.isHidden = true*/
+            viewApplePay.isHidden = true
 
             imgKnet.image = UIImage(named: "ic_UnCheckbox")
             imgApplePay.image = UIImage(named: "ic_UnCheckbox")
@@ -901,7 +925,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             viewNoCommission.borderColor = .clear
             viewYesCommission.borderColor = UIColor(hexString: "#AEAEB2")
             
-//            setPaymentOption()
+            setPaymentOption()
         } else {
             is_loaylty = false
             

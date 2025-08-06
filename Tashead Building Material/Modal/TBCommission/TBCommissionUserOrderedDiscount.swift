@@ -10,7 +10,7 @@ import Foundation
 
 class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
 
-	var commissionAmount : Float!
+    var commissionAmount : String!
 	var commissionPercentage : Int!
 	var createdAt : String!
 	var getUserOrder : TBCommissionGetUserOrder!
@@ -42,7 +42,7 @@ class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
 	 */
 	@objc func parseJSONData(fromDictionary dictionary: NSDictionary)
 	{
-		commissionAmount = dictionary["commission_amount"] as? Float == nil ? 0 : dictionary["commission_amount"] as? Float
+		commissionAmount = dictionary["commission_amount"] as? String == nil ? "" : dictionary["commission_amount"] as? String
 		commissionPercentage = dictionary["commission_percentage"] as? Int == nil ? 0 : dictionary["commission_percentage"] as? Int
 		createdAt = dictionary["created_at"] as? String == nil ? "" : dictionary["created_at"] as? String
 		if let getUserOrderData = dictionary["get_user_order"] as? NSDictionary{
@@ -115,7 +115,7 @@ class TBCommissionUserOrderedDiscount : NSObject, NSCoding{
     */
     @objc required init(coder aDecoder: NSCoder)
 	{
-         commissionAmount = aDecoder.decodeObject(forKey: "commission_amount") as? Float
+         commissionAmount = aDecoder.decodeObject(forKey: "commission_amount") as? String
          commissionPercentage = aDecoder.decodeObject(forKey: "commission_percentage") as? Int
          createdAt = aDecoder.decodeObject(forKey: "created_at") as? String
          getUserOrder = aDecoder.decodeObject(forKey: "get_user_order") as? TBCommissionGetUserOrder
