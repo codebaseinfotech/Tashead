@@ -13,6 +13,12 @@ class LoyaltyPointsTblCell: UITableViewCell {
     
     @IBOutlet weak var heightViewOrderConstant: NSLayoutConstraint!
     
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblOrderId: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var lblPoints: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

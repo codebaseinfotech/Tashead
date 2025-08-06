@@ -164,5 +164,9 @@ let GET_DELIVERY_SLOT = "v1/common/delivery-slots"
 
 let GET_COUPON_LOYALTY = "v1/loyalty-coupons"
 
+let LOYALTY_COUPONS = "v1/loyalty-coupons"
+
+let LOYALTY_COUPONS_HISTORY = "v1/loyalty-coupons/history"
+
 // **************************************************
 let appDelegate = UIApplication.shared.delegate as? AppDelegate

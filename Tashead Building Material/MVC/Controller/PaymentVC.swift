@@ -99,6 +99,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     @IBOutlet weak var viewCOD: UIView!
     
     @IBOutlet weak var heightTblViewTop: NSLayoutConstraint!
+    @IBOutlet weak var heightTblViewBottom: NSLayoutConstraint!
     
     @IBOutlet weak var stackViewMainCredit: UIStackView!
     @IBOutlet weak var heightMainCredit: NSLayoutConstraint!
@@ -232,7 +233,18 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     @IBOutlet weak var lblSelectLoayltyPoin: UILabel!
 //    @IBOutlet weak var heightCollectionLayalty: NSLayoutConstraint!
     
-    @IBOutlet weak var tblViewLoyaltyCoupons: UITableView!
+    @IBOutlet weak var tblViewLoyaltyCoupons: UITableView! {
+        didSet {
+            if #available(iOS 15.0, *) {
+                tblViewLoyaltyCoupons.sectionHeaderTopPadding = 0
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+    
+    @IBOutlet weak var lblAvailableLoyaltyPoint: UILabel!
+    
     
     var arrFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
     var arrNonFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
@@ -240,6 +252,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     var objCart = TBCartListResult()
     
     var arrAddressList : [TBAddressResult] = [TBAddressResult]()
+    
+    var dicLoyaltyCoupons = TBLoyaltyCouponsResult()
     
     var payment_method = ""
     
@@ -252,6 +266,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     
     var is_used_credit: Bool = false
     var is_commission_used: Bool = false
+    
+    var isApiCall = false
     
     var walletBalance = ""
     
@@ -269,6 +285,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         tblViewLoyaltyCoupons.delegate = self
         tblViewLoyaltyCoupons.dataSource = self
         tblViewLoyaltyCoupons.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        tblViewLoyaltyCoupons.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         lblTUseCredit.text = "Use Credit?".localizeString(string: Language.shared.currentAppLang)
         lblTBalanceUC.text = "Available limit:".localizeString(string: Language.shared.currentAppLang)
@@ -344,16 +361,22 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             
             viewMainCommission.isHidden = true
             viewMainLoyaltyPoints.isHidden = false
-            callGetCouponAPI()
+            callLoyaltyCouponsAPI()
         }
+        
         // Do any additional setup after loading the view.
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if(keyPath == "contentSize"){
-            if let newvalue = change?[.newKey] {
-                let newsize = newvalue as! CGSize
-                self.heightTblViewTop.constant = 0/*newsize.height*/
+        if keyPath == "contentSize" {
+            if let newValue = change?[.newKey] as? CGSize,
+               let tableView = object as? UITableView {
+                
+                if tableView === self.tblVie {
+                    self.heightTblViewTop.constant = newValue.height
+                } else if tableView === self.tblViewLoyaltyCoupons {
+                    self.heightTblViewBottom.constant = newValue.height
+                }
             }
         }
     }
@@ -573,7 +596,10 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             }
         }
         else if tableView == tblViewLoyaltyCoupons {
-            return 2
+            if isApiCall == true {
+                return dicLoyaltyCoupons.coupons.count
+            }
+            return 0
         }
         else
         {
@@ -637,6 +663,16 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         } else if tableView == tblViewLoyaltyCoupons {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LoayltyCouponCell", for: indexPath) as! LoayltyCouponCell
             
+            if isApiCall == true {
+                let dicData = dicLoyaltyCoupons.coupons[indexPath.row]
+                cell.lblKD.text = "\(dicData.amount ?? "") KD"
+                cell.lblPoint.text = "\(dicData.point ?? 0) Points"
+                
+                var media_link_url = "\(dicData.image ?? "")"
+                media_link_url = (media_link_url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))!
+                cell.imgCoupon.sd_setImage(with: URL.init(string: media_link_url),placeholderImage: UIImage(named: "App_Logo"), options: [], completed: nil)
+            }
+            
             return cell
         }
         
@@ -645,58 +681,67 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("CheckOutHeaderView", owner: self, options: [:])?.first as! CheckOutHeaderView
         
-        // headerView.lblOrder.text = "Your order will be delivered".localizeString(string: Language.shared.currentAppLang)
-        
-        if arrNonFactoryProduct.count > 0 && arrFactoryProduct.count > 0
-        {
-            if section == 0
-            {
-                headerView.lineView.isHidden = true
-                
-                //  headerView.lblOrder.isHidden = false
-                //                headerView.OrderTopCont.constant = 20
-                //                headerView.OrdeBottomCont.constant = 15
-                headerView.lblName.text = self.objCart.nonFactoryMessage ?? ""
-            }
-            else
-            {
-                headerView.lineView.isHidden = false
-
-                headerView.lblName.text = self.objCart.factoryMessage ?? ""
-                // headerView.lblOrder.isHidden = true
-                //                headerView.OrderTopCont.constant = 0
-                //                headerView.OrdeBottomCont.constant = 0
-            }
-        }
-        else if arrNonFactoryProduct.count > 0 || arrFactoryProduct.count > 0
-        {
-            //  headerView.lblOrder.isHidden = false
-            //            headerView.OrderTopCont.constant = 20
-            //            headerView.OrdeBottomCont.constant = 15
+        if tableView == tblVie {
+            let headerView = Bundle.main.loadNibNamed("CheckOutHeaderView", owner: self, options: [:])?.first as! CheckOutHeaderView
             
-            if arrNonFactoryProduct.count > 0
+            // headerView.lblOrder.text = "Your order will be delivered".localizeString(string: Language.shared.currentAppLang)
+            
+            if arrNonFactoryProduct.count > 0 && arrFactoryProduct.count > 0
             {
-                headerView.lblName.text = self.objCart.nonFactoryMessage ?? ""
+                if section == 0
+                {
+                    headerView.lineView.isHidden = true
+                    
+                    //  headerView.lblOrder.isHidden = false
+                    //                headerView.OrderTopCont.constant = 20
+                    //                headerView.OrdeBottomCont.constant = 15
+                    headerView.lblName.text = self.objCart.nonFactoryMessage ?? ""
+                }
+                else
+                {
+                    headerView.lineView.isHidden = false
+
+                    headerView.lblName.text = self.objCart.factoryMessage ?? ""
+                    // headerView.lblOrder.isHidden = true
+                    //                headerView.OrderTopCont.constant = 0
+                    //                headerView.OrdeBottomCont.constant = 0
+                }
+            }
+            else if arrNonFactoryProduct.count > 0 || arrFactoryProduct.count > 0
+            {
+                //  headerView.lblOrder.isHidden = false
+                //            headerView.OrderTopCont.constant = 20
+                //            headerView.OrdeBottomCont.constant = 15
+                
+                if arrNonFactoryProduct.count > 0
+                {
+                    headerView.lblName.text = self.objCart.nonFactoryMessage ?? ""
+                }
+                else
+                {
+                    headerView.lblName.text = self.objCart.factoryMessage ?? ""
+                }
             }
             else
             {
-                headerView.lblName.text = self.objCart.factoryMessage ?? ""
+                //  headerView.lblOrder.isHidden = true
+                //            headerView.OrderTopCont.constant = 0
+                //            headerView.OrdeBottomCont.constant = 0
             }
+            
+            return headerView
+        } else {
+            return nil
         }
-        else
-        {
-            //  headerView.lblOrder.isHidden = true
-            //            headerView.OrderTopCont.constant = 0
-            //            headerView.OrdeBottomCont.constant = 0
-        }
-        
-        return headerView
+            
     }
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if tableView == tblViewLoyaltyCoupons {
+            return 0.5
+        }
         return UITableView.automaticDimension
     }
     
@@ -803,6 +848,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             
             viewYesLoyalty.borderColor = .clear
             viewNoLoyalty.borderColor = UIColor(hexString: "#AEAEB2")
+            
+            stackViewLaoyatyList.isHidden = false
         }
         
     }
@@ -834,6 +881,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             
             viewNoLoyalty.borderColor = .clear
             viewYesLoyalty.borderColor = UIColor(hexString: "#AEAEB2")
+            
+            stackViewLaoyatyList.isHidden = true
         }
         
     }
@@ -1898,41 +1947,6 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         }
     }
     
-    func callGetCouponAPI()
-    {
-        let param = ["":""]
-        
-        print(param)
-        
-        APIClient.sharedInstance.MakeAPICallWithAuthHeaderPost(GET_COUPON_LOYALTY, parameters: param) { response, error, statusCode in
-            
-            print("STATUS CODE \(String(describing: statusCode))")
-            print("RESPONSE \(String(describing: response))")
-            
-            if error == nil
-            {
-                APIClient.sharedInstance.hideIndicator()
-                
-                let status = response?.value(forKey: "status") as? Int
-                let message = response?.value(forKey: "message") as? String
-                
-                if statusCode == 200
-                {
-                    
-                }
-                else
-                {
-                    
-                    APIClient.sharedInstance.hideIndicator()
-                }
-            }
-            else
-            {
-                APIClient.sharedInstance.hideIndicator()
-            }
-        }
-    }
-    
     func callModifytoCartAPI(is_express_delivery: String,cart_id: String)
     {
         APIClient.sharedInstance.showIndicator()
@@ -2077,6 +2091,57 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             }
             else
             {
+                APIClient.sharedInstance.hideIndicator()
+            }
+        }
+    }
+    
+    func callLoyaltyCouponsAPI() {
+        APIClient.sharedInstance.showIndicator()
+
+        let param = ["":""]
+        print(param)
+
+        APIClient.sharedInstance.MakeAPICallWithAuthHeaderGet(LOYALTY_COUPONS, parameters: param) { response, error, statusCode in
+            
+            print("STATUS CODE \(String(describing: statusCode))")
+            print("RESPONSE \(String(describing: response))")
+            
+            if error == nil {
+                APIClient.sharedInstance.hideIndicator()
+                
+                let status = response?.value(forKey: "status") as? Int
+                let message = response?.value(forKey: "message") as? String
+                
+                if statusCode == 200 {
+                    if status == 1 {
+                        
+                        if let result = response?.value(forKey: "result") as? NSDictionary {
+                            let dic = TBLoyaltyCouponsResult(fromDictionary: result)
+                            self.dicLoyaltyCoupons = dic
+                            
+                            self.lblAvailableLoyaltyPoint.text = "\(dic.point ?? "") Points"
+                            
+                            DispatchQueue.main.async {
+                                self.isApiCall = true
+                                self.tblViewLoyaltyCoupons.reloadData()
+                            }
+                        }
+                        
+                    } else {
+                        APIClient.sharedInstance.hideIndicator()
+                    }
+                } else {
+                    APIClient.sharedInstance.hideIndicator()
+                    
+                    if message?.contains("Unauthenticated.") == true {
+                        appDelegate?.strTotalCount = "0"
+                        appDelegate?.saveCuurentUserData(dic: TBLoginUserResult())
+                        appDelegate?.dicCurrentLoginUser = TBLoginUserResult()
+                        appDelegate?.saveIsUserLogin(dic: false)
+                    }
+                }
+            } else {
                 APIClient.sharedInstance.hideIndicator()
             }
         }
@@ -2227,5 +2292,8 @@ class checkOutListCell: UITableViewCell
 
 class LoayltyCouponCell: UITableViewCell {
     
+    @IBOutlet weak var imgCoupon: UIImageView!
+    @IBOutlet weak var lblKD: UILabel!
+    @IBOutlet weak var lblPoint: UILabel!
     
 }
