@@ -266,6 +266,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     
     var is_used_credit: Bool = false
     var is_commission_used: Bool = false
+    var is_loaylty = false
     
     var isApiCall = false
     var selectedIndex = -1
@@ -508,6 +509,8 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     override func viewWillAppear(_ animated: Bool) {
             
         self.callGetCartAPI()
+        
+        
         
         if let objAddress = appDelegate?.getUserSelectedAddress()
         {
@@ -863,6 +866,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             imgSendLink.image = UIImage(named: "ic_UnCheckbox")
             imgCOd.image = UIImage(named: "ic_UnCheckbox")
         } else {
+            is_loaylty = true
             viewYesLoyalty.backgroundColor = UIColor(hexString: "#F7C491")
             viewNoLoyalty.backgroundColor = .clear
             
@@ -870,6 +874,9 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             viewNoLoyalty.borderColor = UIColor(hexString: "#AEAEB2")
             
             stackViewLaoyatyList.isHidden = false
+            
+            viewApplePay.isHidden = true
+            viewMainSendLink.isHidden = true
         }
         
     }
@@ -896,13 +903,21 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             
 //            setPaymentOption()
         } else {
+            is_loaylty = false
+            
             viewNoLoyalty.backgroundColor = UIColor(hexString: "#F7C491")
             viewYesLoyalty.backgroundColor = .clear
             
             viewNoLoyalty.borderColor = .clear
             viewYesLoyalty.borderColor = UIColor(hexString: "#AEAEB2")
             
+            selectedIndex = -1
+            tblViewLoyaltyCoupons.reloadData()
+            
             stackViewLaoyatyList.isHidden = true
+            
+            viewApplePay.isHidden = false
+            viewMainSendLink.isHidden = false
         }
         
     }
@@ -1272,6 +1287,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         let totalAmount = Double(objTotalAmount) ?? 0.0
  
         let walletBalance = Double(walletBalance) ?? 0
+        let couponBalance = Double(dicLoyaltyCoupons.point) ?? 0
         let totalAmount11 = Double(objCart.total.cartTotal ?? "") ?? 0
 
         print("walletBalance \(walletBalance)")
@@ -1309,6 +1325,32 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
             }
             
             
+        } else if is_loaylty == true {
+            if selectedIndex == -1 {
+                self.setUpMakeToast(msg: "Please select loyalty coupon")
+            } else {
+                
+                let dicLoaylty = dicLoyaltyCoupons.coupons[selectedIndex]
+                
+                let amount = Double(dicLoaylty.amount) ?? 0.0
+                let cartTotal = Double(self.objCart.total.cartTotal) ?? 0.0
+                
+                if amount >= cartTotal  {
+                    payment_method = "loyalty"
+                    callCheckOutAPI()
+                } else {
+                    if payment_method == "" {
+                        self.setUpMakeToast(msg: "Please select payment method".localizeString(string: Language.shared.currentAppLang))
+                    } else {
+                        if payment_method == "knet" {
+                            payment_method = "loyalty_knet"
+                        } else {
+                            payment_method = "loyalty_cod"
+                        }
+                        callCheckOutAPI()
+                    }
+                }
+            }
         }
         else if payment_method == ""
         {
@@ -1504,11 +1546,21 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                 "delivery_date": delivery_date
             ]
         } else {
+            
+            var coupon_id = 0
+            
+            if is_loaylty == true {
+                coupon_id = dicLoyaltyCoupons.coupons[selectedIndex].id ?? 0
+            } else {
+                coupon_id = 0
+            }
+            
             param = [
                 "payment_method":self.payment_method,
                 "delivery_day_slot_id": "\(delivery_day_slot_id)",
                 "booked_slot_time": booked_slot_time,
-                "delivery_date": delivery_date
+                "delivery_date": delivery_date,
+                "coupon_id": coupon_id
             ]
         }
         
@@ -1535,7 +1587,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                         //appDelegate?.isOrder = true
                         // appDelegate?.strOrder = message ?? ""
                         
-                        if self.payment_method == "knet" || self.payment_method == "credit_knet"
+                        if self.payment_method == "knet" || self.payment_method == "credit_knet" || self.payment_method == "loyalty_knet"
                         {
                             let dicResult = response?.value(forKey: "result") as? NSDictionary
                             let payment_url = dicResult?.value(forKey: "payment_url") as? String
@@ -1545,7 +1597,7 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             vc.strWebPaymentURL = payment_url ?? ""
                             self.navigationController?.pushViewController(vc, animated: false)
                         }
-                        else if self.payment_method == "cod" || self.payment_method == "credit"
+                        else if self.payment_method == "cod" || self.payment_method == "credit" || self.payment_method == "loyalty_cod"
                         {
                             APIClient.sharedInstance.hideIndicator()
                             
@@ -1757,6 +1809,14 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             }*/
                             
                             self.setPaymentOption()
+                            
+                            if self.is_loaylty == true {
+                                self.viewApplePay.isHidden = true
+                                self.viewMainSendLink.isHidden = true
+                            } else {
+                                self.viewApplePay.isHidden = false
+                                self.viewMainSendLink.isHidden = false
+                            }
                             
                             if self.objCart.promocode == ""
                             {
