@@ -11,12 +11,14 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
             <string>HelveticaNeue-Bold</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoyaltyPointsVC" customModule="Tashead_Building_Material" customModuleProvider="target">
             <connections>
+                <outlet property="lblNoDataFounf" destination="Qdk-dY-Zke" id="9vs-LE-ts4"/>
                 <outlet property="lblTotalPoints" destination="8Ar-AM-Be4" id="DHP-lh-XDJ"/>
                 <outlet property="tblView" destination="dOZ-zo-xsE" id="cAq-H1-UlF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -179,15 +181,23 @@
                     <rect key="frame" x="0.0" y="257" width="393" height="595"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Found" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdk-dY-Zke">
+                    <rect key="frame" x="138.66666666666666" y="416" width="115.66666666666666" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" name="PRIMARY_COLOR"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SVp-dT-Kga" secondAttribute="trailing" id="5Sj-5t-PXy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="olx-bO-71A" secondAttribute="trailing" id="9ar-tH-Wwo"/>
+                <constraint firstItem="Qdk-dY-Zke" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E7i-cj-Cz9"/>
                 <constraint firstItem="dOZ-zo-xsE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="MkP-fj-QP6"/>
                 <constraint firstItem="SVp-dT-Kga" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xxp-2T-6Dz"/>
                 <constraint firstItem="SVp-dT-Kga" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="agV-hx-JTp"/>
+                <constraint firstItem="Qdk-dY-Zke" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jPL-Xm-Ul9"/>
                 <constraint firstItem="dOZ-zo-xsE" firstAttribute="top" secondItem="olx-bO-71A" secondAttribute="bottom" constant="5" id="opG-Bv-8Qc"/>
                 <constraint firstItem="olx-bO-71A" firstAttribute="top" secondItem="SVp-dT-Kga" secondAttribute="bottom" id="png-io-YVH"/>
                 <constraint firstAttribute="bottom" secondItem="dOZ-zo-xsE" secondAttribute="bottom" id="q8N-Bg-gP1"/>

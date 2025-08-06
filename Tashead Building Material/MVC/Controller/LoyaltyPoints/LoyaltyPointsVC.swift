@@ -12,6 +12,11 @@ class LoyaltyPointsVC: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     
     @IBOutlet weak var lblTotalPoints: UILabel!
+    @IBOutlet weak var lblNoDataFounf: UILabel! {
+        didSet {
+            lblNoDataFounf.text = "No Data Found".localizeString(string: Language.shared.currentAppLang)
+        }
+    }
     
     var arrLoyaltyCouponsHistory: [TBLoyaltyCouponsHistoryHistory] = [TBLoyaltyCouponsHistoryHistory]()
     
@@ -60,9 +65,9 @@ class LoyaltyPointsVC: UIViewController {
                     if status == 1 {
                         
                         if let result = response?.value(forKey: "result") as? NSDictionary {
+                            self.arrLoyaltyCouponsHistory.removeAll()
                             
                             if let history = result.value(forKey: "history") as? NSArray {
-                                self.arrLoyaltyCouponsHistory.removeAll()
                                 for obj in history {
                                     let dic = TBLoyaltyCouponsHistoryHistory(fromDictionary: obj as! NSDictionary)
                                     self.arrLoyaltyCouponsHistory.append(dic)
@@ -71,8 +76,14 @@ class LoyaltyPointsVC: UIViewController {
                             
                             let point = result.value(forKey: "point") as? String
                             
-                            self.lblTotalPoints.text = "\(point ?? "") Points"
+                            self.lblTotalPoints.text = point == "" || point == nil ? "0" + " Points" : "\(point ?? "")" + " Points"
                             
+                            if self.arrLoyaltyCouponsHistory.count > 0 {
+                                self.lblNoDataFounf.isHidden = true
+                            } else {
+                                self.lblNoDataFounf.isHidden = false
+                            }
+
                             DispatchQueue.main.async {
                                 self.tblView.reloadData()
                             }

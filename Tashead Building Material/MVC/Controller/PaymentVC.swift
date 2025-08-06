@@ -2202,6 +2202,10 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             
                             self.lblAvailableLoyaltyPoint.text = "\(dic.point ?? "") Points"
                             
+                            if dic.point == "" {
+                                self.viewMainLoyaltyPoints.isHidden = true
+                            }
+                            
                             DispatchQueue.main.async {
                                 self.isApiCall = true
                                 self.tblViewLoyaltyCoupons.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)

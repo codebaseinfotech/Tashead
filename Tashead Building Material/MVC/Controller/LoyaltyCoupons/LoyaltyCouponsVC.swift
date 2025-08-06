@@ -57,7 +57,7 @@ class LoyaltyCouponsVC: UIViewController {
                             let dic = TBLoyaltyCouponsResult(fromDictionary: result)
                             self.dicLoyaltyCoupons = dic
                             
-                            self.lblTotalPoints.text = "\(dic.point ?? "") Points"
+                            self.lblTotalPoints.text = dic.point == "" ? "0" + " Points" : "\(dic.point ?? "")" + " Points"
                             
                             DispatchQueue.main.async {
                                 self.isApiCall = true
