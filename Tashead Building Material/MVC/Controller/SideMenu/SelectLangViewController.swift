@@ -26,6 +26,7 @@ class SelectLangViewController: UIViewController {
         
         if Language.shared.isArabic == true
         {
+           
             btnBack.image = UIImage(named: "Back_Ar")
             
             viewARabic.backgroundColor = UIColor(red: 247/255, green: 196/255, blue: 145/255, alpha: 1)
@@ -55,6 +56,8 @@ class SelectLangViewController: UIViewController {
     
     @IBAction func clickedArabic(_ sender: Any) {
         
+        appDelegate?.isFirstTime = true
+        
         viewARabic.backgroundColor = UIColor(red: 247/255, green: 196/255, blue: 145/255, alpha: 1)
         viewEnglish.backgroundColor = .white
         
@@ -78,7 +81,7 @@ class SelectLangViewController: UIViewController {
     }
     
     @IBAction func clickedEn(_ sender: Any) {
-        
+        appDelegate?.isFirstTime = true
         viewEnglish.backgroundColor = UIColor(red: 247/255, green: 196/255, blue: 145/255, alpha: 1)
         viewARabic.backgroundColor = .white
         

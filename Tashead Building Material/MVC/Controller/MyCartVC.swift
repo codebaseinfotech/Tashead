@@ -17,6 +17,12 @@ import MarqueeLabel
 
 class MyCartVC: UIViewController,CartDeleteDelegate, UITextViewDelegate, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var lblPromocode: UILabel!
+    @IBOutlet weak var txtPromo: UITextField!
+    @IBOutlet weak var btnRedeem: UIButton!
+    
+    
     @IBOutlet weak var imgCart: UIImageView!
     
     
@@ -80,6 +86,11 @@ class MyCartVC: UIViewController,CartDeleteDelegate, UITextViewDelegate, UITextF
         btnText.setTitle("Next".localizeString(string: Language.shared.currentAppLang), for: .normal)
         btnTContinue.setTitle("Add Item".localizeString(string: Language.shared.currentAppLang), for: .normal)
         
+        txtPromo.placeholder = "Promo code".localizeString(string: Language.shared.currentAppLang)
+        lblPromocode.text = "Promo code".localizeString(string: Language.shared.currentAppLang)
+        btnRedeem.setTitle("Redeem".localizeString(string: Language.shared.currentAppLang), for: .normal)
+
+ 
         tblView.delegate = self
         tblView.dataSource = self
         
@@ -88,9 +99,13 @@ class MyCartVC: UIViewController,CartDeleteDelegate, UITextViewDelegate, UITextF
         
         if Language.shared.isArabic {
             txtNotes.textAlignment = .right
+            lblPromocode.textAlignment = .right
+            txtPromo.textAlignment = .right
             txtNotes.placeholderTextView.textAlignment = .right
         } else {
             txtNotes.textAlignment = .left
+            lblPromocode.textAlignment = .left
+            txtPromo.textAlignment = .left
             txtNotes.placeholderTextView.textAlignment = .left
         }
 

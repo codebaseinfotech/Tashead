@@ -246,6 +246,11 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
     @IBOutlet weak var lblAvailableLoyaltyPoint: UILabel!
     
     
+    @IBOutlet weak var lblUseLoaltyPointTitle: UILabel!
+    @IBOutlet weak var lblAvaibleoyaPoint: UILabel!
+    
+    
+    
     var arrFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
     var arrNonFactoryProduct: [TBCartListCartItem] = [TBCartListCartItem]()
     
@@ -309,21 +314,26 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
         lblTAppl.text = "Apple pay".localizeString(string: Language.shared.currentAppLang)
         lblTCod.text = "Cash on Deliverey".localizeString(string: Language.shared.currentAppLang)
         lblTSendLink.text = "Send a link".localizeString(string: Language.shared.currentAppLang)
-        lbltPromoCode.text = "Promo code".localizeString(string: Language.shared.currentAppLang)
         
+        lblUseLoaltyPointTitle.text = "Use Loyalty Points?".localizeString(string: Language.shared.currentAppLang)
+        lblAvaibleoyaPoint.text = "Available :".localizeString(string: Language.shared.currentAppLang)
+ 
         txtMobileNo.placeholder = "Mobile Number".localizeString(string: Language.shared.currentAppLang)
         txtPromoCode.placeholder = "Promo code".localizeString(string: Language.shared.currentAppLang)
-        
+        lbltPromoCode.text = "Promo code".localizeString(string: Language.shared.currentAppLang)
+
         btnTEditAddress.setTitle("Change".localizeString(string: Language.shared.currentAppLang), for: .normal)
         btnTNxt.setTitle("Pay now".localizeString(string: Language.shared.currentAppLang), for: .normal)
         btnTCounrinue.setTitle("Continue Shopping".localizeString(string: Language.shared.currentAppLang), for: .normal)
         
         if Language.shared.currentAppLang == "en" {
             lblAddress.textAlignment = .left
+            lblUseLoaltyPointTitle.textAlignment = .left
         }
         else {
             lblAddress.textAlignment = .right
-        }
+            lblUseLoaltyPointTitle.textAlignment = .right
+         }
         
         imgKnet.image = UIImage(named: "ic_UnCheckbox")
         //  imgVisa.image = UIImage(named: "ic_UnCheckbox")
@@ -2227,7 +2237,9 @@ class PaymentVC: UIViewController, onUpdateAddress, UITableViewDelegate, UITable
                             let dic = TBLoyaltyCouponsResult(fromDictionary: result)
                             self.dicLoyaltyCoupons = dic
                             
-                            self.lblAvailableLoyaltyPoint.text = "\(dic.point ?? "") Points"
+                            let Points = "Points".localizeString(string: Language.shared.currentAppLang)
+
+                            self.lblAvailableLoyaltyPoint.text = "\(dic.point ?? "") \(Points)"
                             
                             if dic.point == "" {
                                 self.viewMainLoyaltyPoints.isHidden = true

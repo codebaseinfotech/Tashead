@@ -14,8 +14,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "959"
-            endingLineNumber = "959"
+            startingLineNumber = "969"
+            endingLineNumber = "969"
             landmarkName = "setDropDown()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1108"
-            endingLineNumber = "1108"
+            startingLineNumber = "1118"
+            endingLineNumber = "1118"
             landmarkName = "setupApplePayButton()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,9 +94,9 @@
             filePath = "Tashead Building Material/MVC/Controller/MyCartVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "420"
-            endingLineNumber = "420"
-            landmarkName = "callApplicationSettingAPI()"
+            startingLineNumber = "435"
+            endingLineNumber = "435"
+            landmarkName = "callEdittoCartAPI(qty:pro_Id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,9 +110,9 @@
             filePath = "Tashead Building Material/MVC/Controller/MyCartVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "419"
-            endingLineNumber = "419"
-            landmarkName = "callApplicationSettingAPI()"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
+            landmarkName = "callEdittoCartAPI(qty:pro_Id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -126,9 +126,9 @@
             filePath = "Tashead Building Material/MVC/Controller/MyCartVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
-            landmarkName = "callApplicationSettingAPI()"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "callEdittoCartAPI(qty:pro_Id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -142,9 +142,9 @@
             filePath = "Tashead Building Material/MVC/Controller/MyCartVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
-            landmarkName = "callApplicationSettingAPI()"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
+            landmarkName = "callEdittoCartAPI(qty:pro_Id:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -158,8 +158,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1596"
-            endingLineNumber = "1596"
+            startingLineNumber = "1606"
+            endingLineNumber = "1606"
             landmarkName = "callCheckOutAPI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1597"
-            endingLineNumber = "1597"
+            startingLineNumber = "1607"
+            endingLineNumber = "1607"
             landmarkName = "callCheckOutAPI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1593"
-            endingLineNumber = "1593"
+            startingLineNumber = "1603"
+            endingLineNumber = "1603"
             landmarkName = "callCheckOutAPI()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1371"
-            endingLineNumber = "1371"
+            startingLineNumber = "1381"
+            endingLineNumber = "1381"
             landmarkName = "clickedNex(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -222,8 +222,8 @@
             filePath = "Tashead Building Material/MVC/Controller/PaymentVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1375"
-            endingLineNumber = "1375"
+            startingLineNumber = "1385"
+            endingLineNumber = "1385"
             landmarkName = "clickedNex(_:)"
             landmarkType = "7">
          </BreakpointContent>

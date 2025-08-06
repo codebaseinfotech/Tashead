@@ -4865,6 +4865,7 @@ Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnRedeem" destination="Zjk-6k-b92" id="FMj-iI-9vy"/>
                         <outlet property="btnTContinue" destination="lC2-0c-ngT" id="BV3-pc-xpa"/>
                         <outlet property="btnText" destination="08T-q1-JTy" id="1pA-sk-CuE"/>
                         <outlet property="imgBack" destination="U5w-Bg-CI4" id="aEO-DR-dXo"/>
@@ -4874,6 +4875,7 @@ Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
                         <outlet property="lblDCharge" destination="EGW-Tp-kOV" id="Ez7-Pl-NWh"/>
                         <outlet property="lblMyCart" destination="8mJ-xJ-XES" id="Qrc-iI-4pK"/>
                         <outlet property="lblNoData" destination="3Mf-tc-son" id="TOb-Hk-zb5"/>
+                        <outlet property="lblPromocode" destination="kUn-wT-cwX" id="yHw-AN-Kng"/>
                         <outlet property="lblSTotal" destination="jCF-8y-Kvm" id="v1k-8i-Hfx"/>
                         <outlet property="lblTDc" destination="1JF-G0-ykA" id="adm-0Q-y73"/>
                         <outlet property="lblTGeneralNot" destination="cDe-d4-0sS" id="7Y2-5h-QRr"/>
@@ -4883,6 +4885,7 @@ Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh
                         <outlet property="tblView" destination="A9I-tb-Hu5" id="pRh-cP-etE"/>
                         <outlet property="txtNotes" destination="q1V-qS-9IB" id="kZe-vN-pK6"/>
                         <outlet property="txtPrmoCode" destination="lxF-nS-yBV" id="zRt-am-jr8"/>
+                        <outlet property="txtPromo" destination="lxF-nS-yBV" id="5ry-de-OVO"/>
                         <outlet property="viewCountItem" destination="AND-kk-nHG" id="68K-CF-MC0"/>
                         <outlet property="viewLine2" destination="AGM-iD-Upn" id="01d-kT-9yu"/>
                         <outlet property="viewMain2" destination="LMs-CF-nXY" id="QhX-PE-L7g"/>
@@ -6755,6 +6758,7 @@ hours.</string>
                         <outlet property="imgKnet" destination="EZD-UY-T14" id="Po7-73-g3s"/>
                         <outlet property="imgSendLink" destination="o84-Hs-76x" id="fYV-jH-tPa"/>
                         <outlet property="lblAddress" destination="PCd-KP-wMT" id="1E2-ut-te2"/>
+                        <outlet property="lblAvaibleoyaPoint" destination="Vp2-Xa-wRV" id="4mE-ba-hdP"/>
                         <outlet property="lblAvailableLoyaltyPoint" destination="N4b-YJ-Xyf" id="ZBc-6v-AST"/>
                         <outlet property="lblBalanceUC" destination="C4D-Wh-jKi" id="rFF-tL-WpL"/>
                         <outlet property="lblCartCount" destination="Ull-N4-KAo" id="Umf-6P-jKW"/>
@@ -6790,6 +6794,7 @@ hours.</string>
                         <outlet property="lblTopContMEss" destination="yFL-h5-9m0" id="fp0-fj-HXT"/>
                         <outlet property="lblTotal" destination="90p-br-uME" id="aZA-5u-C1r"/>
                         <outlet property="lblType" destination="e93-Vf-wBa" id="Q6G-jf-U8w"/>
+                        <outlet property="lblUseLoaltyPointTitle" destination="jqv-2L-85J" id="mYb-Ln-SDm"/>
                         <outlet property="lblYesLoyalty" destination="Tpa-qP-cJ7" id="jjD-dF-GSh"/>
                         <outlet property="lblYourOrder" destination="Mkl-B4-xkW" id="HlH-R7-YA9"/>
                         <outlet property="lbltPromoCode" destination="if2-FV-921" id="Ghl-Pw-oRh"/>

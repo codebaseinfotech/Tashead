@@ -26,7 +26,7 @@ class LoyaltyCouponsVC: UIViewController {
     }
     @IBOutlet weak var lblTotalPoint: UILabel! {
         didSet {
-            lblTotalPoint.text = "Loyalty Points".localizeString(string: Language.shared.currentAppLang) + " :"
+            lblTotalPoint.text = "Total Points".localizeString(string: Language.shared.currentAppLang) + " :"
         }
     }
     
@@ -117,7 +117,9 @@ extension LoyaltyCouponsVC: UITableViewDelegate, UITableViewDataSource {
         if isApiCall == true {
             let dicData = dicLoyaltyCoupons.coupons[indexPath.row]
             cell.lblKD.text = "\(dicData.amount ?? "") KD"
-            cell.lblPoints.text = "\(dicData.point ?? 0) Points"
+            
+            let Points = "Points".localizeString(string: Language.shared.currentAppLang)
+            cell.lblPoints.text = "\(dicData.point ?? 0) \(Points)"
             
             var media_link_url = "\(dicData.image ?? "")"
             media_link_url = (media_link_url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed))!

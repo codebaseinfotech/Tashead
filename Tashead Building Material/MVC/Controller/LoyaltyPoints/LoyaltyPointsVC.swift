@@ -29,7 +29,7 @@ class LoyaltyPointsVC: UIViewController {
     }
     @IBOutlet weak var lblTotalPoint: UILabel! {
         didSet {
-            lblTotalPoint.text = "Total Points".localizeString(string: Language.shared.currentAppLang) + " :"
+            lblTotalPoint.text = "Total Points".localizeString(string: Language.shared.currentAppLang)
         }
     }
     @IBOutlet weak var btnRedeem: UIButton! {
@@ -147,7 +147,10 @@ extension LoyaltyPointsVC: UITableViewDelegate, UITableViewDataSource {
         cell.lblTitle.text = dicData.type == "redeem" ? "Loyalty Points Redeemed".localizeString(string: Language.shared.currentAppLang) : "Loyalty Points Credited".localizeString(string: Language.shared.currentAppLang)
         cell.lblOrderId.text = "\(dicData.orderId ?? 0)"
         cell.lblTime.text = dicData.createdAt ?? ""
-        cell.lblPoints.text = "\(dicData.points ?? "") Points"
+        
+        let Points = "Points".localizeString(string: Language.shared.currentAppLang)
+        
+        cell.lblPoints.text = "\(dicData.points ?? "") \(Points)"
         
         cell.lblPoints.textColor = dicData.type == "redeem" ? .red : UIColor(hexString: "5ABD3B")
         
